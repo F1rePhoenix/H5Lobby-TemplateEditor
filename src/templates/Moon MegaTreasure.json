@@ -1,0 +1,359 @@
+{
+  "TemplateName": "[S3]Echo",
+  "Zones": [
+    {
+      "ZoneId": 1,
+      "TerrainType": "FirstPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "StaticDwellingConfigs": {
+          "DwellingValue": [
+            {
+              "T1": 2,
+              "T2": 2,
+              "T3": 2
+            }
+          ]
+        }
+      },
+      "Prisons": {
+        "MinValue": 4,
+        "MaxValue": 6
+      },
+      "Taverns": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "EnlightenmentStones": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "WisdomStones": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 1,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    },
+    {
+      "ZoneId": 2,
+      "TerrainType": "SecondPlayer",
+      "MirrorZoneId": 1
+    },
+    {
+      "ZoneId": 3,
+      "TerrainType": "Terrain1",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "DefaultDwellingByTerrain",
+        "CreaturesConfiguration": {
+          "ReplacementsCount": {
+            "MinValue": 7,
+            "MaxValue": 7
+          },
+          "TerrainFaction": true,
+          "PlayerFactions": false,
+          "PlayerType": "Any",
+          "Grades": true,
+          "Neutrals": false,
+          "BaseCostMultiplier": 0.5,
+          "BaseResourcesMultiplier": 0.5,
+          "CreatureModifiers": [],
+          "CreatureTierReplacements": []
+        },
+        "RandomDwellingConfig": {
+          "MinCount": 9,
+          "MaxCount": 9,
+          "MinTiersCount": 3,
+          "MaxTiersCount": 3,
+          "UniformDistribution": true,
+          "AllowedTiers": [
+            5,
+            6,
+            7
+          ]
+        }
+      },
+      "UpgBuildingsDensity": {
+        "MinValue": 14,
+        "MaxValue": 14
+      },
+      "TreasureDensity": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "TreasureChestDensity": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "Prisons": {
+        "MinValue": 4,
+        "MaxValue": 6
+      },
+      "ShopPoints": {
+        "MinValue": 40,
+        "MaxValue": 40
+      },
+      "ShrinePoints": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "LuckMoralBuildingsDensity": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "ResourceBuildingsDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "TreasureBuildingPoints": {
+        "MinValue": 90,
+        "MaxValue": 100
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 85000,
+        "MaxValue": 95000
+      },
+      "DenOfThieves": {
+        "MinValue": 1,
+        "MaxValue": 1
+      },
+      "RedwoodObservatoryDensity": {
+        "MinValue": 1,
+        "MaxValue": 1
+      },
+      "Town": true,
+      "Taverns": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "EnlightenmentStones": {
+        "MinValue": 3,
+        "MaxValue": 3
+      },
+      "WisdomStones": {
+        "MinValue": 0,
+        "MaxValue": 0
+      }
+    },
+    {
+      "ZoneId": 4,
+      "TerrainType": "Terrain2",
+      "MirrorZoneId": 3,
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "DefaultDwellingByTerrain",
+        "CreaturesConfiguration": {
+          "ReplacementsCount": {
+            "MinValue": 7,
+            "MaxValue": 7
+          },
+          "TerrainFaction": true,
+          "PlayerFactions": false,
+          "PlayerType": "Any",
+          "Grades": true,
+          "Neutrals": false,
+          "BaseCostMultiplier": 0.5,
+          "BaseResourcesMultiplier": 0.5,
+          "CreatureModifiers": [],
+          "CreatureTierReplacements": []
+        }
+      }
+    },
+    {
+      "ZoneId": 5,
+      "TerrainType": "Terrain3",
+      "MirrorZoneId": 3,
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "DefaultDwellingByTerrain",
+        "CreaturesConfiguration": {
+          "ReplacementsCount": {
+            "MinValue": 7,
+            "MaxValue": 7
+          },
+          "TerrainFaction": true,
+          "PlayerFactions": false,
+          "PlayerType": "Any",
+          "Grades": true,
+          "Neutrals": false,
+          "BaseCostMultiplier": 0.5,
+          "BaseResourcesMultiplier": 0.5,
+          "CreatureModifiers": [],
+          "CreatureTierReplacements": []
+        }
+      },
+      "Town": true
+    },
+    {
+      "ZoneId": 6,
+      "TerrainType": "Terrain4",
+      "MirrorZoneId": 3,
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "DefaultDwellingByTerrain",
+        "CreaturesConfiguration": {
+          "ReplacementsCount": {
+            "MinValue": 7,
+            "MaxValue": 7
+          },
+          "TerrainFaction": true,
+          "PlayerFactions": false,
+          "PlayerType": "Any",
+          "Grades": true,
+          "Neutrals": false,
+          "BaseCostMultiplier": 0.5,
+          "BaseResourcesMultiplier": 0.5,
+          "CreatureModifiers": [],
+          "CreatureTierReplacements": []
+        }
+      }
+    }
+  ],
+  "Connections": [
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 3,
+      "IsMain": false,
+      "GuardStrenght": 10
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 3,
+      "IsMain": true,
+      "GuardStrenght": 10
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 4,
+      "IsMain": false,
+      "GuardStrenght": 10
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 4,
+      "IsMain": true,
+      "GuardStrenght": 10
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 5,
+      "IsMain": false,
+      "GuardStrenght": 10
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 5,
+      "IsMain": true,
+      "GuardStrenght": 10
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 6,
+      "IsMain": false,
+      "GuardStrenght": 10
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 6,
+      "IsMain": true,
+      "GuardStrenght": 10
+    },
+    {
+      "SourceZoneIndex": 4,
+      "DestZoneIndex": 5,
+      "IsMain": false,
+      "GuardStrenght": 20
+    },
+    {
+      "SourceZoneIndex": 4,
+      "DestZoneIndex": 5,
+      "IsMain": true,
+      "GuardStrenght": 20
+    },
+    {
+      "SourceZoneIndex": 3,
+      "DestZoneIndex": 6,
+      "IsMain": false,
+      "GuardStrenght": 20
+    },
+    {
+      "SourceZoneIndex": 3,
+      "DestZoneIndex": 6,
+      "IsMain": true,
+      "GuardStrenght": 20
+    },
+    {
+      "SourceZoneIndex": 5,
+      "DestZoneIndex": 6,
+      "IsMain": false,
+      "GuardStrenght": 20
+    },
+    {
+      "SourceZoneIndex": 5,
+      "DestZoneIndex": 6,
+      "IsMain": true,
+      "GuardStrenght": 20
+    }
+  ],
+  "TerrainConfig": [],
+  "FactionTerrainConfigs": {},
+  "StartBuildingConfigs": [
+    {
+      "ApplyAllTerrains": true,
+      "TerrainType": "Null",
+      "CastleType": "Undefined",
+      "Buildings": [
+        "T1",
+        "T2",
+        "T3",
+        "Forge",
+        "Market1",
+        "Tavern"
+      ],
+      "BuildingMode": "StartCastle"
+    },
+    {
+      "ApplyAllTerrains": true,
+      "TerrainType": "Null",
+      "CastleType": "Undefined",
+      "Buildings": [
+        "Market1",
+        "Tavern"
+      ],
+      "BuildingMode": "NeutralCastle"
+    }
+  ],
+  "SpecificCastlesStartBuildings": [],
+  "BaseArmyMultiplier": 0.0,
+  "ArmyMultipliers": {},
+  "ScriptFeaturesConfig": {
+    "GloballyDisabledBuildingsProps": {
+      "Buildings": [
+        "NecromancyUnholyTemple"
+      ]
+    },
+    "ForcedFinalBattleProps": [],
+    "AdditionalStartCastles": []
+  },
+  "CustomBuildingConfigs": [
+    {
+      "Id": 1,
+      "GuardStrenght": 4,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "ArtifactXdb": {
+        "ArtifactType": "CrownOfLeadership"
+      }
+    }
+  ]
+}

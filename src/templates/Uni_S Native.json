@@ -1,0 +1,433 @@
+{
+  "TemplateName": "[S3]Universe_S",
+  "Zones": [
+    {
+      "ZoneId": 1,
+      "TerrainType": "FirstPlayer",
+      "Prisons": {
+        "MinValue": 0,
+        "MaxValue": 0
+      }
+    },
+    {
+      "ZoneId": 2,
+      "TerrainType": "SecondPlayer",
+      "MirrorZoneId": 1
+    },
+    {
+      "ZoneId": 3,
+      "TerrainType": "Terrain1",
+      "MineGenerationConfig": {
+        "Gold": {
+          "MinValue": 3,
+          "MaxValue": 3
+        }
+      },
+      "Prisons": {
+        "MinValue": 4,
+        "MaxValue": 6
+      },
+      "TreasureBuildingPoints": {
+        "MinValue": 110,
+        "MaxValue": 110
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 50000,
+        "MaxValue": 50000
+      },
+      "Town": true,
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [
+          {
+            "Models": [
+              {
+                "Objects": [
+                  {
+                    "BuildingId": 1,
+                    "Count": {
+                      "MinValue": 3,
+                      "MaxValue": 4
+                    }
+                  },
+                  {
+                    "BuildingId": 2,
+                    "Count": {
+                      "MinValue": 3,
+                      "MaxValue": 4
+                    }
+                  }
+                ],
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              },
+              {
+                "Objects": [
+                  {
+                    "BuildingId": 3,
+                    "Count": {
+                      "MinValue": 3,
+                      "MaxValue": 4
+                    }
+                  },
+                  {
+                    "BuildingId": 4,
+                    "Count": {
+                      "MinValue": 3,
+                      "MaxValue": 4
+                    }
+                  }
+                ],
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              },
+              {
+                "Objects": [
+                  {
+                    "BuildingId": 5,
+                    "Count": {
+                      "MinValue": 3,
+                      "MaxValue": 4
+                    }
+                  }
+                ],
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              },
+              {
+                "Objects": [
+                  {
+                    "BuildingId": 6,
+                    "Count": {
+                      "MinValue": 3,
+                      "MaxValue": 4
+                    }
+                  }
+                ],
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              }
+            ],
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          }
+        ],
+        "ArtifactsGenerationModels": []
+      }
+    },
+    {
+      "ZoneId": 4,
+      "TerrainType": "Terrain1",
+      "MirrorZoneId": 3
+    },
+    {
+      "ZoneId": 5,
+      "TerrainType": "Terrain2",
+      "TreasureBuildingPoints": {
+        "MinValue": 55,
+        "MaxValue": 55
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 200000,
+        "MaxValue": 200000
+      },
+      "Taverns": {
+        "MinValue": 6,
+        "MaxValue": 6
+      },
+      "WisdomStones": {
+        "MinValue": 3,
+        "MaxValue": 3
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [
+          {
+            "Models": [
+              {
+                "Objects": [
+                  {
+                    "BuildingId": 7,
+                    "Count": {
+                      "MinValue": 3,
+                      "MaxValue": 4
+                    }
+                  }
+                ],
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              },
+              {
+                "Objects": [
+                  {
+                    "BuildingId": 8,
+                    "Count": {
+                      "MinValue": 3,
+                      "MaxValue": 4
+                    }
+                  }
+                ],
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              },
+              {
+                "Objects": [
+                  {
+                    "BuildingId": 9,
+                    "Count": {
+                      "MinValue": 3,
+                      "MaxValue": 4
+                    }
+                  }
+                ],
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              }
+            ],
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          }
+        ],
+        "ArtifactsGenerationModels": []
+      }
+    }
+  ],
+  "Connections": [
+    {
+      "SourceZoneIndex": 3,
+      "DestZoneIndex": 4,
+      "IsMain": true,
+      "GuardStrenght": 20,
+      "RoadType": 1
+    },
+    {
+      "SourceZoneIndex": 10,
+      "DestZoneIndex": 11,
+      "IsMain": true,
+      "GuardStrenght": 20,
+      "RoadType": 1
+    }
+  ],
+  "TerrainConfig": [
+    {
+      "TerrainType": "Terrain1",
+      "MirrorTerrainType": "Null",
+      "BuildingsToDelete": [
+        "Dragon_Utopia",
+        "OrcDeposit"
+      ],
+      "BuildingsToAdd": []
+    }
+  ],
+  "FactionTerrainConfigs": {},
+  "StartBuildingConfigs": [
+    {
+      "ApplyAllTerrains": true,
+      "TerrainType": "Null",
+      "CastleType": "Undefined",
+      "Buildings": [
+        "Forge",
+        "Market1",
+        "Tavern"
+      ],
+      "BuildingMode": "All"
+    }
+  ],
+  "SpecificCastlesStartBuildings": [],
+  "GeneralData": {
+    "MineGoldGuardLevel": 10
+  },
+  "ArmyMultipliers": {
+    "Dwarfs": 1.5,
+    "Mages": 1.25,
+    "Liga": 0.75,
+    "Horde": 0.75,
+    "Elves": 0.5
+  },
+  "CustomBuildingConfigs": [
+    {
+      "Id": 1,
+      "GuardStrenght": 10,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_EARTH_ELEMENTAL"
+        ],
+        "CostMultiplier": 0.3,
+        "GrowMultiplier": 3.34,
+        "IsDwelling": true
+      }
+    },
+    {
+      "Id": 2,
+      "GuardStrenght": 10,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_WATER_ELEMENTAL"
+        ],
+        "CostMultiplier": 0.4,
+        "GrowMultiplier": 2.5,
+        "IsDwelling": true
+      }
+    },
+    {
+      "Id": 3,
+      "GuardStrenght": 12,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_FIRE_ELEMENTAL"
+        ],
+        "CostMultiplier": 0.5,
+        "GrowMultiplier": 2.0,
+        "IsDwelling": true
+      }
+    },
+    {
+      "Id": 4,
+      "GuardStrenght": 12,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_AIR_ELEMENTAL"
+        ],
+        "CostMultiplier": 0.5,
+        "GrowMultiplier": 2.0,
+        "IsDwelling": true
+      }
+    },
+    {
+      "Id": 5,
+      "GuardStrenght": 14,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_WOLF"
+        ],
+        "CostMultiplier": 0.6,
+        "GrowMultiplier": 1.5,
+        "IsDwelling": true
+      }
+    },
+    {
+      "Id": 6,
+      "GuardStrenght": 14,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_MANTICORE"
+        ],
+        "CostMultiplier": 0.42,
+        "GrowMultiplier": 1.0,
+        "IsDwelling": true
+      }
+    },
+    {
+      "Id": 7,
+      "GuardStrenght": 16,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_DEATH_KNIGHT"
+        ],
+        "CostMultiplier": 0.85,
+        "GrowMultiplier": 1.5,
+        "IsDwelling": true
+      }
+    },
+    {
+      "Id": 8,
+      "GuardStrenght": 16,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_MUMMY"
+        ],
+        "CostMultiplier": 0.75,
+        "GrowMultiplier": 1.5,
+        "IsDwelling": true
+      }
+    },
+    {
+      "Id": 9,
+      "GuardStrenght": 20,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_PHOENIX"
+        ],
+        "CostMultiplier": 0.5,
+        "GrowMultiplier": 1.0,
+        "IsDwelling": true
+      }
+    }
+  ]
+}

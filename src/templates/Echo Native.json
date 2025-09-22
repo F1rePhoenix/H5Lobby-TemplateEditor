@@ -1,0 +1,616 @@
+{
+  "TemplateName": "[S3]Echo",
+  "Zones": [
+    {
+      "ZoneId": 1,
+      "TerrainType": "FirstPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "StaticDwellingConfigs": {
+          "DwellingValue": [
+            {
+              "T1": 2,
+              "T2": 2,
+              "T3": 2
+            }
+          ]
+        }
+      },
+      "TreasureDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "TreasureChestDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ResourceBuildingsDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "TreasureBuildingPoints": {
+        "MinValue": 45,
+        "MaxValue": 45
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "TradingPosts": {
+        "MinValue": 2,
+        "MaxValue": 2
+      },
+      "LearningStones": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "EnlightenmentStones": {
+        "MinValue": 3,
+        "MaxValue": 3
+      },
+      "TombOfTheWarriors": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": [
+          {
+            "AllowedArtifacts": [],
+            "MinValue": 1,
+            "MaxValue": 10000,
+            "TotalValue": 65000
+          }
+        ],
+        "ResourcesGenerationModel": {
+          "Wood": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "Ore": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "BaseResourcesGuardsMultiplier": 0.0,
+          "Mercury": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "Gems": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "Crystal": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "Sulfur": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "RareResourcesGuardsMultiplier": 0.0,
+          "Chest": {
+            "MinValue": 6,
+            "MaxValue": 7
+          },
+          "ChestGuardsMultiplier": 0.0,
+          "Gold": {
+            "MinValue": 5,
+            "MaxValue": 6
+          },
+          "GoldGuardsMultiplier": 0.0,
+          "Campfire": {
+            "MinValue": 2,
+            "MaxValue": 3
+          },
+          "CampfireGuardsMultiplier": 0.0
+        }
+      }
+    },
+    {
+      "ZoneId": 2,
+      "TerrainType": "SecondPlayer",
+      "MirrorZoneId": 1
+    },
+    {
+      "ZoneId": 3,
+      "TerrainType": "FirstPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "StaticDwellingConfigs": {
+          "DwellingValue": [
+            {
+              "T6": 2,
+              "T7": 2
+            }
+          ]
+        }
+      },
+      "UpgBuildingsDensity": {
+        "MinValue": 90,
+        "MaxValue": 100
+      },
+      "TreasureDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "TreasureChestDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "Prisons": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ShopPoints": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ShrinePoints": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "LuckMoralBuildingsDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ResourceBuildingsDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "DenOfThieves": {
+        "MinValue": 1,
+        "MaxValue": 1
+      },
+      "RedwoodObservatoryDensity": {
+        "MinValue": 2,
+        "MaxValue": 2
+      },
+      "Town": false,
+      "Taverns": {
+        "MinValue": 3,
+        "MaxValue": 3
+      },
+      "HillForts": {
+        "MinValue": 1,
+        "MaxValue": 1
+      },
+      "SpellMentors": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "EnlightenmentStones": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "WisdomStones": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "TombOfTheWarriors": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 1,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 1
+            }
+          },
+          {
+            "BuildingId": 2,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 1
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": [
+          {
+            "AllowedArtifacts": [],
+            "MinValue": 19999,
+            "MaxValue": 50000,
+            "TotalValue": 450000,
+            "AllowedDuplicatesCount": 1,
+            "GuardsMultiplier": 0.7
+          }
+        ],
+        "ResourcesGenerationModel": {
+          "Wood": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "Ore": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "BaseResourcesGuardsMultiplier": 0.0,
+          "Mercury": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "Gems": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "Crystal": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "Sulfur": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "RareResourcesGuardsMultiplier": 0.0,
+          "Chest": {
+            "MinValue": 4,
+            "MaxValue": 5
+          },
+          "ChestGuardsMultiplier": 0.0,
+          "Gold": {
+            "MinValue": 3,
+            "MaxValue": 4
+          },
+          "GoldGuardsMultiplier": 0.0,
+          "Campfire": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "CampfireGuardsMultiplier": 0.0
+        }
+      }
+    },
+    {
+      "ZoneId": 4,
+      "TerrainType": "SecondPlayer",
+      "MirrorZoneId": 3
+    },
+    {
+      "ZoneId": 5,
+      "TerrainType": "FirstPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "StaticDwellingConfigs": {
+          "DwellingValue": [
+            {
+              "T4": 2,
+              "T5": 2
+            }
+          ]
+        }
+      },
+      "UpgBuildingsDensity": {
+        "MinValue": 90,
+        "MaxValue": 100
+      },
+      "TreasureDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "TreasureChestDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "Prisons": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ShopPoints": {
+        "MinValue": 25,
+        "MaxValue": 25
+      },
+      "ShrinePoints": {
+        "MinValue": 20,
+        "MaxValue": 20
+      },
+      "LuckMoralBuildingsDensity": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "ResourceBuildingsDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "TreasureBuildingPoints": {
+        "MinValue": 80,
+        "MaxValue": 90
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "DenOfThieves": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "RedwoodObservatoryDensity": {
+        "MinValue": 1,
+        "MaxValue": 1
+      },
+      "Town": false,
+      "Taverns": {
+        "MinValue": 3,
+        "MaxValue": 3
+      },
+      "TradingPosts": {
+        "MinValue": 1,
+        "MaxValue": 1
+      },
+      "EnlightenmentStones": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "WisdomStones": {
+        "MinValue": 2,
+        "MaxValue": 3
+      },
+      "TombOfTheWarriors": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": [
+          {
+            "AllowedArtifacts": [],
+            "MinValue": 10000,
+            "MaxValue": 19999,
+            "TotalValue": 300000,
+            "AllowedDuplicatesCount": 1,
+            "GuardsMultiplier": 0.7
+          }
+        ],
+        "ResourcesGenerationModel": {
+          "Wood": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "Ore": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "BaseResourcesGuardsMultiplier": 0.0,
+          "Mercury": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "Gems": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "Crystal": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "Sulfur": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "RareResourcesGuardsMultiplier": 0.0,
+          "Chest": {
+            "MinValue": 4,
+            "MaxValue": 5
+          },
+          "ChestGuardsMultiplier": 0.0,
+          "Gold": {
+            "MinValue": 3,
+            "MaxValue": 4
+          },
+          "GoldGuardsMultiplier": 0.0,
+          "Campfire": {
+            "MinValue": 1,
+            "MaxValue": 2
+          },
+          "CampfireGuardsMultiplier": 0.0
+        }
+      }
+    },
+    {
+      "ZoneId": 6,
+      "TerrainType": "SecondPlayer",
+      "MirrorZoneId": 5
+    }
+  ],
+  "Connections": [
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 2,
+      "IsMain": true,
+      "GuardStrenght": 55
+    },
+    {
+      "SourceZoneIndex": 111,
+      "DestZoneIndex": 222,
+      "IsMain": true,
+      "GuardStrenght": 55
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 3,
+      "IsMain": false,
+      "GuardStrenght": 12
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 3,
+      "IsMain": true,
+      "GuardStrenght": 12
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 4,
+      "IsMain": false,
+      "GuardStrenght": 12
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 4,
+      "IsMain": true,
+      "GuardStrenght": 12
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 5,
+      "IsMain": false,
+      "GuardStrenght": 8
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 5,
+      "IsMain": true,
+      "GuardStrenght": 8
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 6,
+      "IsMain": false,
+      "GuardStrenght": 8
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 6,
+      "IsMain": true,
+      "GuardStrenght": 8
+    },
+    {
+      "SourceZoneIndex": 4,
+      "DestZoneIndex": 5,
+      "IsMain": false,
+      "RemoveConnection": true
+    },
+    {
+      "SourceZoneIndex": 4,
+      "DestZoneIndex": 5,
+      "IsMain": true,
+      "RemoveConnection": true
+    },
+    {
+      "SourceZoneIndex": 3,
+      "DestZoneIndex": 6,
+      "IsMain": false,
+      "RemoveConnection": true
+    },
+    {
+      "SourceZoneIndex": 3,
+      "DestZoneIndex": 6,
+      "IsMain": true,
+      "RemoveConnection": true
+    },
+    {
+      "SourceZoneIndex": 5,
+      "DestZoneIndex": 6,
+      "IsMain": false,
+      "RemoveConnection": true
+    },
+    {
+      "SourceZoneIndex": 5,
+      "DestZoneIndex": 6,
+      "IsMain": true,
+      "RemoveConnection": true
+    }
+  ],
+  "TerrainConfig": [
+    {
+      "TerrainType": "FirstPlayer",
+      "MirrorTerrainType": "Null",
+      "BuildingsToDelete": [],
+      "BuildingsToAdd": [],
+      "NewTreasuryBuildings": {
+        "BuildingsToDelete": [
+          "Elemantal_Stockpile"
+        ],
+        "BuildingsToAdd": []
+      },
+      "NewBuffBuildings": {
+        "BuildingsToDelete": [
+          "OrcDeposit",
+          "Dragon_Utopia",
+          "Monasterybank"
+        ],
+        "BuildingsToAdd": []
+      }
+    },
+    {
+      "TerrainType": "SecondPlayer",
+      "MirrorTerrainType": "FirstPlayer",
+      "BuildingsToDelete": [],
+      "BuildingsToAdd": []
+    }
+  ],
+  "FactionTerrainConfigs": {},
+  "StartBuildingConfigs": [
+    {
+      "ApplyAllTerrains": true,
+      "TerrainType": "Null",
+      "CastleType": "Undefined",
+      "Buildings": [
+        "T1",
+        "T2",
+        "Forge",
+        "StrongholdTravellerShelter"
+      ],
+      "BuildingMode": "All"
+    }
+  ],
+  "SpecificCastlesStartBuildings": [],
+  "BaseArmyMultiplier": 0.0,
+  "ArmyMultipliers": {},
+  "StartSpellsConfig": {
+    "GlobalSpells": [
+      "TownPortal"
+    ],
+    "SpellsByPlayers": [],
+    "SpellsByRaces": [],
+    "SpellsByHeroes": []
+  },
+  "CustomBuildingConfigs": [
+    {
+      "Id": 1,
+      "GuardStrenght": 28,
+      "BuildingTexture": "ExpChest",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [
+          40000
+        ],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [],
+        "Resources": []
+      }
+    },
+    {
+      "Id": 2,
+      "GuardStrenght": 24,
+      "BuildingTexture": "ExpChest",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [
+          30000
+        ],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [],
+        "Resources": []
+      }
+    }
+  ]
+}

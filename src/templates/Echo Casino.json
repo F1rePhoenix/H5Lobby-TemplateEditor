@@ -1,0 +1,454 @@
+{
+  "TemplateName": "[S3]Echo",
+  "Zones": [
+    {
+      "ZoneId": 1,
+      "TerrainType": "FirstPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "StaticDwellingConfigs": {
+          "DwellingValue": [
+            {
+              "T1": 1,
+              "T2": 1,
+              "T3": 1,
+              "T4": 1,
+              "T5": 1,
+              "T6": 1,
+              "T7": 1
+            }
+          ]
+        }
+      },
+      "MineGenerationConfig": {
+        "Wood": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Ore": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Mercury": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Crystals": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Sulfur": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Gems": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Gold": {
+          "MinValue": 1,
+          "MaxValue": 1
+        }
+      },
+      "TreasureBuildingPoints": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 45000,
+        "MaxValue": 45000
+      },
+      "DenOfThieves": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "RedwoodObservatoryDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "TreasureBlocksScalingFromTownDist": true,
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "Taverns": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "EnlightenmentStones": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "WisdomStones": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 1,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 1
+            }
+          },
+          {
+            "BuildingId": 2,
+            "Count": {
+              "MinValue": 3,
+              "MaxValue": 3
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    },
+    {
+      "ZoneId": 2,
+      "TerrainType": "SecondPlayer",
+      "MirrorZoneId": 1
+    },
+    {
+      "ZoneId": 3,
+      "TerrainType": "SecondPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "StaticDwellingConfigs": {
+          "DwellingValue": [
+            {
+              "T1": 2,
+              "T2": 2,
+              "T3": 2,
+              "T4": 2,
+              "T5": 2,
+              "T6": 2,
+              "T7": 2
+            }
+          ]
+        }
+      },
+      "UpgBuildingsDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "TreasureDensity": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "TreasureChestDensity": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "Prisons": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ShopPoints": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ShrinePoints": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "LuckMoralBuildingsDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ResourceBuildingsDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "TreasureBuildingPoints": {
+        "MinValue": 90,
+        "MaxValue": 100
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 120000,
+        "MaxValue": 120000
+      },
+      "DenOfThieves": {
+        "MinValue": 1,
+        "MaxValue": 1
+      },
+      "RedwoodObservatoryDensity": {
+        "MinValue": 2,
+        "MaxValue": 2
+      },
+      "Town": true,
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "Taverns": {
+        "MinValue": 3,
+        "MaxValue": 3
+      },
+      "EnlightenmentStones": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "WisdomStones": {
+        "MinValue": 3,
+        "MaxValue": 3
+      }
+    },
+    {
+      "ZoneId": 4,
+      "TerrainType": "FirstPlayer",
+      "MirrorZoneId": 3
+    },
+    {
+      "ZoneId": 5,
+      "TerrainType": "Terrain1",
+      "UpgBuildingsDensity": {
+        "MinValue": 90,
+        "MaxValue": 100
+      },
+      "TreasureDensity": {
+        "MinValue": 10,
+        "MaxValue": 10
+      },
+      "TreasureChestDensity": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "Prisons": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ShopPoints": {
+        "MinValue": 25,
+        "MaxValue": 25
+      },
+      "ShrinePoints": {
+        "MinValue": 20,
+        "MaxValue": 20
+      },
+      "LuckMoralBuildingsDensity": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "ResourceBuildingsDensity": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "TreasureBuildingPoints": {
+        "MinValue": 70,
+        "MaxValue": 80
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 90000,
+        "MaxValue": 90000
+      },
+      "DenOfThieves": {
+        "MinValue": 1,
+        "MaxValue": 1
+      },
+      "RedwoodObservatoryDensity": {
+        "MinValue": 1,
+        "MaxValue": 1
+      },
+      "Town": false,
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "Taverns": {
+        "MinValue": 3,
+        "MaxValue": 3
+      },
+      "EnlightenmentStones": {
+        "MinValue": 3,
+        "MaxValue": 3
+      },
+      "WisdomStones": {
+        "MinValue": 0,
+        "MaxValue": 0
+      }
+    },
+    {
+      "ZoneId": 6,
+      "TerrainType": "Terrain1",
+      "MirrorZoneId": 5
+    }
+  ],
+  "Connections": [
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 3,
+      "IsMain": false,
+      "GuardStrenght": 24
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 3,
+      "IsMain": true,
+      "GuardStrenght": 24
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 4,
+      "IsMain": false,
+      "GuardStrenght": 24
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 4,
+      "IsMain": true,
+      "GuardStrenght": 24
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 5,
+      "IsMain": false,
+      "GuardStrenght": 7
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 5,
+      "IsMain": true,
+      "GuardStrenght": 7
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 6,
+      "IsMain": false,
+      "GuardStrenght": 7
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 6,
+      "IsMain": true,
+      "GuardStrenght": 7
+    },
+    {
+      "SourceZoneIndex": 4,
+      "DestZoneIndex": 5,
+      "IsMain": false,
+      "GuardStrenght": 16
+    },
+    {
+      "SourceZoneIndex": 4,
+      "DestZoneIndex": 5,
+      "IsMain": true,
+      "GuardStrenght": 16
+    },
+    {
+      "SourceZoneIndex": 3,
+      "DestZoneIndex": 6,
+      "IsMain": false,
+      "GuardStrenght": 16
+    },
+    {
+      "SourceZoneIndex": 3,
+      "DestZoneIndex": 6,
+      "IsMain": true,
+      "GuardStrenght": 16
+    },
+    {
+      "SourceZoneIndex": 5,
+      "DestZoneIndex": 6,
+      "IsMain": false,
+      "RemoveConnection": true
+    },
+    {
+      "SourceZoneIndex": 5,
+      "DestZoneIndex": 6,
+      "IsMain": true,
+      "RemoveConnection": true
+    }
+  ],
+  "TerrainConfig": [
+    {
+      "TerrainType": "FirstPlayer",
+      "MirrorTerrainType": "Null",
+      "BuildingsToDelete": [
+        "Magic_Spring",
+        "Tree_of_Knowledge",
+        "LibraryOfEnlightenment"
+      ],
+      "BuildingsToAdd": [],
+      "NewTreasuryBuildings": {
+        "BuildingsToDelete": [
+          "DwarvenTreasury",
+          "Elemantal_Stockpile"
+        ],
+        "BuildingsToAdd": []
+      }
+    },
+    {
+      "TerrainType": "SecondPlayer",
+      "MirrorTerrainType": "FirstPlayer",
+      "BuildingsToDelete": [],
+      "BuildingsToAdd": []
+    }
+  ],
+  "FactionTerrainConfigs": {},
+  "StartBuildingConfigs": [
+    {
+      "ApplyAllTerrains": true,
+      "TerrainType": "Null",
+      "CastleType": "Undefined",
+      "Buildings": [
+        "T1",
+        "T2",
+        "T3",
+        "Forge",
+        "Market1",
+        "Tavern"
+      ],
+      "BuildingMode": "StartCastle"
+    },
+    {
+      "ApplyAllTerrains": true,
+      "TerrainType": "Null",
+      "CastleType": "Undefined",
+      "Buildings": [
+        "Gm1",
+        "Gm2",
+        "Gm3",
+        "StrongholdHallOfTrial",
+        "StrongholdHallOfMastership",
+        "StrongholdTravellerShelter",
+        "Tavern"
+      ],
+      "BuildingMode": "NeutralCastle"
+    }
+  ],
+  "SpecificCastlesStartBuildings": [],
+  "BaseArmyMultiplier": 0.0,
+  "ArmyMultipliers": {},
+  "ScriptFeaturesConfig": {
+    "GloballyDisabledBuildingsProps": {
+      "Buildings": [
+        "NecromancyUnholyTemple"
+      ]
+    },
+    "ForcedFinalBattleProps": [],
+    "AdditionalStartCastles": []
+  },
+  "CustomBuildingConfigs": [
+    {
+      "Id": 1,
+      "GuardStrenght": 0,
+      "BuildingTexture": "Null",
+      "RoadType": "MainRoad",
+      "MapObjectXdb": {
+        "MapObject": "HillFort"
+      }
+    },
+    {
+      "Id": 2,
+      "GuardStrenght": 8,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "GoldChest5K"
+      }
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "TemplateName": "Jebus",
+  "Zones": [
+    {
+      "ZoneId": 1,
+      "TerrainType": "FirstPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "StaticDwellingConfigs": {
+          "DwellingValue": [
+            {
+              "T1": 0,
+              "T2": 0,
+              "T3": 0,
+              "T4": 1,
+              "T5": 2,
+              "T6": 2,
+              "T7": 2
+            }
+          ]
+        }
+      },
+      "MineGenerationConfig": {
+        "Wood": {
+          "MinValue": 2,
+          "MaxValue": 2
+        },
+        "Ore": {
+          "MinValue": 0,
+          "MaxValue": 0
+        },
+        "Mercury": {
+          "MinValue": 2,
+          "MaxValue": 2
+        },
+        "Crystals": {
+          "MinValue": 0,
+          "MaxValue": 0
+        },
+        "Sulfur": {
+          "MinValue": 2,
+          "MaxValue": 2
+        },
+        "Gems": {
+          "MinValue": 0,
+          "MaxValue": 0
+        },
+        "Gold": {
+          "MinValue": 2,
+          "MaxValue": 2
+        }
+      },
+      "Prisons": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 95000,
+        "MaxValue": 105000
+      },
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 1,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    },
+    {
+      "ZoneId": 2,
+      "TerrainType": "SecondPlayer",
+      "MirrorZoneId": 1
+    },
+    {
+      "ZoneId": 3,
+      "TerrainType": "FirstPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "StaticDwellingConfigs": {
+          "DwellingValue": [
+            {
+              "T1": 2,
+              "T2": 2,
+              "T3": 2,
+              "T4": 1,
+              "T5": 0,
+              "T6": 0,
+              "T7": 0
+            }
+          ]
+        }
+      },
+      "MineGenerationConfig": {
+        "Wood": {
+          "MinValue": 0,
+          "MaxValue": 0
+        },
+        "Ore": {
+          "MinValue": 2,
+          "MaxValue": 2
+        },
+        "Mercury": {
+          "MinValue": 0,
+          "MaxValue": 0
+        },
+        "Crystals": {
+          "MinValue": 2,
+          "MaxValue": 2
+        },
+        "Sulfur": {
+          "MinValue": 0,
+          "MaxValue": 0
+        },
+        "Gems": {
+          "MinValue": 2,
+          "MaxValue": 2
+        },
+        "Gold": {
+          "MinValue": 2,
+          "MaxValue": 2
+        }
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 95000,
+        "MaxValue": 105000
+      },
+      "TreasureBlocksScalingFromTownDist": true,
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 1,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    },
+    {
+      "ZoneId": 4,
+      "TerrainType": "SecondPlayer",
+      "MirrorZoneId": 3
+    },
+    {
+      "ZoneId": 5,
+      "TerrainType": "Terrain1",
+      "Prisons": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 585000,
+        "MaxValue": 585000
+      },
+      "TreasureBlocksScalingFromTownDist": false,
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 5,
+        "MaxValue": 5
+      }
+    }
+  ],
+  "Connections": [],
+  "TerrainConfig": [],
+  "FactionTerrainConfigs": {},
+  "StartBuildingConfigs": [
+    {
+      "ApplyAllTerrains": true,
+      "TerrainType": "Null",
+      "CastleType": "Undefined",
+      "Buildings": [
+        "Tavern",
+        "Market1",
+        "Forge"
+      ],
+      "BuildingMode": "All"
+    }
+  ],
+  "SpecificCastlesStartBuildings": [
+    {
+      "CoordinateX": 27,
+      "CoordinateY": 145,
+      "SearchRadius": 25,
+      "Buildings": [
+        "T1",
+        "T2",
+        "T3",
+        "Market1",
+        "Tavern",
+        "Forge"
+      ]
+    },
+    {
+      "CoordinateX": 145,
+      "CoordinateY": 27,
+      "SearchRadius": 25,
+      "Buildings": [
+        "T1",
+        "T2",
+        "T3",
+        "Market1",
+        "Tavern",
+        "Forge"
+      ]
+    }
+  ],
+  "GeneralData": {},
+  "ArmyMultipliers": {
+    "Horde": 0.75,
+    "Dwarfs": 1.5,
+    "Elves": 0.5,
+    "Mages": 1.25
+  },
+  "ScriptFeaturesConfig": {
+    "GloballyDisabledBuildingsProps": {
+      "Buildings": [
+        "StrongholdTravellerShelter"
+      ]
+    },
+    "ForcedFinalBattleProps": [],
+    "AdditionalStartCastles": [
+      {
+        "StartCoordinateX": 145,
+        "StartCoordinateY": 145,
+        "SearchRadius": 25,
+        "TargetCoordinateX": 27,
+        "TargetCoordinateY": 145,
+        "TargetSearchRadius": 10
+      },
+      {
+        "StartCoordinateX": 27,
+        "StartCoordinateY": 27,
+        "SearchRadius": 25,
+        "TargetCoordinateX": 145,
+        "TargetCoordinateY": 27,
+        "TargetSearchRadius": 10
+      }
+    ]
+  },
+  "EntitiesBanConfig": {
+    "BannedHeroes": [],
+    "BannedSpells": [
+      "TownPortal"
+    ],
+    "BannedArtifacts": []
+  },
+  "CustomBuildingConfigs": [
+    {
+      "Id": 1,
+      "GuardStrenght": 12,
+      "BuildingTexture": "DwarvenCareer",
+      "RoadType": "SecondaryRoad",
+      "ResourceGiver": {
+        "ResourcesConfigs": [
+          {
+            "Mercury": {
+              "MinValue": 3,
+              "MaxValue": 5
+            },
+            "Crystals": {
+              "MinValue": 3,
+              "MaxValue": 5
+            },
+            "Sulfur": {
+              "MinValue": 3,
+              "MaxValue": 5
+            },
+            "Gems": {
+              "MinValue": 3,
+              "MaxValue": 5
+            }
+          }
+        ]
+      },
+      "InteractionMessageType": "NoMessage"
+    }
+  ]
+}

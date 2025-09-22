@@ -1,0 +1,69 @@
+{
+  "TemplateName": "NewTemplate",
+  "GeneralData": {},
+  "BaseArmyMultiplier": 1.0,
+  "ArmyMultipliers": {
+    "Humans": 1.0,
+    "Inferno": 1.0,
+    "Necropolis": 1.0,
+    "Elves": 1.0,
+    "Liga": 1.0,
+    "Mages": 1.0,
+    "Dwarfs": 1.0,
+    "Horde": 1.0
+  },
+  "Zones": [],
+  "Connections": [],
+  "CustomBuildingConfigs": [],
+  "TerrainConfig": [],
+  "StartBuildingConfigs": [],
+  "ScriptFeaturesConfig": {
+    "CastleCaptureProps": {
+      "CoordinateX": 0,
+      "CoordinateY": 0,
+      "SearchRadius": 10,
+      "EventTimer": 1,
+      "DisableFortifications": true,
+      "IsForcedFinalBattle": false
+    },
+    "GMRebuildProps": {
+      "MinimalGMLevel": 1,
+      "MinimalWarCriesLeveL": 1,
+      "RebuildCost": {
+        "Wood": 0,
+        "Ore": 0,
+        "Mercury": 0,
+        "Sulfur": 0,
+        "Gem": 0,
+        "Crystal": 0,
+        "Gold": 0
+      }
+    },
+    "GloballyDisabledBuildingsProps": {
+      "Buildings": []
+    },
+    "ForcedFinalBattleProps": [],
+    "AdditionalStartCastles": []
+  },
+  "ZoneRandomizationConfig": {
+    "ZonesToSwap": [],
+    "IsSymmetricalSwap": false,
+    "ZonesToRandomize": []
+  },
+  "EntitiesBanConfig": {
+    "BannedHeroes": [],
+    "BannedSpells": [],
+    "BannedArtifacts": [],
+    "BanMaradeur": false,
+    "BannedBases": {
+      "CommonBannedSkills": [],
+      "SkillsBannedForClass": []
+    }
+  },
+  "StartSpellsConfig": {
+    "GlobalSpells": [],
+    "SpellsByPlayers": [],
+    "SpellsByRaces": [],
+    "SpellsByHeroes": []
+  }
+}
