@@ -5,6 +5,7 @@ import {
   FormControlLabel,
   Switch,
   Button,
+  Chip, // Добавляем Chip
 } from '@mui/material';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTemplate } from '../../contexts/TemplateContext';
@@ -31,16 +32,19 @@ const TerrainBuildingsConfigEditor: React.FC<TerrainBuildingsConfigEditorProps> 
   const customBuildings = state.template.CustomBuildingConfigs || [];
   const availableBuildingIds = customBuildings.map(b => b.Id).filter((id): id is number => id !== undefined);
 
+  // Функция для получения названия MapObject
+  const getMapObjectName = (mapObject: MapObject) => {
+    return mapObjectDict[mapObject]?.[language] || mapObject;
+  };
+
   const handleClearBuildingsChange = (clear: boolean) => {
     if (clear) {
-      // При активации очищаем остальные поля
       onChange({
         ClearBuildings: true,
         BuildingsToDelete: undefined,
         BuildingsToAdd: undefined
       });
     } else {
-      // При деактивации оставляем только ClearBuildings: false
       onChange({
         ClearBuildings: false,
         BuildingsToDelete: value.BuildingsToDelete,
@@ -67,10 +71,29 @@ const TerrainBuildingsConfigEditor: React.FC<TerrainBuildingsConfigEditorProps> 
 
       {!value.ClearBuildings && (
         <Box sx={{ mt: 2 }}>
+          {/* Здания для удаления с отображением */}
           <Box sx={{ mb: 2 }}>
             <Typography variant="subtitle1" gutterBottom>
               {language === 'ru' ? 'Здания для удаления' : 'Buildings to delete'}
             </Typography>
+            
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 1, minHeight: '40px' }}>
+              {value.BuildingsToDelete?.map((mapObject: MapObject) => (
+                <Chip
+                  key={mapObject}
+                  label={getMapObjectName(mapObject)}
+                  onDelete={() => {
+                    const updated = value.BuildingsToDelete.filter((obj: MapObject) => obj !== mapObject);
+                    onChange({
+                      ...value,
+                      BuildingsToDelete: updated.length > 0 ? updated : undefined
+                    });
+                  }}
+                  size="small"
+                />
+              ))}
+            </Box>
+            
             <Button
               variant="outlined"
               onClick={() => setBuildingsToDeleteDialogOpen(true)}
@@ -79,10 +102,29 @@ const TerrainBuildingsConfigEditor: React.FC<TerrainBuildingsConfigEditorProps> 
             </Button>
           </Box>
 
+          {/* Здания для добавления с отображением */}
           <Box sx={{ mb: 2 }}>
             <Typography variant="subtitle1" gutterBottom>
               {language === 'ru' ? 'Здания для добавления' : 'Buildings to add'}
             </Typography>
+            
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 1, minHeight: '40px' }}>
+              {value.BuildingsToAdd?.map((id: number) => (
+                <Chip
+                  key={id}
+                  label={`ID: ${id}`}
+                  onDelete={() => {
+                    const updated = value.BuildingsToAdd.filter((buildingId: number) => buildingId !== id);
+                    onChange({
+                      ...value,
+                      BuildingsToAdd: updated.length > 0 ? updated : undefined
+                    });
+                  }}
+                  size="small"
+                />
+              ))}
+            </Box>
+            
             <Button
               variant="outlined"
               onClick={() => setBuildingsToAddDialogOpen(true)}
@@ -92,7 +134,7 @@ const TerrainBuildingsConfigEditor: React.FC<TerrainBuildingsConfigEditorProps> 
           </Box>
         </Box>
       )}
-
+      
       {/* Диалоги выбора зданий */}
       <SearchableMultiSelectDialog
         open={buildingsToDeleteDialogOpen}
