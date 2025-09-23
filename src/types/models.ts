@@ -337,7 +337,19 @@ export interface Connection {
   SourceZoneIndex: number;
   DestZoneIndex: number;
   IsMain?: boolean;
-  GuardStrenght: number;
+  RemoveConnection?: boolean;
+  TwoWay?: boolean;
+  Guarded?: boolean;
+  GuardStrenght?: number;
+  Wide?: boolean;
+  StaticPos?: boolean;
+  StartPointX?: number;
+  StartPointY?: number;
+  MinRadiusToSearch?: number;
+  MaxRadiusToSearch?: number;
+  MinRadiusToMain?: number;
+  MaxRadiusToMain?: number;
+  RoadType?: number;
 }
 
 export interface GeneralDataClass {
@@ -346,7 +358,7 @@ export interface GeneralDataClass {
   MineGoldGuardLevel?: number;
 }
 
-export interface ZoneRandomizationConfigClass {
+export interface ZoneRandomizationConfig {
   ZonesToSwap?: number[];
   IsSymmetricalSwap?: boolean;
   ZonesToRandomize?: number[];
@@ -398,6 +410,13 @@ export interface StartBuildingConfigClass {
   CastleType?: CastleType;
   Buildings?: BuildingType[];
   BuildingMode?: BuildingMode;
+}
+
+export interface SpecificCastlesStartBuildings {
+  CoordinateX?: number;
+  CoordinateY?: number;
+  SearchRadius?: number;
+  Buildings?: BuildingType[];
 }
 
 export interface ScriptFeatureConfig {
@@ -455,6 +474,7 @@ export interface Zone {
 }
 
 export interface Template {
+  SpecificCastlesStartBuildings: {};
   TemplateName?: string;
   Zones?: Zone[];
   BaseArmyMultiplier?: number;
@@ -464,7 +484,7 @@ export interface Template {
   TerrainConfig?: TerrainConfig[];
   ScriptFeaturesConfig?: ScriptFeatureConfig;
   StartBuildingConfigs?: StartBuildingConfigClass[];
-  ZoneRandomizationConfig?: ZoneRandomizationConfigClass;
+  ZoneRandomizationConfig?: ZoneRandomizationConfig;
   GeneralData?: GeneralDataClass;
   EntitiesBanConfig?: EntitiesBanConfigClass;
   StartSpellsConfig?: StartSpellsConfig;

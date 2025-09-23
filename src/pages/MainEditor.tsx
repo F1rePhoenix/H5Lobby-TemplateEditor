@@ -31,6 +31,9 @@ import CustomBuildingsTab from './tabs/CustomBuildingsTab';
 import ZonesTab from './tabs/ZonesTab';
 import ScriptFeaturesTab from './tabs/ScriptFeaturesTab';
 import TerrainsTab from './tabs/TerrainsTab';
+import ConnectionsTab from './tabs/ConnectionsTab';
+import ZoneRandomizationTab from './tabs/ZoneRandomizationTab';
+import ArmyTab from './tabs/ArmyTab';
 
 const MainEditor: React.FC = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -136,14 +139,7 @@ const MainEditor: React.FC = () => {
         return <ZonesTab />;
       case 2:
         return (
-          <Box>
-            <Typography variant="h5" gutterBottom>
-              {language === 'ru' ? 'Редактор связей' : 'Connections Editor'}
-            </Typography>
-            <Typography>
-              {language === 'ru' ? 'Редактор связей между зонами будет здесь' : 'Connections editor will be here'}
-            </Typography>
-          </Box>
+          <ConnectionsTab/>
         );
       case 3:
         return (
@@ -154,45 +150,11 @@ const MainEditor: React.FC = () => {
           <StartBuildingsTab
             updateTemplateField={updateTemplateField}
             updateArrayField={updateArrayField}
-            openSelectionDialog={openSelectionDialog}
           />
         );
       case 5:
         return (
-          <Box>
-            <Typography variant="h5" gutterBottom>
-              {language === 'ru' ? 'Настройки армии' : 'Army Configuration'}
-            </Typography>
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, maxWidth: 500 }}>
-              <Box>
-                <Typography variant="subtitle1" gutterBottom>
-                  {language === 'ru' ? 'Базовый множитель армии' : 'Base Army Multiplier'}
-                </Typography>
-                <TextField
-                  type="number"
-                  value={state.template.BaseArmyMultiplier || 1.0}
-                  onChange={(e) => updateTemplateField('BaseArmyMultiplier', parseFloat(e.target.value))}
-                  fullWidth
-                  inputProps={{ step: 0.1, min: 0.1 }}
-                />
-              </Box>
-
-              {['Humans', 'Inferno', 'Necropolis', 'Elves', 'Liga', 'Mages', 'Dwarfs', 'Horde'].map((faction) => (
-                <Box key={faction}>
-                  <Typography variant="subtitle1" gutterBottom>
-                    {language === 'ru' ? `Множитель ${faction}` : `${faction} Multiplier`}
-                  </Typography>
-                  <TextField
-                    type="number"
-                    value={state.template.ArmyMultipliers?.[faction as keyof typeof state.template.ArmyMultipliers] || 1.0}
-                    onChange={(e) => updateTemplateField(`ArmyMultipliers.${faction}`, parseFloat(e.target.value))}
-                    fullWidth
-                    inputProps={{ step: 0.1, min: 0.1 }}
-                  />
-                </Box>
-              ))}
-            </Box>
-          </Box>
+          <ArmyTab/>
         );
       case 6:
         return (
@@ -216,14 +178,7 @@ const MainEditor: React.FC = () => {
         return <CustomBuildingsTab/>;
       case 10:
         return (
-          <Box>
-            <Typography variant="h5" gutterBottom>
-              {language === 'ru' ? 'Случайные координаты' : 'Zone Randomization'}
-            </Typography>
-            <Typography>
-              {language === 'ru' ? 'Редактор рандомизации зон будет здесь' : 'Zone randomization editor will be here'}
-            </Typography>
-          </Box>
+          <ZoneRandomizationTab/>
         );
       case 11:
         return <JsonPreview />;
@@ -251,7 +206,7 @@ const MainEditor: React.FC = () => {
         bottom: 0, 
         zIndex: 1000 
       }}>
-        <Sidebar selectedTab={selectedTab} onTabChange={handleTabChange} />
+        <Sidebar selectedTab={selectedTab} onTabChange={handleTabChange} language={language} />
       </Box>
 
       {/* Основное содержание */}

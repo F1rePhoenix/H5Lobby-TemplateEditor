@@ -12,7 +12,7 @@ import {
   ListItemButton,
   Chip
 } from '@mui/material';
-import { Add as AddIcon, Delete as DeleteIcon, NumbersSharp } from '@mui/icons-material';
+import { Add as AddIcon, Delete as DeleteIcon } from '@mui/icons-material';
 import { useTemplate } from '../../contexts/TemplateContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { buildingTextureConfigDict, roadTypeDict } from '../../dictionaries/enumsDict';
@@ -54,6 +54,57 @@ const CustomBuildingsTab: React.FC = () => {
   const [mapObjectDialogOpen, setMapObjectDialogOpen] = useState(false);
   const [defaultBuildingDialogOpen, setDefaultBuildingDialogOpen] = useState(false);
 
+  // Тексты на двух языках
+  const texts = {
+    title: language === 'ru' ? 'Кастомные здания' : 'Custom Buildings',
+    configsTitle: language === 'ru' ? 'Конфигурации зданий' : 'Building Configurations',
+    loading: language === 'ru' ? 'Загрузка конфигов...' : 'Loading configurations...',
+    noValue: language === 'ru' ? 'Нет значения' : 'No value',
+    notSelected: language === 'ru' ? 'Не выбран' : 'Not selected',
+    selectTexture: language === 'ru' ? 'Выбрать текстуру' : 'Select texture',
+    selectType: language === 'ru' ? 'Выбрать тип' : 'Select type',
+    selectArtifact: language === 'ru' ? 'Выбрать артефакт' : 'Select artifact',
+    selectMapObject: language === 'ru' ? 'Выбрать объект' : 'Select object',
+    selectBuilding: language === 'ru' ? 'Выбрать здание' : 'Select building',
+    addBuilding: language === 'ru' ? 'Добавить здание' : 'Add building',
+    value: language === 'ru' ? 'Значение' : 'Value',
+    guardStrength: language === 'ru' ? 'Сила охраны' : 'Guard Strength',
+    buildingTexture: language === 'ru' ? 'Текстура здания' : 'Building Texture',
+    roadType: language === 'ru' ? 'Тип дороги' : 'Road Type',
+    buildingType: language === 'ru' ? 'Тип строения' : 'Building Type',
+    
+    // Типы зданий
+    creatureBuilding: language === 'ru' ? 'Жилище существ' : 'Creature Dwelling',
+    pandoraBox: language === 'ru' ? 'Сундук Пандоры' : 'Pandora Box',
+    resourceGiver: language === 'ru' ? 'Раздатчик ресурсов' : 'Resource Giver',
+    scriptBuilding: language === 'ru' ? 'Скриптовое здание' : 'Script Building',
+    mageEye: language === 'ru' ? 'Магический глаз' : 'Mage Eye',
+    runicChest: language === 'ru' ? 'Рунический сундук' : 'Runic Chest',
+    artifactXdb: language === 'ru' ? 'Артефакт' : 'Artifact',
+    mapObjectXdb: language === 'ru' ? 'Объект карты' : 'Map Object',
+    xdbRef: language === 'ru' ? 'Xdb Reference' : 'Xdb Reference',
+    defaultBuilding: language === 'ru' ? 'Здание по умолчанию' : 'Default Building',
+    
+    // Диалоги
+    textureDialogTitle: language === 'ru' ? 'Выберите текстуру здания' : 'Select building texture',
+    typeDialogTitle: language === 'ru' ? 'Выберите тип здания' : 'Select building type',
+    artifactDialogTitle: language === 'ru' ? 'Выберите артефакт' : 'Select artifact',
+    mapObjectDialogTitle: language === 'ru' ? 'Выберите объект карты' : 'Select map object',
+    defaultBuildingDialogTitle: language === 'ru' ? 'Выберите здание по умолчанию' : 'Select default building',
+    
+    // Специфические поля
+    scriptBuildingLabel: language === 'ru' ? 'Скриптовое здание' : 'Script Building',
+    scriptBuildingType: language === 'ru' ? 'Тип скриптового здания' : 'Script Building Type',
+    mageEyeLabel: language === 'ru' ? 'Око мага' : 'Mage Eye',
+    coordinateX: language === 'ru' ? 'Координата X' : 'Coordinate X',
+    coordinateY: language === 'ru' ? 'Координата Y' : 'Coordinate Y',
+    radius: language === 'ru' ? 'Радиус' : 'Radius',
+    radiusHelper: language === 'ru' ? 'Радиус открытия тумана войны' : 'Fog of war reveal radius',
+    artifactLabel: language === 'ru' ? 'Артефакт' : 'Artifact',
+    mapObjectLabel: language === 'ru' ? 'Объект карты' : 'Map Object',
+    defaultBuildingLabel: language === 'ru' ? 'Здание по умолчанию' : 'Default Building'
+  };
+
   // Автоматически создаем первый конфиг при монтировании, если нужно
   useEffect(() => {
     if (!state.template.CustomBuildingConfigs || state.template.CustomBuildingConfigs.length === 0) {
@@ -69,310 +120,288 @@ const CustomBuildingsTab: React.FC = () => {
     dispatch({ type: 'UPDATE_FIELD', payload: { path, value } });
   };
 
-    const getConfigTypeName = (config: CustomBuildingConfig): string => {
+  const getConfigTypeName = (config: CustomBuildingConfig): string => {
     const typeKey = Object.keys(buildingTypeDict).find(key => {
-        const configKey = key as keyof CustomBuildingConfig;
-        return config[configKey] !== undefined && config[configKey] !== null;
+      const configKey = key as keyof CustomBuildingConfig;
+      return config[configKey] !== undefined && config[configKey] !== null;
     });
     
-    return typeKey ? buildingTypeDict[typeKey][language] : 'Не выбран';
-    };
+    return typeKey ? buildingTypeDict[typeKey][language] : texts.notSelected;
+  };
 
-const renderSpecificFields = () => {
-  const config = selectedConfig;
-  if (!config) return null;
+  const renderSpecificFields = () => {
+    const config = selectedConfig;
+    if (!config) return null;
 
-  const selectedType = Object.keys(buildingTypeDict).find(key => {
-    const configKey = key as keyof CustomBuildingConfig;
-    return config[configKey] !== undefined && config[configKey] !== null;
-  });
+    const selectedType = Object.keys(buildingTypeDict).find(key => {
+      const configKey = key as keyof CustomBuildingConfig;
+      return config[configKey] !== undefined && config[configKey] !== null;
+    });
 
-  switch (selectedType) {
-    case 'XdbRef':
-      return <XdbRefEditor 
-               value={config.XdbRef || ''}
-               onChange={(value) => updateTemplateField(
-                 `CustomBuildingConfigs.${selectedConfigIndex}.XdbRef`,
-                 value
-               )}
-             />;
-    
-    case 'PandoraBox':
-      return <PandoraBoxEditor
-               config={config.PandoraBox || {}}
-               onConfigChange={(newPandoraConfig) => updateTemplateField(
-                 `CustomBuildingConfigs.${selectedConfigIndex}.PandoraBox`,
-                 newPandoraConfig
-               )}
-             />;
-    case 'ResourceGiver':
-       return (
-          <ResourceGiverEditor
-            config={config.ResourceGiver?.ResourcesConfigs || []}
-            onConfigChange={(newResourcesArray) => updateTemplateField(
-              `CustomBuildingConfigs.${selectedConfigIndex}.ResourceGiver`,
-              { ResourcesConfigs: newResourcesArray } // Просто объект с ResourcesConfigs
+    switch (selectedType) {
+      case 'XdbRef':
+        return <XdbRefEditor 
+                 value={config.XdbRef || ''}
+                 onChange={(value) => updateTemplateField(
+                   `CustomBuildingConfigs.${selectedConfigIndex}.XdbRef`,
+                   value
+                 )}
+               />;
+      
+      case 'PandoraBox':
+        return <PandoraBoxEditor
+                 config={config.PandoraBox || {}}
+                 onConfigChange={(newPandoraConfig) => updateTemplateField(
+                   `CustomBuildingConfigs.${selectedConfigIndex}.PandoraBox`,
+                   newPandoraConfig
+                 )}
+               />;
+      case 'ResourceGiver':
+         return (
+            <ResourceGiverEditor
+              config={config.ResourceGiver?.ResourcesConfigs || []}
+              onConfigChange={(newResourcesArray) => updateTemplateField(
+                `CustomBuildingConfigs.${selectedConfigIndex}.ResourceGiver`,
+                { ResourcesConfigs: newResourcesArray }
+              )}
+            />
+          );
+      case 'CreatureBuilding':
+         return (
+          <CreatureBuildingEditor
+            config={selectedConfig?.CreatureBuilding || {}}
+            onConfigChange={(newCreatureBuildingConfig) => updateTemplateField(
+              `CustomBuildingConfigs.${selectedConfigIndex}.CreatureBuilding`,
+              newCreatureBuildingConfig
             )}
           />
         );
-    case 'CreatureBuilding':
-       return (
-        <CreatureBuildingEditor
-          config={selectedConfig?.CreatureBuilding || {}} // Передаем объект напрямую
-          onConfigChange={(newCreatureBuildingConfig) => updateTemplateField(
-            `CustomBuildingConfigs.${selectedConfigIndex}.CreatureBuilding`,
-            newCreatureBuildingConfig // Принимаем объект
-          )}
-        />
-      );
-    case 'ScriptBuilding':
-      return (
-        <Box sx={{ mt: 2 }}>
-          <Typography variant="h5" gutterBottom>
-            Скриптовое здание
-          </Typography>
-          <TextField
-            select
-            label="Тип скриптового здания"
-            value={config.ScriptBuilding?.ScriptBuilding || ''}
-            onChange={(e) => updateTemplateField(
-              `CustomBuildingConfigs.${selectedConfigIndex}.ScriptBuilding.ScriptBuilding`,
-              e.target.value as ScriptBuilding
+      case 'ScriptBuilding':
+        return (
+          <Box sx={{ mt: 2 }}>
+            <Typography variant="h5" gutterBottom>
+              {texts.scriptBuildingLabel}
+            </Typography>
+            <TextField
+              select
+              label={texts.scriptBuildingType}
+              value={config.ScriptBuilding?.ScriptBuilding || ''}
+              onChange={(e) => updateTemplateField(
+                `CustomBuildingConfigs.${selectedConfigIndex}.ScriptBuilding.ScriptBuilding`,
+                e.target.value as ScriptBuilding
+              )}
+              sx={{ minWidth: 200 }}
+            >
+              {Object.entries(scriptBuildingDict).map(([key, value]) => (
+                <MenuItem key={key} value={key}>
+                  {value[language]}
+                </MenuItem>
+              ))}
+            </TextField>
+          </Box>
+        );
+      case 'MageEye':
+        return (
+          <Box sx={{ mt: 2 }}>
+            <Typography variant="h5" gutterBottom>
+              {texts.mageEyeLabel}
+            </Typography>
+            
+            <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mb: 2 }}>
+              <TextField
+                label={texts.coordinateX}
+                type="number"
+                value={config.MageEye?.CoordinateX || ''}
+                onChange={(e) => updateTemplateField(
+                  `CustomBuildingConfigs.${selectedConfigIndex}.MageEye.CoordinateX`,
+                  e.target.value ? Number(e.target.value) : undefined
+                )}
+                sx={{ minWidth: 120 }}
+                inputProps={{ min: 0 }}
+              />
+              
+              <TextField
+                label={texts.coordinateY}
+                type="number"
+                value={config.MageEye?.CoordinateY || ''}
+                onChange={(e) => updateTemplateField(
+                  `CustomBuildingConfigs.${selectedConfigIndex}.MageEye.CoordinateY`,
+                  e.target.value ? Number(e.target.value) : undefined
+                )}
+                sx={{ minWidth: 120 }}
+                inputProps={{ min: 0 }}
+              />
+            </Box>
+
+            <TextField
+              label={`${texts.radius} (${language === 'ru' ? 'опционально' : 'optional'})`}
+              type="number"
+              value={config.MageEye?.Radius || ''}
+              onChange={(e) => updateTemplateField(
+                `CustomBuildingConfigs.${selectedConfigIndex}.MageEye.Radius`,
+                e.target.value ? parseInt(e.target.value) : undefined
+              )}
+              sx={{ minWidth: 120 }}
+              inputProps={{ min: 0 }}
+              helperText={texts.radiusHelper}
+            />
+          </Box>
+        );
+      case 'RunicChest':
+        return (
+          <RunicChestEditor
+            config={config.RunicChest || {}}
+            onConfigChange={(newRunicChestConfig) => updateTemplateField(
+              `CustomBuildingConfigs.${selectedConfigIndex}.RunicChest`,
+              newRunicChestConfig
             )}
-            sx={{ minWidth: 200 }}
-          >
-            {Object.entries(scriptBuildingDict).map(([key, value]) => (
-              <MenuItem key={key} value={key}>
-                {value[language]}
-              </MenuItem>
-            ))}
-          </TextField>
-        </Box>
-      );
-case 'MageEye':
-  return (
-    <Box sx={{ mt: 2 }}>
-      <Typography variant="h5" gutterBottom>
-        Око мага
-      </Typography>
-      
-      <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap', mb: 2 }}>
-        <TextField
-          label="Координата X"
-          type="number"
-          value={config.MageEye?.CoordinateX || ''}
-          onChange={(e) => updateTemplateField(
-            `CustomBuildingConfigs.${selectedConfigIndex}.MageEye.CoordinateX`,
-            e.target.value ? Number(e.target.value) : undefined
-          )}
-          sx={{ minWidth: 120 }}
-          inputProps={{ min: 0 }}
-        />
-        
-        <TextField
-          label="Координата Y"
-          type="number"
-          value={config.MageEye?.CoordinateY || ''}
-          onChange={(e) => updateTemplateField(
-            `CustomBuildingConfigs.${selectedConfigIndex}.MageEye.CoordinateY`,
-            e.target.value ? Number(e.target.value) : undefined
-          )}
-          sx={{ minWidth: 120 }}
-          inputProps={{ min: 0 }}
-        />
-      </Box>
+          />
+        );
+      case 'ArtifactXdb':
+        return (
+          <Box sx={{ mt: 2 }}>
+            <Typography variant="h5" gutterBottom>
+              {texts.artifactLabel}
+            </Typography>
+            
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
+              <Typography variant="body2">
+                {config.ArtifactXdb?.ArtifactType ? 
+                  artifactTypeDict[config.ArtifactXdb.ArtifactType as ArtifactType]?.[language] || config.ArtifactXdb.ArtifactType 
+                  : texts.notSelected
+                }
+              </Typography>
+              <Button
+                variant="outlined"
+                size="small"
+                onClick={() => setArtifactDialogOpen(true)}
+              >
+                {texts.selectArtifact}
+              </Button>
+            </Box>
 
-      <TextField
-        label="Радиус (опционально)"
-        type="number"
-        value={config.MageEye?.Radius || ''}
-        onChange={(e) => updateTemplateField(
-          `CustomBuildingConfigs.${selectedConfigIndex}.MageEye.Radius`,
-          e.target.value ? parseInt(e.target.value) : undefined
-        )}
-        sx={{ minWidth: 120 }}
-        inputProps={{ min: 0 }}
-        helperText="Радиус открытия тумана войны"
-      />
-    </Box>
-  );
-  case 'RunicChest':
-  return (
-    <RunicChestEditor
-      config={config.RunicChest || {}} // Передаем объект
-      onConfigChange={(newRunicChestConfig) => updateTemplateField(
-        `CustomBuildingConfigs.${selectedConfigIndex}.RunicChest`,
-        newRunicChestConfig // Принимаем объект
-      )}
-    />
-  );
-  case 'ArtifactXdb':
-  return (
-    <Box sx={{ mt: 2 }}>
-      <Typography variant="h5" gutterBottom>
-        Артефакт
-      </Typography>
-      
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
-        <Typography variant="body2">
-          {config.ArtifactXdb?.ArtifactType ? 
-            artifactTypeDict[config.ArtifactXdb.ArtifactType as ArtifactType]?.[language] || config.ArtifactXdb.ArtifactType 
-            : 'Не выбран'
-          }
-        </Typography>
-        <Button
-          variant="outlined"
-          size="small"
-          onClick={() => setArtifactDialogOpen(true)}
-        >
-          Выбрать артефакт
-        </Button>
-      </Box>
+            <SearchableSingleSelectDialog
+              open={artifactDialogOpen}
+              title={texts.artifactDialogTitle}
+              items={artifactTypeDict}
+              selectedItem={config.ArtifactXdb?.ArtifactType || null}
+              onClose={() => setArtifactDialogOpen(false)}
+              onSelect={(selectedArtifact) => {
+                if (selectedArtifact) {
+                  updateTemplateField(
+                    `CustomBuildingConfigs.${selectedConfigIndex}.ArtifactXdb.ArtifactType`,
+                    selectedArtifact
+                  );
+                }
+                setArtifactDialogOpen(false);
+              }}
+            />
+          </Box>
+        );
+      case 'MapObjectXdb':
+        return (
+          <Box sx={{ mt: 2 }}>
+            <Typography variant="h5" gutterBottom>
+              {texts.mapObjectLabel}
+            </Typography>
+            
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
+              <Typography variant="body2">
+                {config.MapObjectXdb?.MapObject ? 
+                  mapObjectDict[config.MapObjectXdb.MapObject as MapObject]?.[language] || config.MapObjectXdb.MapObject 
+                  : texts.notSelected
+                }
+              </Typography>
+              <Button
+                variant="outlined"
+                size="small"
+                onClick={() => setMapObjectDialogOpen(true)}
+              >
+                {texts.selectMapObject}
+              </Button>
+            </Box>
 
-      {/* Диалог выбора артефакта */}
-      <SearchableSingleSelectDialog
-        open={artifactDialogOpen}
-        title="Выберите артефакт"
-        items={artifactTypeDict}
-        selectedItem={config.ArtifactXdb?.ArtifactType || null}
-        onClose={() => setArtifactDialogOpen(false)}
-        onSelect={(selectedArtifact) => {
-          if (selectedArtifact) {
-            updateTemplateField(
-              `CustomBuildingConfigs.${selectedConfigIndex}.ArtifactXdb.ArtifactType`,
-              selectedArtifact
-            );
-          }
-          setArtifactDialogOpen(false);
-        }}
-      />
-    </Box>
-  );
-  case 'MapObjectXdb':
-  return (
-    <Box sx={{ mt: 2 }}>
-      <Typography variant="h5" gutterBottom>
-        Объект карты
-      </Typography>
-      
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
-        <Typography variant="body2">
-          {config.MapObjectXdb?.MapObject ? 
-            mapObjectDict[config.MapObjectXdb.MapObject as MapObject]?.[language] || config.MapObjectXdb.MapObject 
-            : 'Не выбран'
-          }
-        </Typography>
-        <Button
-          variant="outlined"
-          size="small"
-          onClick={() => setMapObjectDialogOpen(true)}
-        >
-          Выбрать объект
-        </Button>
-      </Box>
+            <SearchableSingleSelectDialog
+              open={mapObjectDialogOpen}
+              title={texts.mapObjectDialogTitle}
+              items={mapObjectDict}
+              selectedItem={config.MapObjectXdb?.MapObject || null}
+              onClose={() => setMapObjectDialogOpen(false)}
+              onSelect={(selectedMapObject) => {
+                if (selectedMapObject) {
+                  updateTemplateField(
+                    `CustomBuildingConfigs.${selectedConfigIndex}.MapObjectXdb.MapObject`,
+                    selectedMapObject
+                  );
+                }
+                setMapObjectDialogOpen(false);
+              }}
+            />
+          </Box>
+        );
+      case 'DefaultBuilding':
+        return (
+          <Box sx={{ mt: 2 }}>
+            <Typography variant="h5" gutterBottom>
+              {texts.defaultBuildingLabel}
+            </Typography>
+            
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
+              <Typography variant="body2">
+                {config.DefaultBuilding?.DefaultBuilding ? 
+                  defaultBuildingDict[config.DefaultBuilding.DefaultBuilding as DefaultBuilding]?.[language] || config.DefaultBuilding.DefaultBuilding 
+                  : texts.notSelected
+                }
+              </Typography>
+              <Button
+                variant="outlined"
+                size="small"
+                onClick={() => setDefaultBuildingDialogOpen(true)}
+              >
+                {texts.selectBuilding}
+              </Button>
+            </Box>
 
-      <SearchableSingleSelectDialog
-        open={mapObjectDialogOpen}
-        title="Выберите объект карты"
-        items={mapObjectDict}
-        selectedItem={config.MapObjectXdb?.MapObject || null}
-        onClose={() => setMapObjectDialogOpen(false)}
-        onSelect={(selectedMapObject) => {
-          if (selectedMapObject) {
-            updateTemplateField(
-              `CustomBuildingConfigs.${selectedConfigIndex}.MapObjectXdb.MapObject`,
-              selectedMapObject
-            );
-          }
-          setMapObjectDialogOpen(false);
-        }}
-      />
-    </Box>
-  );
-case 'DefaultBuilding':
-  return (
-    <Box sx={{ mt: 2 }}>
-      <Typography variant="h5" gutterBottom>
-        Здание по умолчанию
-      </Typography>
-      
-      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
-        <Typography variant="body2">
-          {config.DefaultBuilding?.DefaultBuilding ? 
-            defaultBuildingDict[config.DefaultBuilding.DefaultBuilding as DefaultBuilding]?.[language] || config.DefaultBuilding.DefaultBuilding 
-            : 'Не выбрано'
-          }
-        </Typography>
-        <Button
-          variant="outlined"
-          size="small"
-          onClick={() => setDefaultBuildingDialogOpen(true)}
-        >
-          Выбрать здание
-        </Button>
-      </Box>
+            <SearchableSingleSelectDialog
+              open={defaultBuildingDialogOpen}
+              title={texts.defaultBuildingDialogTitle}
+              items={defaultBuildingDict}
+              selectedItem={config.DefaultBuilding?.DefaultBuilding || null}
+              onClose={() => setDefaultBuildingDialogOpen(false)}
+              onSelect={(selectedBuilding) => {
+                if (selectedBuilding) {
+                  updateTemplateField(
+                    `CustomBuildingConfigs.${selectedConfigIndex}.DefaultBuilding.DefaultBuilding`,
+                    selectedBuilding
+                  );
+                }
+                setDefaultBuildingDialogOpen(false);
+              }}
+            />
+          </Box>
+        );
+      default:
+        return null;
+    }
+  };
 
-      <SearchableSingleSelectDialog
-        open={defaultBuildingDialogOpen}
-        title="Выберите здание по умолчанию"
-        items={defaultBuildingDict}
-        selectedItem={config.DefaultBuilding?.DefaultBuilding || null}
-        onClose={() => setDefaultBuildingDialogOpen(false)}
-        onSelect={(selectedBuilding) => {
-          if (selectedBuilding) {
-            updateTemplateField(
-              `CustomBuildingConfigs.${selectedConfigIndex}.DefaultBuilding.DefaultBuilding`,
-              selectedBuilding
-            );
-          }
-          setDefaultBuildingDialogOpen(false);
-        }}
-      />
-    </Box>
-  );
-    // Добавим case для других типов позже
-    default:
-      return null;
-  }
-};
-
-const getDefaultValueForType = (type: string): any => {
-  switch (type) {
-    case 'CreatureBuilding':
-      return {};
-    case 'XdbRef':
-      return '';
-    case 'PandoraBox':
-      return {
-         GoldAmount: [],
-         ExpAmount: [],
-         Artifacts: [],
-         PandoraCreatureConfig: [],
-         Spells: [],
-         Resources: []
+  const getDefaultValueForType = (type: string): any => {
+    switch (type) {
+      case 'CreatureBuilding': return {};
+      case 'XdbRef': return '';
+      case 'PandoraBox': return {
+        GoldAmount: [], ExpAmount: [], Artifacts: [], PandoraCreatureConfig: [], Spells: [], Resources: []
       };
-    case 'ResourceGiver':
-      return { ResourcesConfigs: [] };
-    case 'ScriptBuilding':
-      return { ScriptBuilding: ScriptBuilding.TowerPortal };
-    case 'MageEye':
-      return {
-        CoordinateX: 0, // int64
-        CoordinateY: 0, // int64
-        Radius: undefined // optional Int32
-      };
-    case 'RunicChest':
-      return { Runes: [], RuneTiers: [] };
-    case 'ArtifactXdb':
-      return {};
-    case 'MapObjectXdb':
-      return {};
-    case 'DefaultBuilding':
-      return {};
-    default:
-      return undefined;
-  }
-};
+      case 'ResourceGiver': return { ResourcesConfigs: [] };
+      case 'ScriptBuilding': return { ScriptBuilding: ScriptBuilding.TowerPortal };
+      case 'MageEye': return { CoordinateX: 0, CoordinateY: 0, Radius: undefined };
+      case 'RunicChest': return { Runes: [], RuneTiers: [] };
+      case 'ArtifactXdb': return {};
+      case 'MapObjectXdb': return {};
+      case 'DefaultBuilding': return {};
+      default: return undefined;
+    }
+  };
 
   // Добавление нового конфига
   const addNewConfig = () => {
@@ -387,12 +416,11 @@ const getDefaultValueForType = (type: string): any => {
   // Удаление конфига
   const deleteConfig = (index: number) => {
     const currentConfigs = state.template.CustomBuildingConfigs || [];
-    if (currentConfigs.length <= 1) return; // Не удаляем последний конфиг
+    if (currentConfigs.length <= 1) return;
 
     const updatedConfigs = currentConfigs.filter((_, i) => i !== index);
     updateTemplateField('CustomBuildingConfigs', updatedConfigs);
 
-    // Корректируем индекс выбранного конфига
     if (index === selectedConfigIndex) {
       setSelectedConfigIndex(0);
     } else if (index < selectedConfigIndex) {
@@ -413,7 +441,7 @@ const getDefaultValueForType = (type: string): any => {
       {/* Боковая панель с конфигами */}
       <Box sx={{ minWidth: 250, borderRight: '1px solid #ccc', pr: 2 }}>
         <Typography variant="h6" gutterBottom>
-          Конфигурации зданий
+          {texts.configsTitle}
         </Typography>
         <List>
           {configs.map((config, index) => (
@@ -433,8 +461,8 @@ const getDefaultValueForType = (type: string): any => {
                 onClick={() => selectConfig(index)}
               >
                 <ListItemText
-                  primary={`Тип здания: ${getConfigTypeName(config)}`}
-                  secondary={config.Id ? `id: ${config.Id}` : 'Нет значения'}
+                  primary={`${language === 'ru' ? 'Тип здания' : 'Building Type'}: ${getConfigTypeName(config)}`}
+                  secondary={config.Id ? `ID: ${config.Id}` : texts.noValue}
                 />
               </ListItemButton>
             </ListItem>
@@ -447,23 +475,23 @@ const getDefaultValueForType = (type: string): any => {
           fullWidth
           sx={{ mt: 2 }}
         >
-          Добавить здание
+          {texts.addBuilding}
         </Button>
       </Box>
 
       {/* Основная область редактирования */}
       <Box sx={{ flex: 1 }}>
         <Typography variant="h5" gutterBottom>
-          Custom Building Configuration
+          {texts.title}
         </Typography>
 
         {configs.length === 0 ? (
-          <Typography>Загрузка конфигов...</Typography>
+          <Typography>{texts.loading}</Typography>
         ) : (
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, maxWidth: 600 }}>
             {/* Поле Value */}
             <TextField
-              label="Value"
+              label={texts.value}
               type="number"
               value={selectedConfig?.Value || ''}
               onChange={(e) =>
@@ -476,7 +504,7 @@ const getDefaultValueForType = (type: string): any => {
 
             {/* Поле Guard Strength */}
             <TextField
-              label="Guard Strength"
+              label={texts.guardStrength}
               type="number"
               value={selectedConfig?.GuardStrenght || ''}
               onChange={(e) =>
@@ -490,7 +518,7 @@ const getDefaultValueForType = (type: string): any => {
             {/* Поле Building Texture (диалог) */}
             <Box>
               <Typography variant="subtitle1" gutterBottom>
-                Building Texture (Текстура здания)
+                {texts.buildingTexture}
               </Typography>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
                 {selectedConfig?.BuildingTexture && (
@@ -512,7 +540,7 @@ const getDefaultValueForType = (type: string): any => {
                   size="small"
                   onClick={() => setTextureDialogOpen(true)}
                 >
-                  Выбрать текстуру
+                  {texts.selectTexture}
                 </Button>
               </Box>
             </Box>
@@ -520,7 +548,7 @@ const getDefaultValueForType = (type: string): any => {
             {/* Поле Road Type (выпадающий список) */}
             <TextField
               select
-              label="Road Type"
+              label={texts.roadType}
               value={selectedConfig?.RoadType || ''}
               onChange={(e) =>
                 updateTemplateField(
@@ -528,7 +556,7 @@ const getDefaultValueForType = (type: string): any => {
                   e.target.value
                 )
               }
-              helperText="Тип дороги"
+              helperText={texts.roadType}
             >
               {Object.entries(roadTypeDict).map(([key, value]) => (
                 <MenuItem key={key} value={key}>
@@ -540,23 +568,18 @@ const getDefaultValueForType = (type: string): any => {
             {/* Поле Building Type (диалог) */}
             <Box>
               <Typography variant="subtitle1" gutterBottom>
-                Building Type (Тип строения)
+                {texts.buildingType}
               </Typography>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
                 <Typography variant="body2">
-                  {selectedConfig ? (
-                    (Object.keys(buildingTypeDict).find(key => {
-                      const configKey = key as keyof CustomBuildingConfig;
-                      return selectedConfig[configKey] !== undefined && selectedConfig[configKey] !== null;
-                    }) || 'Не выбран')
-                  ) : 'Не выбран'}
+                  {selectedConfig ? getConfigTypeName(selectedConfig) : texts.notSelected}
                 </Typography>
                 <Button
                   variant="outlined"
                   size="small"
                   onClick={() => setTypeDialogOpen(true)}
                 >
-                  Выбрать тип
+                  {texts.selectType}
                 </Button>
               </Box>
             </Box>
@@ -570,7 +593,7 @@ const getDefaultValueForType = (type: string): any => {
       {/* Диалоги */}
       <SearchableSingleSelectDialog
         open={textureDialogOpen}
-        title="Выберите текстуру здания"
+        title={texts.textureDialogTitle}
         items={buildingTextureConfigDict}
         selectedItem={selectedConfig?.BuildingTexture || null}
         onClose={() => setTextureDialogOpen(false)}
@@ -587,7 +610,7 @@ const getDefaultValueForType = (type: string): any => {
 
       <SearchableSingleSelectDialog
         open={typeDialogOpen}
-        title="Выберите тип здания"
+        title={texts.typeDialogTitle}
         items={buildingTypeDict}
         selectedItem={null}
         onClose={() => setTypeDialogOpen(false)}
@@ -613,7 +636,7 @@ const getDefaultValueForType = (type: string): any => {
         }}
       />
     </Box>
-);
+  );
 };
 
 export default CustomBuildingsTab;

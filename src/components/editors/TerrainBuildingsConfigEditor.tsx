@@ -5,7 +5,7 @@ import {
   FormControlLabel,
   Switch,
   Button,
-  Chip, // Добавляем Chip
+  Chip,
 } from '@mui/material';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { useTemplate } from '../../contexts/TemplateContext';
@@ -73,17 +73,13 @@ const TerrainBuildingsConfigEditor: React.FC<TerrainBuildingsConfigEditorProps> 
         <Box sx={{ mt: 2 }}>
           {/* Здания для удаления с отображением */}
           <Box sx={{ mb: 2 }}>
-            <Typography variant="subtitle1" gutterBottom>
-              {language === 'ru' ? 'Здания для удаления' : 'Buildings to delete'}
-            </Typography>
-            
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 1, minHeight: '40px' }}>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 1, minHeight: '15px' }}>
               {value.BuildingsToDelete?.map((mapObject: MapObject) => (
                 <Chip
                   key={mapObject}
                   label={getMapObjectName(mapObject)}
                   onDelete={() => {
-                    const updated = value.BuildingsToDelete.filter((obj: MapObject) => obj !== mapObject);
+                    const updated = (value.BuildingsToDelete || []).filter((obj: MapObject) => obj !== mapObject);
                     onChange({
                       ...value,
                       BuildingsToDelete: updated.length > 0 ? updated : undefined
@@ -104,17 +100,13 @@ const TerrainBuildingsConfigEditor: React.FC<TerrainBuildingsConfigEditorProps> 
 
           {/* Здания для добавления с отображением */}
           <Box sx={{ mb: 2 }}>
-            <Typography variant="subtitle1" gutterBottom>
-              {language === 'ru' ? 'Здания для добавления' : 'Buildings to add'}
-            </Typography>
-            
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 1, minHeight: '40px' }}>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 1, minHeight: '15px' }}>
               {value.BuildingsToAdd?.map((id: number) => (
                 <Chip
                   key={id}
                   label={`ID: ${id}`}
                   onDelete={() => {
-                    const updated = value.BuildingsToAdd.filter((buildingId: number) => buildingId !== id);
+                    const updated = (value.BuildingsToAdd || []).filter((buildingId: number) => buildingId !== id);
                     onChange({
                       ...value,
                       BuildingsToAdd: updated.length > 0 ? updated : undefined
@@ -134,7 +126,7 @@ const TerrainBuildingsConfigEditor: React.FC<TerrainBuildingsConfigEditorProps> 
           </Box>
         </Box>
       )}
-      
+
       {/* Диалоги выбора зданий */}
       <SearchableMultiSelectDialog
         open={buildingsToDeleteDialogOpen}

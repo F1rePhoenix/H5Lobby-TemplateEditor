@@ -13,16 +13,14 @@ import {
   Paper,
   FormControlLabel,
   Switch,
-  Tabs,
-  Tab,
+  Chip,
 } from '@mui/material';
 import { Add as AddIcon, Delete as DeleteIcon } from '@mui/icons-material';
 import { useTemplate } from '../../contexts/TemplateContext';
 import { useLanguage } from '../../contexts/LanguageContext';
-import { terrainTypeDict } from '../../dictionaries/enumsDict';
+import { terrainTypeDict, mapObjectDict } from '../../dictionaries/enumsDict';
 import { TerrainType, MapObject } from '../../types/enums';
 import SearchableMultiSelectDialog from '../../components/common/SearchableMultiSelectDialog';
-import { mapObjectDict } from '../../dictionaries/enumsDict';
 import TerrainBuildingsConfigEditor from '../../components/editors/TerrainBuildingsConfigEditor';
 
 const TerrainsTab: React.FC = () => {
@@ -34,6 +32,17 @@ const TerrainsTab: React.FC = () => {
   const [mirrorTerrainEnabled, setMirrorTerrainEnabled] = useState(false);
   const [buildingsToDeleteDialogOpen, setBuildingsToDeleteDialogOpen] = useState(false);
   const [buildingsToAddDialogOpen, setBuildingsToAddDialogOpen] = useState(false);
+
+  // Маппинг вкладок для выпадающего списка
+  const tabOptions = [
+    { value: 0, label: language === 'ru' ? 'Удача/Мораль' : 'Luck/Morale', key: 'NewLuckMoraleBuildings' },
+    { value: 1, label: language === 'ru' ? 'Магазины' : 'Shops', key: 'NewShopBuildings' },
+    { value: 2, label: language === 'ru' ? 'Ресурсы' : 'Resources', key: 'NewResourceGivers' },
+    { value: 3, label: language === 'ru' ? 'Улучшения' : 'Upgrades', key: 'NewUpgradeBuildings' },
+    { value: 4, label: language === 'ru' ? 'Святилища' : 'Shrines', key: 'NewShrines' },
+    { value: 5, label: language === 'ru' ? 'Сокровищницы' : 'Treasuries', key: 'NewTreasuryBuildings' },
+    { value: 6, label: language === 'ru' ? 'Баффы' : 'Buffs', key: 'NewBuffBuildings' }
+  ];
 
   // Автоматически создаем первую конфигурацию террейна при монтировании
   useEffect(() => {
@@ -84,10 +93,6 @@ const TerrainsTab: React.FC = () => {
     setMirrorTerrainEnabled(false);
   };
 
-  const handleTabChange = (event: React.SyntheticEvent, newValue: number) => {
-    setActiveTab(newValue);
-  };
-
   const selectedTerrain = state.template.TerrainConfig?.[selectedTerrainIndex];
   const terrains = state.template.TerrainConfig || [];
   const customBuildings = state.template.CustomBuildingConfigs || [];
@@ -114,6 +119,11 @@ const TerrainsTab: React.FC = () => {
     const terrainType = terrain.TerrainType as TerrainType;
     const terrainName = terrainTypeDict[terrainType]?.[language] || (language === 'ru' ? 'Не выбрано' : 'Not selected');
     return terrainName;
+  };
+
+  // Функция для получения названия MapObject
+  const getMapObjectName = (mapObject: MapObject) => {
+    return mapObjectDict[mapObject]?.[language] || mapObject;
   };
 
   if (!selectedTerrain) {
@@ -217,10 +227,23 @@ const TerrainsTab: React.FC = () => {
           {/* BuildingsToDelete и BuildingsToAdd - скрываем при зеркальном террейне */}
           {!mirrorTerrainEnabled && (
             <>
+              {/* Здания для удаления с отображением выбранных */}
               <Box sx={{ mb: 2 }}>
-                <Typography variant="subtitle1" gutterBottom>
-                  {language === 'ru' ? 'Здания для удаления' : 'Buildings to delete'}
-                </Typography>
+                {/* Отображение выбранных зданий */}
+                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 1, minHeight: '15px' }}>
+                  {selectedTerrain.BuildingsToDelete?.map((mapObject: MapObject) => (
+                    <Chip
+                      key={mapObject}
+                      label={getMapObjectName(mapObject)}
+                      onDelete={() => {
+                        const updated = (selectedTerrain.BuildingsToDelete || []).filter((obj: MapObject) => obj !== mapObject);
+                        updateTerrainField('BuildingsToDelete', updated.length > 0 ? updated : undefined);
+                      }}
+                      size="small"
+                    />
+                  ))}
+                </Box>
+                
                 <Button
                   variant="outlined"
                   onClick={() => setBuildingsToDeleteDialogOpen(true)}
@@ -229,10 +252,23 @@ const TerrainsTab: React.FC = () => {
                 </Button>
               </Box>
 
+              {/* Здания для добавления с отображением выбранных */}
               <Box sx={{ mb: 2 }}>
-                <Typography variant="subtitle1" gutterBottom>
-                  {language === 'ru' ? 'Здания для добавления' : 'Buildings to add'}
-                </Typography>
+                {/* Отображение выбранных ID */}
+                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 1, minHeight: '15px' }}>
+                  {selectedTerrain.BuildingsToAdd?.map((id: number) => (
+                    <Chip
+                      key={id}
+                      label={`ID: ${id}`}
+                      onDelete={() => {
+                        const updated = (selectedTerrain.BuildingsToAdd || []).filter((buildingId: number) => buildingId !== id);
+                        updateTerrainField('BuildingsToAdd', updated.length > 0 ? updated : undefined);
+                      }}
+                      size="small"
+                    />
+                  ))}
+                </Box>
+                
                 <Button
                   variant="outlined"
                   onClick={() => setBuildingsToAddDialogOpen(true)}
@@ -251,15 +287,21 @@ const TerrainsTab: React.FC = () => {
               {language === 'ru' ? 'Конфигурации зданий' : 'Buildings configurations'}
             </Typography>
             
-            <Tabs value={activeTab} onChange={handleTabChange} sx={{ mb: 2 }}>
-              <Tab label={language === 'ru' ? 'Удача/Мораль' : 'Luck/Morale'} />
-              <Tab label={language === 'ru' ? 'Магазины' : 'Shops'} />
-              <Tab label={language === 'ru' ? 'Ресурсы' : 'Resources'} />
-              <Tab label={language === 'ru' ? 'Улучшения' : 'Upgrades'} />
-              <Tab label={language === 'ru' ? 'Святилища' : 'Shrines'} />
-              <Tab label={language === 'ru' ? 'Сокровищницы' : 'Treasuries'} />
-              <Tab label={language === 'ru' ? 'Баффы' : 'Buffs'} />
-            </Tabs>
+            {/* Выпадающий список вместо вкладок */}
+            <TextField
+              select
+              label={language === 'ru' ? 'Тип зданий' : 'Building type'}
+              value={activeTab}
+              onChange={(e) => setActiveTab(Number(e.target.value))}
+              sx={{ mb: 2 }}
+              fullWidth
+            >
+              {tabOptions.map((tab) => (
+                <MenuItem key={tab.value} value={tab.value}>
+                  {tab.label}
+                </MenuItem>
+              ))}
+            </TextField>
 
             <Box sx={{ pt: 2 }}>
               {activeTab === 0 && (

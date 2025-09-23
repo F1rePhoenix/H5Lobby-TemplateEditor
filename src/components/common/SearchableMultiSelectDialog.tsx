@@ -32,6 +32,14 @@ const SearchableMultiSelectDialog: React.FC<SearchableMultiSelectDialogProps> = 
   const [tempSelected, setTempSelected] = useState<string[]>(selectedItems);
   const [searchTerm, setSearchTerm] = useState('');
 
+  // Тексты на двух языках
+  const texts = {
+    searchPlaceholder: language === 'ru' ? 'Поиск...' : 'Search...',
+    noResults: language === 'ru' ? 'Ничего не найдено' : 'No results found',
+    cancel: language === 'ru' ? 'Отмена' : 'Cancel',
+    save: language === 'ru' ? 'Сохранить' : 'Save',
+  };
+
   // Синхронизируем tempSelected с selectedItems при открытии диалога
   useEffect(() => {
     if (open) {
@@ -67,14 +75,29 @@ const SearchableMultiSelectDialog: React.FC<SearchableMultiSelectDialogProps> = 
   };
 
   return (
-    <Dialog open={open} onClose={handleClose} maxWidth="lg" fullWidth>
+    <Dialog 
+      open={open} 
+      onClose={handleClose} 
+      maxWidth="lg" 
+      fullWidth
+      sx={{
+        '& .MuiDialog-container': {
+          alignItems: 'flex-start',
+          mt: 2
+        }
+      }}
+    >
       <DialogTitle>{title}</DialogTitle>
-      <DialogContent>
+      <DialogContent sx={{ 
+        display: 'flex', 
+        flexDirection: 'column',
+        overflow: 'hidden' // Убираем внутренний скролл
+      }}>
         {/* Поле поиска */}
-        <Box sx={{ mb: 2 }}>
+        <Box sx={{ mb: 2, flexShrink: 0 }}>
           <TextField
             fullWidth
-            placeholder="Поиск..."
+            placeholder={texts.searchPlaceholder}
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             InputProps={{
@@ -83,14 +106,16 @@ const SearchableMultiSelectDialog: React.FC<SearchableMultiSelectDialogProps> = 
           />
         </Box>
 
-        {/* Список элементов с фиксированным размером кнопок */}
+        {/* Список элементов - исправляем проблему со скроллом */}
         <Box sx={{ 
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))',
           gap: 1,
-          maxHeight: '400px',
-          overflow: 'auto',
-          p: 1
+          maxHeight: '60vh', // Ограничиваем высоту относительно viewport
+          overflow: 'auto', // Только один скролл
+          p: 1,
+          flex: 1,
+          minHeight: 0 // Важно для правильной работы flexbox
         }}>
           {filteredItems.map(([key, value]) => (
             <Button
@@ -110,23 +135,29 @@ const SearchableMultiSelectDialog: React.FC<SearchableMultiSelectDialogProps> = 
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                fontSize: '0.875rem'
+                fontSize: '0.8rem'
               }}
             >
               {value[language]}
             </Button>
           ))}
         </Box>
+        
         {filteredItems.length === 0 && (
-          <Box sx={{ textAlign: 'center', py: 2, color: 'text.secondary' }}>
-            Ничего не найдено
+          <Box sx={{ 
+            textAlign: 'center', 
+            py: 2, 
+            color: 'text.secondary',
+            flexShrink: 0 
+          }}>
+            {texts.noResults}
           </Box>
         )}
       </DialogContent>
-      <DialogActions>
-        <Button onClick={handleClose}>Отмена</Button>
+      <DialogActions sx={{ flexShrink: 0 }}>
+        <Button onClick={handleClose}>{texts.cancel}</Button>
         <Button onClick={handleSave} variant="contained">
-          Сохранить ({tempSelected.length})
+          {texts.save} ({tempSelected.length})
         </Button>
       </DialogActions>
     </Dialog>

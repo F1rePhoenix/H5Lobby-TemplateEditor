@@ -41,6 +41,7 @@ const createInitialTemplate = (): Template => ({
   CustomBuildingConfigs: [],
   TerrainConfig: [],
   StartBuildingConfigs: [],
+  SpecificCastlesStartBuildings: [],
   ScriptFeaturesConfig: {
     CastleCaptureProps: {
       CoordinateX: 0,

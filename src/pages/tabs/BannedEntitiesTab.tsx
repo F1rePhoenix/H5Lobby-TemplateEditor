@@ -54,6 +54,42 @@ const BannedEntitiesTab: React.FC<{
   const commonBannedSkills = state.template.EntitiesBanConfig?.BannedBases?.CommonBannedSkills || [];
   const skillsBannedForClass = state.template.EntitiesBanConfig?.BannedBases?.SkillsBannedForClass || [];
 
+  // Тексты на двух языках
+  const texts = {
+    title: language === 'ru' ? 'Бан сущностей' : 'Entities Ban',
+    generalBan: language === 'ru' ? 'Общий бан' : 'General Ban',
+    baseSkillsBan: language === 'ru' ? 'Бан базовых навыков' : 'Base Skills Ban',
+    
+    // Вкладка 0 - Общий бан
+    bannedHeroes: language === 'ru' ? 'Забаненные герои' : 'Banned Heroes',
+    bannedSpells: language === 'ru' ? 'Забаненные заклинания' : 'Banned Spells',
+    bannedArtifacts: language === 'ru' ? 'Забаненные артефакты' : 'Banned Artifacts',
+    banSettings: language === 'ru' ? 'Настройки бана' : 'Ban Settings',
+    banMaradeurLabel: language === 'ru' ? 'Забанить мародерство' : 'Ban Marauder',
+    
+    addHeroes: language === 'ru' ? 'Добавить героев' : 'Add Heroes',
+    addSpells: language === 'ru' ? 'Добавить заклинания' : 'Add Spells',
+    addArtifacts: language === 'ru' ? 'Добавить артефакты' : 'Add Artifacts',
+    
+    selectHeroes: language === 'ru' ? 'Выберите героев для бана' : 'Select heroes to ban',
+    selectSpells: language === 'ru' ? 'Выберите заклинания для бана' : 'Select spells to ban',
+    selectArtifacts: language === 'ru' ? 'Выберите артефакты для бана' : 'Select artifacts to ban',
+    
+    // Вкладка 1 - Бан базовых навыков
+    commonBannedSkills: language === 'ru' ? 'Общие запрещенные навыки' : 'Common Banned Skills',
+    classBannedSkills: language === 'ru' ? 'Навыки запрещенные по классам' : 'Class Banned Skills',
+    heroClass: language === 'ru' ? 'Класс героя' : 'Hero Class',
+    selectClass: language === 'ru' ? 'Выберите класс' : 'Select class',
+    noClassConfigs: language === 'ru' ? 'Нет добавленных конфигураций классов' : 'No class configurations added',
+    
+    addCommonSkills: language === 'ru' ? 'Добавить общие навыки' : 'Add Common Skills',
+    addClassSkills: language === 'ru' ? 'Добавить навыки для класса' : 'Add Skills for Class',
+    addClassConfig: language === 'ru' ? 'Добавить конфигурацию класса' : 'Add Class Configuration',
+    
+    selectCommonSkills: language === 'ru' ? 'Выберите общие запрещенные навыки' : 'Select common banned skills',
+    selectClassSkills: language === 'ru' ? 'Выберите навыки для' : 'Select skills for',
+  };
+
   // Получение доступных классов для выбора (исключая уже выбранные)
   const getAvailableClasses = () => {
     const usedClasses = skillsBannedForClass.map(config => config.Class);
@@ -113,19 +149,19 @@ const BannedEntitiesTab: React.FC<{
 
   // Добавление новой конфигурации бана по классу
   const addClassBanConfig = () => {
-  const availableClasses = getAvailableClasses();
-  const firstAvailableClass = Object.keys(availableClasses)[0] as HeroClassType;
-  
-  if (firstAvailableClass) {
-    const newConfig: ClassBanConfig = {
-      Class: firstAvailableClass,
-      Skills: [] // Обязательно инициализируем пустым массивом
-    };
-    const updatedConfigs = [...skillsBannedForClass, newConfig];
-    updateTemplateField('EntitiesBanConfig.BannedBases.SkillsBannedForClass', updatedConfigs);
-    setClassTab(updatedConfigs.length - 1);
-  }
-};
+    const availableClasses = getAvailableClasses();
+    const firstAvailableClass = Object.keys(availableClasses)[0] as HeroClassType;
+    
+    if (firstAvailableClass) {
+      const newConfig: ClassBanConfig = {
+        Class: firstAvailableClass,
+        Skills: []
+      };
+      const updatedConfigs = [...skillsBannedForClass, newConfig];
+      updateTemplateField('EntitiesBanConfig.BannedBases.SkillsBannedForClass', updatedConfigs);
+      setClassTab(updatedConfigs.length - 1);
+    }
+  };
 
   // Удаление конфигурации бана по классу
   const removeClassBanConfig = (index: number) => {
@@ -138,30 +174,31 @@ const BannedEntitiesTab: React.FC<{
   };
 
   // Изменение класса в конфигурации
-const updateClassInConfig = (index: number, newClass: HeroClassType) => {
-  if (!newClass) return; // Защита от пустого значения
-  
-  const updatedConfigs = skillsBannedForClass.map((config, i) => 
-    i === index ? { ...config, Class: newClass } : config
-  );
-  updateTemplateField('EntitiesBanConfig.BannedBases.SkillsBannedForClass', updatedConfigs);
-};
+  const updateClassInConfig = (index: number, newClass: HeroClassType) => {
+    if (!newClass) return;
+    
+    const updatedConfigs = skillsBannedForClass.map((config, i) => 
+      i === index ? { ...config, Class: newClass } : config
+    );
+    updateTemplateField('EntitiesBanConfig.BannedBases.SkillsBannedForClass', updatedConfigs);
+  };
+
   return (
     <Box sx={{ p: 3 }}>
       <Typography variant="h4" gutterBottom>
-        Бан сущностей
+        {texts.title}
       </Typography>
 
       <Tabs value={activeTab} onChange={(_, newValue) => setActiveTab(newValue)} sx={{ mb: 3 }}>
-        <Tab label="Общий бан" />
-        <Tab label="Бан базовых навыков" />
+        <Tab label={texts.generalBan} />
+        <Tab label={texts.baseSkillsBan} />
       </Tabs>
 
       {activeTab === 0 && (
         <Box>
           {/* Забаненные герои */}
           <Paper sx={{ p: 3, mb: 3 }}>
-            <Typography variant="h6" gutterBottom>Забаненные герои</Typography>
+            <Typography variant="h6" gutterBottom>{texts.bannedHeroes}</Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
               {bannedHeroes.map((hero) => (
                 <Chip
@@ -174,15 +211,15 @@ const updateClassInConfig = (index: number, newClass: HeroClassType) => {
             <Button
               variant="outlined"
               startIcon={<AddIcon />}
-              onClick={() => openSelectionDialog('heroes', 'EntitiesBanConfig.BannedHeroes', 'Выберите героев для бана')}
+              onClick={() => openSelectionDialog('heroes', 'EntitiesBanConfig.BannedHeroes', texts.selectHeroes)}
             >
-              Добавить героев
+              {texts.addHeroes}
             </Button>
           </Paper>
 
           {/* Забаненные заклинания */}
           <Paper sx={{ p: 3, mb: 3 }}>
-            <Typography variant="h6" gutterBottom>Забаненные заклинания</Typography>
+            <Typography variant="h6" gutterBottom>{texts.bannedSpells}</Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
               {bannedSpells.map((spell) => (
                 <Chip
@@ -195,15 +232,15 @@ const updateClassInConfig = (index: number, newClass: HeroClassType) => {
             <Button
               variant="outlined"
               startIcon={<AddIcon />}
-              onClick={() => openSelectionDialog('spells', 'EntitiesBanConfig.BannedSpells', 'Выберите заклинания для бана')}
+              onClick={() => openSelectionDialog('spells', 'EntitiesBanConfig.BannedSpells', texts.selectSpells)}
             >
-              Добавить заклинания
+              {texts.addSpells}
             </Button>
           </Paper>
 
           {/* Забаненные артефакты */}
           <Paper sx={{ p: 3, mb: 3 }}>
-            <Typography variant="h6" gutterBottom>Забаненные артефакты</Typography>
+            <Typography variant="h6" gutterBottom>{texts.bannedArtifacts}</Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
               {bannedArtifacts.map((artifact) => (
                 <Chip
@@ -216,15 +253,15 @@ const updateClassInConfig = (index: number, newClass: HeroClassType) => {
             <Button
               variant="outlined"
               startIcon={<AddIcon />}
-              onClick={() => openSelectionDialog('artifacts', 'EntitiesBanConfig.BannedArtifacts', 'Выберите артефакты для бана')}
+              onClick={() => openSelectionDialog('artifacts', 'EntitiesBanConfig.BannedArtifacts', texts.selectArtifacts)}
             >
-              Добавить артефакты
+              {texts.addArtifacts}
             </Button>
           </Paper>
 
           {/* Бан мародерства */}
           <Paper sx={{ p: 3 }}>
-            <Typography variant="h6" gutterBottom>Настройки бана</Typography>
+            <Typography variant="h6" gutterBottom>{texts.banSettings}</Typography>
             <FormControlLabel
               control={
                 <Switch
@@ -232,7 +269,7 @@ const updateClassInConfig = (index: number, newClass: HeroClassType) => {
                   onChange={(e) => updateTemplateField('EntitiesBanConfig.BanMaradeur', e.target.checked)}
                 />
               }
-              label="Забанить мародерство"
+              label={texts.banMaradeurLabel}
             />
           </Paper>
         </Box>
@@ -241,11 +278,11 @@ const updateClassInConfig = (index: number, newClass: HeroClassType) => {
       {activeTab === 1 && (
         <Box>
           <Paper sx={{ p: 3 }}>
-            <Typography variant="h6" gutterBottom>Бан базовых навыков</Typography>
+            <Typography variant="h6" gutterBottom>{texts.baseSkillsBan}</Typography>
             
             {/* Общие запрещенные навыки */}
             <Box sx={{ mb: 4 }}>
-              <Typography variant="subtitle1" gutterBottom>Общие запрещенные навыки</Typography>
+              <Typography variant="subtitle1" gutterBottom>{texts.commonBannedSkills}</Typography>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
                 {commonBannedSkills.map((skill) => (
                   <Chip
@@ -258,18 +295,18 @@ const updateClassInConfig = (index: number, newClass: HeroClassType) => {
               <Button
                 variant="outlined"
                 startIcon={<AddIcon />}
-                onClick={() => openSelectionDialog('commonBases', 'EntitiesBanConfig.BannedBases.CommonBannedSkills', 'Выберите общие запрещенные навыки')}
+                onClick={() => openSelectionDialog('commonBases', 'EntitiesBanConfig.BannedBases.CommonBannedSkills', texts.selectCommonSkills)}
               >
-                Добавить общие навыки
+                {texts.addCommonSkills}
               </Button>
             </Box>
 
             {/* Навыки запрещенные по классам */}
             <Box sx={{ mb: 3 }}>
-              <Typography variant="subtitle1" gutterBottom>Навыки запрещенные по классам</Typography>
+              <Typography variant="subtitle1" gutterBottom>{texts.classBannedSkills}</Typography>
               
               {skillsBannedForClass.length === 0 ? (
-                <Typography sx={{ mb: 2 }}>Нет добавленных конфигураций классов</Typography>
+                <Typography sx={{ mb: 2 }}>{texts.noClassConfigs}</Typography>
               ) : (
                 <Box>
                   <Tabs 
@@ -280,7 +317,7 @@ const updateClassInConfig = (index: number, newClass: HeroClassType) => {
                   >
                     {skillsBannedForClass.map((config, index) => (
                       <Tab
-                        key={`${config.Class}-${index}`} // Добавляем ключ с классом и индексом
+                        key={`${config.Class}-${index}`}
                         label={heroClassTypeDict[config.Class]?.[language] || config.Class}
                       />
                     ))}
@@ -291,19 +328,19 @@ const updateClassInConfig = (index: number, newClass: HeroClassType) => {
                       <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
                         <TextField
                           select
-                          label="Класс героя"
+                          label={texts.heroClass}
                           value={config.Class || ''}
                           onChange={(e) => updateClassInConfig(index, e.target.value as HeroClassType)}
                           sx={{ minWidth: 200 }}
                         >
                           <MenuItem value="" disabled>
-                            Выберите класс
+                            {texts.selectClass}
                           </MenuItem>
                           {Object.entries(heroClassTypeDict).map(([key, value]) => (
                             <MenuItem 
                               key={key} 
                               value={key}
-                              disabled={skillsBannedForClass.some((c, i) => i !== index && c.Class === key)} // Отключаем уже выбранные классы (кроме текущего)
+                              disabled={skillsBannedForClass.some((c, i) => i !== index && c.Class === key)}
                             >
                               {value[language]}
                             </MenuItem>
@@ -330,9 +367,14 @@ const updateClassInConfig = (index: number, newClass: HeroClassType) => {
                         <Button
                           variant="outlined"
                           startIcon={<AddIcon />}
-                          onClick={() => openSelectionDialog('classBases', '', `Выберите навыки для ${heroClassTypeDict[config.Class]?.[language]}`, index)}
+                          onClick={() => openSelectionDialog(
+                            'classBases', 
+                            '', 
+                            `${texts.selectClassSkills} ${heroClassTypeDict[config.Class]?.[language]}`,
+                            index
+                          )}
                         >
-                          Добавить навыки для класса
+                          {texts.addClassSkills}
                         </Button>
                       </Box>
                     </Box>
@@ -347,7 +389,7 @@ const updateClassInConfig = (index: number, newClass: HeroClassType) => {
                 disabled={Object.keys(getAvailableClasses()).length === 0}
                 sx={{ mt: 2 }}
               >
-                Добавить конфигурацию класса
+                {texts.addClassConfig}
               </Button>
             </Box>
           </Paper>

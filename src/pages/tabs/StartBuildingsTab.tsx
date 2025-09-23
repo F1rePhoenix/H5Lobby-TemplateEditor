@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Box,
   Typography,
@@ -11,35 +11,70 @@ import {
   List,
   ListItem,
   ListItemText,
-  ListItemSecondaryAction,
   IconButton,
   ListItemButton,
+  Paper,
+  Collapse,
+  Divider,
 } from '@mui/material';
-import { Add as AddIcon, Delete as DeleteIcon } from '@mui/icons-material';
-import InfoTooltip from '../../components/common/InfoTooltip';
+import { Add as AddIcon, Delete as DeleteIcon, ExpandMore as ExpandMoreIcon, ExpandLess as ExpandLessIcon } from '@mui/icons-material';
 import { useTemplate } from '../../contexts/TemplateContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { buildingModeDict, castleTypeDict, terrainTypeDict, buildingTypeDict } from '../../dictionaries/enumsDict';
 import SearchableMultiSelectDialog from '../../components/common/SearchableMultiSelectDialog';
-import { TerrainType, CastleType } from '../../types/enums';
+import { TerrainType, CastleType, BuildingType } from '../../types/enums';
+import { SpecificCastlesStartBuildings } from '../../types/models';
 
 const StartBuildingsTab: React.FC<{
   updateTemplateField: (field: string, value: any) => void;
   updateArrayField: (field: string, items: string[]) => void;
-  openSelectionDialog: (type: 'buildings', fieldPath: string, title: string) => void;
-}> = ({ updateTemplateField, updateArrayField, openSelectionDialog }) => {
+}> = ({ updateTemplateField, updateArrayField }) => {
   const { state, dispatch } = useTemplate();
   const { language } = useLanguage();
 
-  // Состояние для выбранного конфига
-  const [selectedConfigIndex, setSelectedConfigIndex] = React.useState(0);
+  const [selectedConfigIndex, setSelectedConfigIndex] = useState(0);
+  const [selectedCastleIndex, setSelectedCastleIndex] = useState(0);
+  const [expandedSpecificCastles, setExpandedSpecificCastles] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const [dialogFieldPath, setDialogFieldPath] = useState('');
+  const [dialogTitle, setDialogTitle] = useState('');
 
-  // Состояние для диалога выбора зданий
-  const [dialogOpen, setDialogOpen] = React.useState(false);
-  const [dialogFieldPath, setDialogFieldPath] = React.useState('');
-  const [dialogTitle, setDialogTitle] = React.useState('');
+  // Тексты на двух языках
+  const texts = {
+    // Основные заголовки
+    title: language === 'ru' ? 'Стартовые здания' : 'Start Buildings',
+    savedConfigs: language === 'ru' ? 'Сохранённые конфиги' : 'Saved Configs',
+    addConfig: language === 'ru' ? 'Добавить конфиг' : 'Add Config',
+    loading: language === 'ru' ? 'Загрузка конфигов...' : 'Loading configs...',
+    
+    // Поля конфигурации
+    applyAllTerrains: language === 'ru' ? 'Применить ко всем террейнам' : 'Apply to all terrains',
+    terrainType: language === 'ru' ? 'Тип террейна' : 'Terrain Type',
+    castleType: language === 'ru' ? 'Тип фракции (замка)' : 'Faction (Castle) Type',
+    buildings: language === 'ru' ? 'Здания' : 'Buildings',
+    addBuildings: language === 'ru' ? 'Добавить здания' : 'Add Buildings',
+    buildingMode: language === 'ru' ? 'Режим зданий' : 'Building Mode',
+    
+    // Specific Castles Section
+    specificCastles: language === 'ru' ? 'Настройка отдельных замков' : 'Specific Castles',
+    specificCastlesDesc: language === 'ru' 
+      ? 'Настройки стартовых зданий для конкретных замков на карте' 
+      : 'Start building settings for specific map coordinates',
+    coordinateX: language === 'ru' ? 'Координата X' : 'Coordinate X',
+    coordinateY: language === 'ru' ? 'Координата Y' : 'Coordinate Y',
+    searchRadius: language === 'ru' ? 'Радиус поиска' : 'Search Radius',
+    selectBuildings: language === 'ru' ? 'Выберите здания' : 'Select Buildings',
+    addCastleConfig: language === 'ru' ? 'Добавить конфиг замка' : 'Add Castle Config',
+    castleConfig: language === 'ru' ? 'Конфиг замка' : 'Castle Config',
+    
+    // Вторичный текст конфигов
+    generalConfig: language === 'ru' ? 'Общий конфиг' : 'General config',
+    terrain: language === 'ru' ? 'Террейн' : 'Terrain',
+    castle: language === 'ru' ? 'Замок' : 'Castle',
+    notConfigured: language === 'ru' ? 'Не настроен' : 'Not configured',
+    config: language === 'ru' ? 'Конфиг' : 'Config',
+  };
 
-  // Автоматически создаем первый конфиг при монтировании компонента
   useEffect(() => {
     if (!state.template.StartBuildingConfigs || state.template.StartBuildingConfigs.length === 0) {
       const initialConfig = {
@@ -51,9 +86,9 @@ const StartBuildingsTab: React.FC<{
       };
       updateTemplateField('StartBuildingConfigs', [initialConfig]);
     }
-  }, []); // Пустой массив зависимостей - выполняется только при монтировании
+  }, []);
 
-  // Добавление нового конфига
+  // Функции для основной конфигурации
   const addNewConfig = () => {
     const newConfig = {
       ApplyAllTerrains: false,
@@ -67,10 +102,9 @@ const StartBuildingsTab: React.FC<{
     setSelectedConfigIndex(updatedConfigs.length - 1);
   };
 
-  // Удаление конфига (не позволяем удалить последний конфиг)
   const deleteConfig = (index: number) => {
     const currentConfigs = state.template.StartBuildingConfigs || [];
-    if (currentConfigs.length <= 1) return; // Не удаляем последний конфиг
+    if (currentConfigs.length <= 1) return;
     
     const updatedConfigs = currentConfigs.filter((_, i) => i !== index);
     updateTemplateField('StartBuildingConfigs', updatedConfigs);
@@ -82,12 +116,44 @@ const StartBuildingsTab: React.FC<{
     }
   };
 
-  // Выбор конфига для редактирования
+  // Функции для Specific Castles
+  const addNewCastleConfig = () => {
+    const newCastleConfig: SpecificCastlesStartBuildings = {
+      CoordinateX: 0,
+      CoordinateY: 0,
+      SearchRadius: 10,
+      Buildings: [],
+    };
+    const currentCastles = state.template.SpecificCastlesStartBuildings as SpecificCastlesStartBuildings[] || [];
+    const updatedCastles = [...currentCastles, newCastleConfig];
+    updateTemplateField('SpecificCastlesStartBuildings', updatedCastles);
+    setSelectedCastleIndex(updatedCastles.length - 1);
+  };
+
+  const deleteCastleConfig = (index: number) => {
+    const currentCastles = state.template.SpecificCastlesStartBuildings as SpecificCastlesStartBuildings[] || [];
+    const updatedCastles = currentCastles.filter((_: any, i: number) => i !== index);
+    updateTemplateField('SpecificCastlesStartBuildings', updatedCastles);
+
+    if (index === selectedCastleIndex) {
+      setSelectedCastleIndex(Math.max(0, updatedCastles.length - 1));
+    } else if (index < selectedCastleIndex) {
+      setSelectedCastleIndex((prev) => prev - 1);
+    }
+  };
+
+  const updateCastleField = (field: string, value: any) => {
+    updateTemplateField(`SpecificCastlesStartBuildings.${selectedCastleIndex}.${field}`, value);
+  };
+
   const selectConfig = (index: number) => {
     setSelectedConfigIndex(index);
   };
 
-  // Обработчик изменения переключателя ApplyAllTerrains
+  const selectCastleConfig = (index: number) => {
+    setSelectedCastleIndex(index);
+  };
+
   const handleApplyAllTerrainsChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const isChecked = e.target.checked;
     
@@ -108,44 +174,55 @@ const StartBuildingsTab: React.FC<{
     }
   };
 
-  // Открытие диалога выбора зданий
-  const handleOpenDialog = (type: 'buildings', fieldPath: string, title: string) => {
+  const handleOpenDialog = (fieldPath: string, title: string) => {
     setDialogFieldPath(fieldPath);
     setDialogTitle(title);
     setDialogOpen(true);
   };
 
-  // Обработка выбора зданий
   const handleBuildingsSelect = (selectedBuildings: string[]) => {
     updateArrayField(dialogFieldPath, selectedBuildings);
     setDialogOpen(false);
   };
 
-  const selectedConfig = state.template.StartBuildingConfigs?.[selectedConfigIndex];
-  const configs = state.template.StartBuildingConfigs || [];
+  const toggleSpecificCastles = () => {
+    setExpandedSpecificCastles(!expandedSpecificCastles);
+  };
 
-  // Функция для получения подписи конфига в боковой панели
   const getConfigSecondaryText = (config: any) => {
     if (config.ApplyAllTerrains) {
-      return 'Общий конфиг';
+      return texts.generalConfig;
     }
     if (config.TerrainType && config.TerrainType !== 'Null') {
       const terrainType = config.TerrainType as TerrainType;
-      return `Террейн: ${terrainTypeDict[terrainType]?.[language] || 'Не выбрано'}`;
+      return `${texts.terrain}: ${terrainTypeDict[terrainType]?.[language] || texts.notConfigured}`;
     }
     if (config.CastleType && config.CastleType !== 'Undefined') {
       const castleType = config.CastleType as CastleType;
-      return `Замок: ${castleTypeDict[castleType]?.[language] || 'Не выбрано'}`;
+      return `${texts.castle}: ${castleTypeDict[castleType]?.[language] || texts.notConfigured}`;
     }
-    return 'Не настроен';
+    return texts.notConfigured;
   };
+
+  const getCastleConfigText = (castle: SpecificCastlesStartBuildings, index: number) => {
+    if (castle.CoordinateX !== undefined && castle.CoordinateY !== undefined) {
+      return `${texts.castleConfig} ${index + 1}`;
+    }
+    return `${texts.castleConfig} ${index + 1}`;
+  };
+
+  const selectedConfig = state.template.StartBuildingConfigs?.[selectedConfigIndex];
+  const configs = state.template.StartBuildingConfigs || [];
+  
+  const specificCastles: SpecificCastlesStartBuildings[] = (state.template.SpecificCastlesStartBuildings as SpecificCastlesStartBuildings[]) || [];
+  const selectedCastle = specificCastles[selectedCastleIndex];
 
   return (
     <Box sx={{ display: 'flex', gap: 3 }}>
       {/* Боковая панель с конфигами */}
       <Box sx={{ minWidth: 250, borderRight: '1px solid #ccc', pr: 2 }}>
         <Typography variant="h6" gutterBottom>
-          Сохранённые конфиги
+          {texts.savedConfigs}
         </Typography>
         <List>
           {configs.map((config, index) => (
@@ -153,7 +230,7 @@ const StartBuildingsTab: React.FC<{
               key={index}
               disablePadding
               secondaryAction={
-                configs.length > 1 && ( // Показываем кнопку удаления только если конфигов больше 1
+                configs.length > 1 && (
                   <IconButton edge="end" onClick={() => deleteConfig(index)}>
                     <DeleteIcon />
                   </IconButton>
@@ -162,7 +239,7 @@ const StartBuildingsTab: React.FC<{
             >
               <ListItemButton selected={index === selectedConfigIndex} onClick={() => selectConfig(index)}>
                 <ListItemText
-                  primary={`Конфиг ${index + 1}`}
+                  primary={`${texts.config} ${index + 1}`}
                   secondary={getConfigSecondaryText(config)}
                 />
               </ListItemButton>
@@ -176,18 +253,18 @@ const StartBuildingsTab: React.FC<{
           fullWidth
           sx={{ mt: 2 }}
         >
-          Добавить конфиг
+          {texts.addConfig}
         </Button>
       </Box>
 
       {/* Основная область редактирования */}
       <Box sx={{ flex: 1 }}>
         <Typography variant="h5" gutterBottom>
-          Start Buildings (Стартовые здания)
+          {texts.title}
         </Typography>
         
         {configs.length === 0 ? (
-          <Typography>Загрузка конфигов...</Typography>
+          <Typography>{texts.loading}</Typography>
         ) : (
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 3, maxWidth: 600 }}>
             {/* ApplyAllTerrains */}
@@ -198,14 +275,14 @@ const StartBuildingsTab: React.FC<{
                   onChange={handleApplyAllTerrainsChange}
                 />
               }
-              label="Применить ко всем террейнам"
+              label={texts.applyAllTerrains}
             />
 
             {/* TerrainType */}
             {!selectedConfig?.ApplyAllTerrains && (
               <Box>
                 <Typography variant="subtitle1" gutterBottom>
-                  Тип террейна
+                  {texts.terrainType}
                 </Typography>
                 <TextField
                   select
@@ -229,10 +306,10 @@ const StartBuildingsTab: React.FC<{
             )}
             
             {/* CastleType */}
-            {!selectedConfig?.ApplyAllTerrains && (!selectedConfig?.TerrainType) && (
+            {!selectedConfig?.ApplyAllTerrains && (!selectedConfig?.TerrainType || selectedConfig.TerrainType === 'Null') && (
               <Box>
                 <Typography variant="subtitle1" gutterBottom>
-                  Тип фракции (замка)
+                  {texts.castleType}
                 </Typography>
                 <TextField
                   select
@@ -257,18 +334,16 @@ const StartBuildingsTab: React.FC<{
 
             {/* Buildings */}
             <Box>
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
-                <Typography variant="subtitle1">Здания</Typography>
-                <InfoTooltip title="Выберите стартовые здания для этого террейна" />
-              </Box>
+              <Typography variant="subtitle1" gutterBottom>
+                {texts.buildings}
+              </Typography>
               <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
-                {selectedConfig?.Buildings?.map((building) => (
+                {selectedConfig?.Buildings?.map((building: string) => (
                   <Chip
                     key={building}
                     label={buildingTypeDict[building as keyof typeof buildingTypeDict]?.[language]}
                     onDelete={() => {
-                      const updated =
-                        selectedConfig.Buildings?.filter((b) => b !== building) || [];
+                      const updated = selectedConfig.Buildings?.filter((b: string) => b !== building) || [];
                       updateArrayField(
                         `StartBuildingConfigs.${selectedConfigIndex}.Buildings`,
                         updated
@@ -283,21 +358,20 @@ const StartBuildingsTab: React.FC<{
                 startIcon={<AddIcon />}
                 onClick={() =>
                   handleOpenDialog(
-                    'buildings',
                     `StartBuildingConfigs.${selectedConfigIndex}.Buildings`,
-                    'Выберите стартовые здания'
+                    texts.selectBuildings
                   )
                 }
                 sx={{ maxWidth: 200 }}
               >
-                Добавить здания
+                {texts.addBuildings}
               </Button>
             </Box>
 
             {/* BuildingMode */}
             <Box>
               <Typography variant="subtitle1" gutterBottom>
-                Режим зданий
+                {texts.buildingMode}
               </Typography>
               <TextField
                 select
@@ -320,6 +394,130 @@ const StartBuildingsTab: React.FC<{
             </Box>
           </Box>
         )}
+
+        {/* Секция Specific Castles */}
+        <Paper sx={{ mt: 4, p: 2 }}>
+          <Box 
+            sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }} 
+            onClick={toggleSpecificCastles}
+          >
+            <Typography variant="h6" sx={{ flex: 1 }}>
+              {texts.specificCastles}
+            </Typography>
+            {expandedSpecificCastles ? <ExpandLessIcon /> : <ExpandMoreIcon />}
+          </Box>
+          <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+            {texts.specificCastlesDesc}
+          </Typography>
+          
+          <Collapse in={expandedSpecificCastles}>
+            <Divider sx={{ my: 2 }} />
+            
+            {/* Боковая панель для конфигов замков */}
+            <Box sx={{ display: 'flex', gap: 3, mt: 2 }}>
+              <Box sx={{ minWidth: 250 }}>
+                <Typography variant="subtitle1" gutterBottom>
+                  {texts.castleConfig}
+                </Typography>
+                <List>
+                  {specificCastles.map((castle, index) => (
+                    <ListItem
+                      key={index}
+                      disablePadding
+                      secondaryAction={
+                        <IconButton edge="end" onClick={() => deleteCastleConfig(index)}>
+                          <DeleteIcon />
+                        </IconButton>
+                      }
+                    >
+                      <ListItemButton 
+                        selected={index === selectedCastleIndex} 
+                        onClick={() => selectCastleConfig(index)}
+                      >
+                        <ListItemText
+                          primary={getCastleConfigText(castle, index)}
+                        />
+                      </ListItemButton>
+                    </ListItem>
+                  ))}
+                </List>
+                <Button
+                  variant="contained"
+                  startIcon={<AddIcon />}
+                  onClick={addNewCastleConfig}
+                  fullWidth
+                  sx={{ mt: 2 }}
+                >
+                  {texts.addCastleConfig}
+                </Button>
+              </Box>
+
+              {/* Область редактирования выбранного замка */}
+              {selectedCastle && (
+                <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 2, maxWidth: 400 }}>
+                  {/* Coordinate X */}
+                  <TextField
+                    label={texts.coordinateX}
+                    type="number"
+                    value={selectedCastle.CoordinateX || ''}
+                    onChange={(e) => updateCastleField('CoordinateX', e.target.value ? parseInt(e.target.value) : undefined)}
+                    fullWidth
+                  />
+
+                  {/* Coordinate Y */}
+                  <TextField
+                    label={texts.coordinateY}
+                    type="number"
+                    value={selectedCastle.CoordinateY || ''}
+                    onChange={(e) => updateCastleField('CoordinateY', e.target.value ? parseInt(e.target.value) : undefined)}
+                    fullWidth
+                  />
+
+                  {/* Search Radius */}
+                  <TextField
+                    label={texts.searchRadius}
+                    type="number"
+                    value={selectedCastle.SearchRadius || ''}
+                    onChange={(e) => updateCastleField('SearchRadius', e.target.value ? parseInt(e.target.value) : undefined)}
+                    fullWidth
+                    helperText={language === 'ru' 
+                      ? 'Радиус поиска замков вокруг указанных координат' 
+                      : 'Search radius for castles around specified coordinates'
+                    }
+                  />
+
+                  {/* Buildings */}
+                  <Box>
+                    <Typography variant="subtitle1" gutterBottom>
+                      {texts.buildings}
+                    </Typography>
+                    <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
+                      {selectedCastle.Buildings?.map((building: BuildingType) => (
+                        <Chip
+                          key={building}
+                          label={buildingTypeDict[building]?.[language]}
+                          onDelete={() => {
+                            const updated = selectedCastle.Buildings?.filter((b: BuildingType) => b !== building) || [];
+                            updateCastleField('Buildings', updated);
+                          }}
+                          sx={{ maxWidth: 150 }}
+                        />
+                      ))}
+                    </Box>
+                    <Button
+                      variant="outlined"
+                      startIcon={<AddIcon />}
+                      onClick={() => handleOpenDialog(`SpecificCastlesStartBuildings.${selectedCastleIndex}.Buildings`, texts.selectBuildings)}
+                      sx={{ maxWidth: 200 }}
+                    >
+                      {texts.addBuildings}
+                    </Button>
+                  </Box>
+                </Box>
+              )}
+            </Box>
+          </Collapse>
+        </Paper>
       </Box>
 
       {/* Диалог выбора зданий */}
@@ -327,7 +525,11 @@ const StartBuildingsTab: React.FC<{
         open={dialogOpen}
         title={dialogTitle}
         items={buildingTypeDict}
-        selectedItems={selectedConfig?.Buildings || []}
+        selectedItems={
+          dialogFieldPath.includes('SpecificCastlesStartBuildings') 
+            ? selectedCastle?.Buildings || []
+            : selectedConfig?.Buildings || []
+        }
         onClose={() => setDialogOpen(false)}
         onSelect={handleBuildingsSelect}
       />
