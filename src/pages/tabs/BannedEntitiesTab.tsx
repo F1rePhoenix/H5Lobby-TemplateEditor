@@ -25,6 +25,7 @@ import {
   heroClassTypeDict,
 } from '../../dictionaries/enumsDict';
 import { HeroClassType } from '../../types/enums';
+import SearchableMultiSelectImageDialog from '../../components/common/SearchableMultiSelectImageDialog';
 
 interface ClassBanConfig {
   Class: HeroClassType;
@@ -303,7 +304,7 @@ const BannedEntitiesTab: React.FC<{
 
             {/* Навыки запрещенные по классам */}
             <Box sx={{ mb: 3 }}>
-              <Typography variant="subtitle1" gutterBottom>{texts.classBannedSkills}</Typography>
+              <Typography variant="h6" gutterBottom>{texts.classBannedSkills}</Typography>
               
               {skillsBannedForClass.length === 0 ? (
                 <Typography sx={{ mb: 2 }}>{texts.noClassConfigs}</Typography>
@@ -395,15 +396,25 @@ const BannedEntitiesTab: React.FC<{
           </Paper>
         </Box>
       )}
-
-      <SearchableMultiSelectDialog
-        open={dialogOpen}
-        title={dialogTitle}
-        items={getDictionary()}
-        selectedItems={getSelectedItems()}
-        onClose={() => setDialogOpen(false)}
-        onSelect={handleItemsSelect}
-      />
+      {dialogType === 'heroes' ? (
+        <SearchableMultiSelectImageDialog
+          open={dialogOpen}
+          title={dialogTitle}
+          items={getDictionary()}
+          selectedItems={getSelectedItems()}
+          onClose={() => setDialogOpen(false)}
+          onSelect={handleItemsSelect}
+        />
+      ) : (
+        <SearchableMultiSelectDialog
+          open={dialogOpen}
+          title={dialogTitle}
+          items={getDictionary()}
+          selectedItems={getSelectedItems()}
+          onClose={() => setDialogOpen(false)}
+          onSelect={handleItemsSelect}
+        />
+      )}
     </Box>
   );
 };

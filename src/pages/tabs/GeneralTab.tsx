@@ -42,6 +42,17 @@ const GeneralTab: React.FC<{ updateTemplateField: (field: string, value: any) =>
     }
   };
 
+  const handleNumberChange = (field: string, value: string) => {
+    if (value === '') {
+      updateTemplateField(field, undefined);
+    } else {
+      const numValue = Number(value);
+      if (!isNaN(numValue)) {
+        updateTemplateField(field, numValue);
+      }
+    }
+  };
+
   return (
     <Box>
       <Typography variant="h5" gutterBottom>
@@ -95,9 +106,10 @@ const GeneralTab: React.FC<{ updateTemplateField: (field: string, value: any) =>
           <TextField
             type="number"
             value={state.template.GeneralData?.Mine1LevelGuardLevel ?? ''}
-            onChange={(e) => updateTemplateField('GeneralData.Mine1LevelGuardLevel', parseInt(e.target.value) || 0)}
+            onChange={(e) => handleNumberChange('GeneralData.Mine1LevelGuardLevel', e.target.value)}
             fullWidth
             inputProps={{ min: 0 }}
+            placeholder={language === 'ru' ? "Охрана древесины и рудника в поинтах" : "Wood and Ore Mines Guard"}
           />
         </Box>
 
@@ -111,9 +123,10 @@ const GeneralTab: React.FC<{ updateTemplateField: (field: string, value: any) =>
           <TextField
             type="number"
             value={state.template.GeneralData?.Mine2LevelGuardLevel ?? ''}
-            onChange={(e) => updateTemplateField('GeneralData.Mine2LevelGuardLevel', parseInt(e.target.value) || 0)}
+            onChange={(e) => handleNumberChange('GeneralData.Mine2LevelGuardLevel', e.target.value)}
             fullWidth
             inputProps={{ min: 0 }}
+            placeholder={language === 'ru' ? "Охрана шахт редких ресурсов в поинтах" : "Rare Resources Mines Guard"}
           />
         </Box>
 
@@ -127,9 +140,27 @@ const GeneralTab: React.FC<{ updateTemplateField: (field: string, value: any) =>
           <TextField
             type="number"
             value={state.template.GeneralData?.MineGoldGuardLevel ?? ''}
-            onChange={(e) => updateTemplateField('GeneralData.MineGoldGuardLevel', parseInt(e.target.value) || 0)}
+            onChange={(e) => handleNumberChange('GeneralData.MineGoldGuardLevel', e.target.value)}
             fullWidth
             inputProps={{ min: 0 }}
+            placeholder={language === 'ru' ? "Охрана золотых шахт в поинтах" : "Gold Mines Guard"}
+          />
+        </Box>
+
+        {/* Базовые очки перемещения героя */}
+        <Box>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
+            <Typography variant="subtitle1" fontWeight="bold">
+              {language === 'ru' ? 'Базовые очки перемещения героя' : 'Hero Base Movement Points'}
+            </Typography>
+          </Box>
+          <TextField
+            type="number"
+            value={state.template.GeneralData?.HeroBaseMoves ?? ''}
+            onChange={(e) => handleNumberChange('GeneralData.HeroBaseMoves', e.target.value)}
+            fullWidth
+            inputProps={{ min: 0 }}
+            placeholder={language === 'ru' ? "Базовые очки перемещения" : "Hero Base Movement"}
           />
         </Box>
 

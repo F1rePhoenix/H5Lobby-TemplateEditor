@@ -306,6 +306,7 @@ export interface MapObjectXdb {
 
 export interface DefaultBuildingConfig {
   DefaultBuilding: DefaultBuilding;
+  UseSpecificDescription?: boolean;
 }
 
 export interface LocalizedCustomTextsModel {
@@ -356,6 +357,7 @@ export interface GeneralDataClass {
   Mine1LevelGuardLevel?: number;
   Mine2LevelGuardLevel?: number;
   MineGoldGuardLevel?: number;
+  HeroBaseMoves?: number;
 }
 
 export interface ZoneRandomizationConfig {
@@ -425,6 +427,24 @@ export interface ScriptFeatureConfig {
   GloballyDisabledBuildingsProps?: GloballyDisabledBuildingsModel;
   ForcedFinalBattleProps?: ForcedFinalBattleModel[];
   AdditionalStartCastles?: AdditionalStartCastle[];
+  FogOpeners?: FogOpeners[];
+  DisabledSiegeConfig?: DisabledSiegeModel;
+}
+
+export interface FogOpeners {
+  Player?: PlayerType;
+  Data?: FogOpenerData[];
+}
+
+export interface FogOpenerData {
+  CoordinateX?: number;
+  CoordinateY?: number;
+  Radius?: number;
+}
+
+export interface DisabledSiegeModel {
+  Week: number;
+  Day: number;
 }
 
 export interface TerrainConfig {
@@ -557,3 +577,5 @@ export interface ResourcesGenerationModel {
   Campfire?: IntValueConfig;
   CampfireGuardsMultiplier?: number;
 }
+
+export { ArtifactType };

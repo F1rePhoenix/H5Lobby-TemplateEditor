@@ -72,7 +72,9 @@ const CustomBuildingsTab: React.FC = () => {
     buildingTexture: language === 'ru' ? 'Текстура здания' : 'Building Texture',
     roadType: language === 'ru' ? 'Тип дороги' : 'Road Type',
     buildingType: language === 'ru' ? 'Тип строения' : 'Building Type',
-    
+    useSpecificDescription: language === 'ru' ? 'Использовать специфическое описание' : 'Use Specific Description',
+    yes: language === 'ru' ? 'Да' : 'Yes',
+    no: language === 'ru' ? 'Нет' : 'No',
     // Типы зданий
     creatureBuilding: language === 'ru' ? 'Жилище существ' : 'Creature Dwelling',
     pandoraBox: language === 'ru' ? 'Сундук Пандоры' : 'Pandora Box',
@@ -340,46 +342,75 @@ const CustomBuildingsTab: React.FC = () => {
           </Box>
         );
       case 'DefaultBuilding':
-        return (
-          <Box sx={{ mt: 2 }}>
-            <Typography variant="h5" gutterBottom>
-              {texts.defaultBuildingLabel}
-            </Typography>
-            
-            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
-              <Typography variant="body2">
-                {config.DefaultBuilding?.DefaultBuilding ? 
-                  defaultBuildingDict[config.DefaultBuilding.DefaultBuilding as DefaultBuilding]?.[language] || config.DefaultBuilding.DefaultBuilding 
-                  : texts.notSelected
-                }
-              </Typography>
-              <Button
-                variant="outlined"
-                size="small"
-                onClick={() => setDefaultBuildingDialogOpen(true)}
-              >
-                {texts.selectBuilding}
-              </Button>
-            </Box>
+  return (
+    <Box sx={{ mt: 2 }}>
+      <Typography variant="h5" gutterBottom>
+        {texts.defaultBuildingLabel}
+      </Typography>
+      
+      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
+        <Typography variant="body2">
+          {config.DefaultBuilding?.DefaultBuilding ? 
+            defaultBuildingDict[config.DefaultBuilding.DefaultBuilding as DefaultBuilding]?.[language] || config.DefaultBuilding.DefaultBuilding 
+            : texts.notSelected
+          }
+        </Typography>
+        <Button
+          variant="outlined"
+          size="small"
+          onClick={() => setDefaultBuildingDialogOpen(true)}
+        >
+          {texts.selectBuilding}
+        </Button>
+      </Box>
 
-            <SearchableSingleSelectDialog
-              open={defaultBuildingDialogOpen}
-              title={texts.defaultBuildingDialogTitle}
-              items={defaultBuildingDict}
-              selectedItem={config.DefaultBuilding?.DefaultBuilding || null}
-              onClose={() => setDefaultBuildingDialogOpen(false)}
-              onSelect={(selectedBuilding) => {
-                if (selectedBuilding) {
-                  updateTemplateField(
-                    `CustomBuildingConfigs.${selectedConfigIndex}.DefaultBuilding.DefaultBuilding`,
-                    selectedBuilding
-                  );
-                }
-                setDefaultBuildingDialogOpen(false);
-              }}
-            />
-          </Box>
-        );
+      {/* Переключатель UseSpecificDescription */}
+      <Box sx={{ mb: 2 }}>
+        <Typography variant="subtitle2" gutterBottom>
+          {language === 'ru' ? 'Использовать специфическое описание' : 'Use Specific Description'}
+        </Typography>
+        <Box sx={{ display: 'flex', gap: 1 }}>
+          <Button
+            variant={config.DefaultBuilding?.UseSpecificDescription ? "contained" : "outlined"}
+            onClick={() => updateTemplateField(
+              `CustomBuildingConfigs.${selectedConfigIndex}.DefaultBuilding.UseSpecificDescription`,
+              true
+            )}
+            size="small"
+          >
+            {language === 'ru' ? 'Да' : 'Yes'}
+          </Button>
+          <Button
+            variant={!config.DefaultBuilding?.UseSpecificDescription ? "contained" : "outlined"}
+            onClick={() => updateTemplateField(
+              `CustomBuildingConfigs.${selectedConfigIndex}.DefaultBuilding.UseSpecificDescription`,
+              false
+            )}
+            size="small"
+          >
+            {language === 'ru' ? 'Нет' : 'No'}
+          </Button>
+        </Box>
+      </Box>
+
+      <SearchableSingleSelectDialog
+        open={defaultBuildingDialogOpen}
+        title={texts.defaultBuildingDialogTitle}
+        items={defaultBuildingDict}
+        selectedItem={config.DefaultBuilding?.DefaultBuilding || null}
+        onClose={() => setDefaultBuildingDialogOpen(false)}
+        onSelect={(selectedBuilding) => {
+          if (selectedBuilding) {
+            updateTemplateField(
+              `CustomBuildingConfigs.${selectedConfigIndex}.DefaultBuilding.DefaultBuilding`,
+              selectedBuilding
+            );
+          }
+          setDefaultBuildingDialogOpen(false);
+        }}
+      />
+    </Box>
+  );
       default:
         return null;
     }
@@ -556,7 +587,6 @@ const CustomBuildingsTab: React.FC = () => {
                   e.target.value
                 )
               }
-              helperText={texts.roadType}
             >
               {Object.entries(roadTypeDict).map(([key, value]) => (
                 <MenuItem key={key} value={key}>

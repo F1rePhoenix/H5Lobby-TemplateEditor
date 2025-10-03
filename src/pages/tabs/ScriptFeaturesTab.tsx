@@ -1,3 +1,4 @@
+// ScriptFeaturesTab.tsx
 import React, { useState } from 'react';
 import {
   Box,
@@ -14,7 +15,9 @@ import GMRebuildEditor from '../../components/editors/GMRebuildEditor';
 import GloballyDisabledBuildingsEditor from '../../components/editors/GloballyDisabledBuildingsEditor';
 import ForcedFinalBattleEditor from '../../components/editors/ForcedFinalBattleEditor';
 import AdditionalStartCastlesEditor from '../../components/editors/AdditionalStartCastlesEditor';
-import { GMRebuildModel, CastleCaptureModel } from '../../types/models';
+import FogOpenersEditor from '../../components/editors/FogOpenersEditor';
+import DisabledSiegeEditor from '../../components/editors/DisabledSiegeEditor';
+import { GMRebuildModel, CastleCaptureModel, DisabledSiegeModel } from '../../types/models';
 
 const ScriptFeaturesTab: React.FC = () => {
   const { state, dispatch } = useTemplate();
@@ -44,18 +47,33 @@ const ScriptFeaturesTab: React.FC = () => {
     IsForcedFinalBattle: false,
   };
 
+  const defaultDisabledSiegeProps: DisabledSiegeModel = {
+    Week: 1,
+    Day: 1
+  };
+
   return (
     <Box sx={{ width: '100%', p: 3 }}>
       <Typography variant="h4" gutterBottom>
         {language === 'ru' ? 'Конфигурация скриптов' : 'Script Features Configuration'}
       </Typography>
 
-      <Tabs value={activeTab} onChange={handleTabChange} sx={{ mb: 3 }}>
+      {/* Скроллируемые вкладки */}
+      <Tabs 
+        value={activeTab} 
+        onChange={handleTabChange} 
+        sx={{ mb: 3 }}
+        variant="scrollable"
+        scrollButtons="auto"
+        allowScrollButtonsMobile
+      >
         <Tab label={language === 'ru' ? 'Захват замка' : 'Castle Capture'} />
         <Tab label={language === 'ru' ? 'Перестройка ГМ' : 'GM Rebuild'} />
         <Tab label={language === 'ru' ? 'Отключенные здания' : 'Disabled Buildings'} />
         <Tab label={language === 'ru' ? 'Финальная битва' : 'Final Battle'} />
         <Tab label={language === 'ru' ? 'Доп. замки' : 'Additional Castles'} />
+        <Tab label={language === 'ru' ? 'Туман войны' : 'Fog Openers'} />
+        <Tab label={language === 'ru' ? 'Отключение осад' : 'Disabled Siege'} />
       </Tabs>
 
       <Box sx={{ pt: 2 }}>
@@ -87,6 +105,18 @@ const ScriptFeaturesTab: React.FC = () => {
           <AdditionalStartCastlesEditor
             value={scriptFeaturesConfig.AdditionalStartCastles || []}
             onChange={(value) => updateTemplateField('ScriptFeaturesConfig.AdditionalStartCastles', value)}
+          />
+        )}
+        {activeTab === 5 && (
+          <FogOpenersEditor
+            value={scriptFeaturesConfig.FogOpeners || []}
+            onChange={(value) => updateTemplateField('ScriptFeaturesConfig.FogOpeners', value)}
+          />
+        )}
+        {activeTab === 6 && (
+          <DisabledSiegeEditor
+            value={{ ...defaultDisabledSiegeProps, ...scriptFeaturesConfig.DisabledSiegeConfig }}
+            onChange={(value) => updateTemplateField('ScriptFeaturesConfig.DisabledSiegeConfig', value)}
           />
         )}
       </Box>

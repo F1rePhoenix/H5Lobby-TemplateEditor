@@ -19,6 +19,8 @@ import { AdditionalMapObjectConfig, AdditionalObjectModel } from '../../types/mo
 import { CastleType } from '../../types/enums';
 import { castleTypeDict } from '../../dictionaries/enumsDict';
 import FewOfModelsEditor from './FewOfModelsEditor'
+import ArtifactsGenerationModelsEditor from './ArtifactsGenerationModelsEditor';
+import ByPointModelsEditor from './ByPointModelsEditor';
 
 interface AdditionalMapObjectConfigEditorProps {
   value: AdditionalMapObjectConfig;
@@ -42,25 +44,30 @@ const AdditionalMapObjectConfigEditor: React.FC<AdditionalMapObjectConfigEditorP
   // Работаем с StaticObjectsByCastle как с Record CastleType -> { Objects: AdditionalObjectModel[] }
   const staticObjectsByCastleRecord = value.StaticObjectsByCastle as unknown as Record<CastleType, { Objects: AdditionalObjectModel[] }> || {};
 
+  // Функция для обновления полей конфигурации
+  const updateField = (field: keyof AdditionalMapObjectConfig, fieldValue: any) => {
+    onChange({
+      ...value,
+      [field]: fieldValue
+    });
+  };
+
   // Static Objects Section
   const addStaticObject = () => {
     const newObject: AdditionalObjectModel = { BuildingId: undefined, Count: {} };
-    onChange({
-      ...value,
-      StaticObjects: [...(value.StaticObjects || []), newObject]
-    });
+    updateField('StaticObjects', [...(value.StaticObjects || []), newObject]);
   };
 
   const updateStaticObject = (index: number, field: keyof AdditionalObjectModel, fieldValue: any) => {
     const updatedObjects = [...(value.StaticObjects || [])];
     updatedObjects[index] = { ...updatedObjects[index], [field]: fieldValue };
-    onChange({ ...value, StaticObjects: updatedObjects });
+    updateField('StaticObjects', updatedObjects);
   };
 
   const removeStaticObject = (index: number) => {
     const updatedObjects = [...(value.StaticObjects || [])];
     updatedObjects.splice(index, 1);
-    onChange({ ...value, StaticObjects: updatedObjects.length > 0 ? updatedObjects : undefined });
+    updateField('StaticObjects', updatedObjects.length > 0 ? updatedObjects : undefined);
   };
 
   // Static Objects By Castle Section
@@ -68,15 +75,12 @@ const AdditionalMapObjectConfigEditor: React.FC<AdditionalMapObjectConfigEditorP
     const currentObjects = staticObjectsByCastleRecord[castleType]?.Objects || [];
     const newObject: AdditionalObjectModel = { BuildingId: undefined, Count: {} };
     
-    onChange({
-      ...value,
-      StaticObjectsByCastle: {
-        ...staticObjectsByCastleRecord,
-        [castleType]: {
-          Objects: [...currentObjects, newObject]
-        }
-      } as unknown as any
-    });
+    updateField('StaticObjectsByCastle', {
+      ...staticObjectsByCastleRecord,
+      [castleType]: {
+        Objects: [...currentObjects, newObject]
+      }
+    } as unknown as any);
     setCastleDialogOpen(false);
   };
 
@@ -84,30 +88,24 @@ const AdditionalMapObjectConfigEditor: React.FC<AdditionalMapObjectConfigEditorP
     const currentObjects = staticObjectsByCastleRecord[castleType]?.Objects || [];
     const newObject: AdditionalObjectModel = { BuildingId: undefined, Count: {} };
     
-    onChange({
-      ...value,
-      StaticObjectsByCastle: {
-        ...staticObjectsByCastleRecord,
-        [castleType]: {
-          Objects: [...currentObjects, newObject]
-        }
-      } as unknown as any
-    });
+    updateField('StaticObjectsByCastle', {
+      ...staticObjectsByCastleRecord,
+      [castleType]: {
+        Objects: [...currentObjects, newObject]
+      }
+    } as unknown as any);
   };
 
   const updateStaticObjectByCastle = (castleType: CastleType, index: number, field: keyof AdditionalObjectModel, fieldValue: any) => {
     const currentObjects = [...(staticObjectsByCastleRecord[castleType]?.Objects || [])];
     currentObjects[index] = { ...currentObjects[index], [field]: fieldValue };
     
-    onChange({
-      ...value,
-      StaticObjectsByCastle: {
-        ...staticObjectsByCastleRecord,
-        [castleType]: {
-          Objects: currentObjects
-        }
-      } as unknown as any
-    });
+    updateField('StaticObjectsByCastle', {
+      ...staticObjectsByCastleRecord,
+      [castleType]: {
+        Objects: currentObjects
+      }
+    } as unknown as any);
   };
 
   const removeStaticObjectByCastle = (castleType: CastleType, index: number) => {
@@ -121,20 +119,14 @@ const AdditionalMapObjectConfigEditor: React.FC<AdditionalMapObjectConfigEditorP
       newRecord[castleType] = { Objects: currentObjects };
     }
     
-    onChange({
-      ...value,
-      StaticObjectsByCastle: Object.keys(newRecord).length > 0 ? newRecord as unknown as any : undefined
-    });
+    updateField('StaticObjectsByCastle', Object.keys(newRecord).length > 0 ? newRecord as unknown as any : undefined);
   };
 
   const removeCastleEntry = (castleType: CastleType) => {
     const newRecord = { ...staticObjectsByCastleRecord };
     delete newRecord[castleType];
     
-    onChange({
-      ...value,
-      StaticObjectsByCastle: Object.keys(newRecord).length > 0 ? newRecord as unknown as any : undefined
-    });
+    updateField('StaticObjectsByCastle', Object.keys(newRecord).length > 0 ? newRecord as unknown as any : undefined);
   };
 
   const castleEntries = Object.entries(staticObjectsByCastleRecord) as [CastleType, { Objects: AdditionalObjectModel[] }][];
@@ -305,17 +297,35 @@ const AdditionalMapObjectConfigEditor: React.FC<AdditionalMapObjectConfigEditorP
 
           <Divider sx={{ my: 3 }} />
 
-            {/* Few Of Models Section */}
+          {/* Few Of Models Section */}
             <FewOfModelsEditor
-            value={value.FewOfModels || []}
-            onChange={(config) => onChange({ ...value, FewOfModels: config })}
-            disabled={disabled}
+              value={value.FewOfModels || []}
+              onChange={(config) => updateField('FewOfModels', config)}
+              disabled={disabled}
             />
+
+          <Divider sx={{ my: 3 }} />
+
+          {/* Artifacts Generation Models Section */}
+            <ArtifactsGenerationModelsEditor
+              value={value.ArtifactsGenerationModels || []}
+              onChange={(newValue) => updateField('ArtifactsGenerationModels', newValue)}
+              disabled={disabled}
+            />
+          
+          <Divider sx={{ my: 3 }} />
+
+          <ByPointModelsEditor
+            value={value.ByPointModels || []}
+            onChange={(newValue) => updateField('ByPointModels', newValue)}
+            disabled={disabled}
+          />
+          
           {/* Остальные секции будут реализованы по аналогии */}
           <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center', py: 3 }}>
             {language === 'ru' 
-              ? 'Остальные секции (By Points, Few Of, Artifacts, Resources) будут реализованы в ближайшем обновлении'
-              : 'Other sections (By Points, Few Of, Artifacts, Resources) will be implemented in the next update'
+              ? 'Остальные секции (By Points, Resources) будут реализованы в ближайшем обновлении'
+              : 'Other sections (By Points, Resources) will be implemented in the next update'
             }
           </Typography>
 
