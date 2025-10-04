@@ -396,7 +396,6 @@ const BannedEntitiesTab: React.FC<{
           </Paper>
         </Box>
       )}
-      {dialogType === 'heroes' ? (
         <SearchableMultiSelectImageDialog
           open={dialogOpen}
           title={dialogTitle}
@@ -405,16 +404,6 @@ const BannedEntitiesTab: React.FC<{
           onClose={() => setDialogOpen(false)}
           onSelect={handleItemsSelect}
         />
-      ) : (
-        <SearchableMultiSelectDialog
-          open={dialogOpen}
-          title={dialogTitle}
-          items={getDictionary()}
-          selectedItems={getSelectedItems()}
-          onClose={() => setDialogOpen(false)}
-          onSelect={handleItemsSelect}
-        />
-      )}
     </Box>
   );
 };
