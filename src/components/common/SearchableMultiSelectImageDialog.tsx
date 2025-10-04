@@ -46,7 +46,7 @@ const SearchableMultiSelectImageDialog: React.FC<
 
   // Фильтруем элементы по поисковому запросу, исключая NotSelected
   const filteredItems = Object.entries(items)
-    .filter(([key]) => !['NotSelected', 'SpellNone', 'NoSkill'].includes(key)) // Исключаем NotSelected
+    .filter(([key]) => !['NotSelected', 'SpellNone', 'NoSkill', 'None'].includes(key)) // Исключаем NotSelected
     .filter(([key, value]) =>
       value[language].toLowerCase().includes(searchTerm.toLowerCase()) ||
       key.toLowerCase().includes(searchTerm.toLowerCase())
