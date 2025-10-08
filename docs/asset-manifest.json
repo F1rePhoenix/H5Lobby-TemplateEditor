@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/H5Lobby-TemplateEditor/static/css/main.332820b5.css",
-    "main.js": "/H5Lobby-TemplateEditor/static/js/main.bcb64ba1.js",
+    "main.js": "/H5Lobby-TemplateEditor/static/js/main.23f79adb.js",
     "static/js/453.fceb0a01.chunk.js": "/H5Lobby-TemplateEditor/static/js/453.fceb0a01.chunk.js",
     "index.html": "/H5Lobby-TemplateEditor/index.html",
     "main.332820b5.css.map": "/H5Lobby-TemplateEditor/static/css/main.332820b5.css.map",
-    "main.bcb64ba1.js.map": "/H5Lobby-TemplateEditor/static/js/main.bcb64ba1.js.map",
+    "main.23f79adb.js.map": "/H5Lobby-TemplateEditor/static/js/main.23f79adb.js.map",
     "453.fceb0a01.chunk.js.map": "/H5Lobby-TemplateEditor/static/js/453.fceb0a01.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.332820b5.css",
-    "static/js/main.bcb64ba1.js"
+    "static/js/main.23f79adb.js"
   ]
 }

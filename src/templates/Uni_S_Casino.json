@@ -1,0 +1,879 @@
+{
+  "TemplateName": "[S3]Universe_S",
+  "Zones": [
+    {
+      "ZoneId": 1,
+      "TerrainType": "FirstPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "StaticDwellingConfigs": {
+          "DwellingValue": [
+            {
+              "T1": 1,
+              "T2": 1,
+              "T3": 1
+            }
+          ]
+        }
+      },
+      "MineGenerationConfig": {
+        "Wood": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Ore": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Mercury": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Crystals": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Sulfur": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Gems": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Gold": {
+          "MinValue": 3,
+          "MaxValue": 3
+        }
+      },
+      "UpgBuildingsDensity": {
+        "MinValue": 40,
+        "MaxValue": 40
+      },
+      "TreasureDensity": {
+        "MinValue": 10,
+        "MaxValue": 10
+      },
+      "TreasureChestDensity": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "Prisons": {
+        "MinValue": 6,
+        "MaxValue": 6
+      },
+      "ShopPoints": {
+        "MinValue": 25,
+        "MaxValue": 25
+      },
+      "ShrinePoints": {
+        "MinValue": 20,
+        "MaxValue": 20
+      },
+      "LuckMoralBuildingsDensity": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "ResourceBuildingsDensity": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "TreasureBuildingPoints": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 50000,
+        "MaxValue": 50000
+      },
+      "DenOfThieves": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "RedwoodObservatoryDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "Size": {
+        "MinValue": 10,
+        "MaxValue": 10
+      },
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 1,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 2,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 3,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 4,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 5,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 6,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 7,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 8,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 9,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 10,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 11,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 12,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 13,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    },
+    {
+      "ZoneId": 2,
+      "TerrainType": "SecondPlayer",
+      "MirrorZoneId": 1
+    },
+    {
+      "ZoneId": 3,
+      "TerrainType": "Terrain1",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "StaticDwellingConfigs": {
+          "DwellingValue": [
+            {
+              "T1": 1,
+              "T2": 1,
+              "T3": 1
+            }
+          ]
+        }
+      },
+      "MineGenerationConfig": {
+        "Wood": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Ore": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Mercury": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Crystals": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Sulfur": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Gems": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Gold": {
+          "MinValue": 1,
+          "MaxValue": 1
+        }
+      },
+      "UpgBuildingsDensity": {
+        "MinValue": 40,
+        "MaxValue": 40
+      },
+      "TreasureDensity": {
+        "MinValue": 10,
+        "MaxValue": 10
+      },
+      "TreasureChestDensity": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "Prisons": {
+        "MinValue": 6,
+        "MaxValue": 6
+      },
+      "ShopPoints": {
+        "MinValue": 25,
+        "MaxValue": 25
+      },
+      "ShrinePoints": {
+        "MinValue": 20,
+        "MaxValue": 20
+      },
+      "LuckMoralBuildingsDensity": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "ResourceBuildingsDensity": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "TreasureBuildingPoints": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 50000,
+        "MaxValue": 50000
+      },
+      "DenOfThieves": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "RedwoodObservatoryDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "Size": {
+        "MinValue": 10,
+        "MaxValue": 10
+      },
+      "Town": true,
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 1,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 2,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 3,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 4,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 5,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 6,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 7,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 8,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 9,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 10,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 11,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 12,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 13,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    },
+    {
+      "ZoneId": 4,
+      "TerrainType": "Terrain1",
+      "MirrorZoneId": 3
+    },
+    {
+      "ZoneId": 5,
+      "TerrainType": "Terrain1",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "StaticDwellingConfigs": {
+          "DwellingValue": [
+            {
+              "T1": 0
+            }
+          ]
+        }
+      },
+      "UpgBuildingsDensity": {
+        "MinValue": 40,
+        "MaxValue": 40
+      },
+      "TreasureDensity": {
+        "MinValue": 10,
+        "MaxValue": 10
+      },
+      "TreasureChestDensity": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "Prisons": {
+        "MinValue": 6,
+        "MaxValue": 6
+      },
+      "ShopPoints": {
+        "MinValue": 25,
+        "MaxValue": 25
+      },
+      "ShrinePoints": {
+        "MinValue": 20,
+        "MaxValue": 20
+      },
+      "LuckMoralBuildingsDensity": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "ResourceBuildingsDensity": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "TreasureBuildingPoints": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 50000,
+        "MaxValue": 50000
+      },
+      "DenOfThieves": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "RedwoodObservatoryDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 14,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 1
+            }
+          },
+          {
+            "BuildingId": 15,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 1
+            }
+          },
+          {
+            "BuildingId": 16,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 1
+            }
+          },
+          {
+            "BuildingId": 17,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 1
+            }
+          },
+          {
+            "BuildingId": 5,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 3
+            }
+          },
+          {
+            "BuildingId": 6,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 3
+            }
+          },
+          {
+            "BuildingId": 7,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 3
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    }
+  ],
+  "Connections": [
+    {
+      "SourceZoneIndex": 4,
+      "DestZoneIndex": 5,
+      "IsMain": true,
+      "GuardStrenght": 10,
+      "StaticPos": false,
+      "RoadType": 0
+    },
+    {
+      "SourceZoneIndex": 3,
+      "DestZoneIndex": 5,
+      "IsMain": true,
+      "GuardStrenght": 10,
+      "StaticPos": false,
+      "RoadType": 0
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 3,
+      "IsMain": true,
+      "GuardStrenght": 10,
+      "StaticPos": false,
+      "RoadType": 0
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 4,
+      "IsMain": true,
+      "GuardStrenght": 10,
+      "StaticPos": false,
+      "RoadType": 0
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 2,
+      "IsMain": true,
+      "GuardStrenght": 10,
+      "StaticPos": false,
+      "RoadType": 0
+    },
+    {
+      "SourceZoneIndex": 3,
+      "DestZoneIndex": 4,
+      "IsMain": true,
+      "GuardStrenght": 10,
+      "StaticPos": false,
+      "RoadType": 0
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 4,
+      "IsMain": false,
+      "RemoveConnection": true
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 3,
+      "IsMain": false,
+      "RemoveConnection": true
+    },
+    {
+      "SourceZoneIndex": 3,
+      "DestZoneIndex": 5,
+      "IsMain": false,
+      "RemoveConnection": true
+    },
+    {
+      "SourceZoneIndex": 4,
+      "DestZoneIndex": 5,
+      "IsMain": false,
+      "RemoveConnection": true
+    }
+  ],
+  "TerrainConfig": [],
+  "FactionTerrainConfigs": {},
+  "StartBuildingConfigs": [
+    {
+      "ApplyAllTerrains": true,
+      "TerrainType": "Null",
+      "CastleType": "Undefined",
+      "Buildings": [
+        "T1",
+        "T2",
+        "Forge",
+        "Market1",
+        "Tavern"
+      ],
+      "BuildingMode": "All"
+    }
+  ],
+  "SpecificCastlesStartBuildings": [],
+  "GeneralData": {
+    "MineGoldGuardLevel": 10
+  },
+  "BaseArmyMultiplier": 0.0,
+  "ArmyMultipliers": {},
+  "ScriptFeaturesConfig": {
+    "CastleCaptureProps": {
+      "CoordinateX": 117,
+      "CoordinateY": 67,
+      "SearchRadius": 25,
+      "EventTimer": 7,
+      "DisableFortifications": true,
+      "IsForcedFinalBattle": false
+    },
+    "GloballyDisabledBuildingsProps": {
+      "Buildings": [
+        "NecromancyUnholyTemple"
+      ]
+    },
+    "ForcedFinalBattleProps": [],
+    "AdditionalStartCastles": [
+      {
+        "StartCoordinateX": 16,
+        "StartCoordinateY": 33,
+        "SearchRadius": 25,
+        "TargetCoordinateX": 90,
+        "TargetCoordinateY": 16,
+        "TargetSearchRadius": 10
+      },
+      {
+        "StartCoordinateX": 16,
+        "StartCoordinateY": 101,
+        "SearchRadius": 25,
+        "TargetCoordinateX": 90,
+        "TargetCoordinateY": 118,
+        "TargetSearchRadius": 10
+      }
+    ]
+  },
+  "CustomBuildingConfigs": [
+    {
+      "Id": 1,
+      "GuardStrenght": 6,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "RandomT1CreatureBox"
+      }
+    },
+    {
+      "Id": 2,
+      "GuardStrenght": 8,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "RandomT2CreatureBox"
+      }
+    },
+    {
+      "Id": 3,
+      "GuardStrenght": 10,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "RandomT3CreatureBox"
+      }
+    },
+    {
+      "Id": 4,
+      "GuardStrenght": 12,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "RandomT4CreatureBox"
+      }
+    },
+    {
+      "Id": 5,
+      "GuardStrenght": 14,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "RandomT5CreatureBox"
+      }
+    },
+    {
+      "Id": 6,
+      "GuardStrenght": 16,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "RandomT6CreatureBox"
+      }
+    },
+    {
+      "Id": 7,
+      "GuardStrenght": 18,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "RandomT7CreatureBox"
+      }
+    },
+    {
+      "Id": 8,
+      "GuardStrenght": 6,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [
+          5000
+        ],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [],
+        "Resources": []
+      }
+    },
+    {
+      "Id": 9,
+      "GuardStrenght": 10,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [
+          10000
+        ],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [],
+        "Resources": []
+      }
+    },
+    {
+      "Id": 10,
+      "GuardStrenght": 18,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [
+          20000
+        ],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [],
+        "Resources": []
+      }
+    },
+    {
+      "Id": 11,
+      "GuardStrenght": 6,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [
+          5000
+        ],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [],
+        "Resources": []
+      }
+    },
+    {
+      "Id": 12,
+      "GuardStrenght": 10,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [
+          10000
+        ],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [],
+        "Resources": []
+      }
+    },
+    {
+      "Id": 13,
+      "GuardStrenght": 18,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [
+          20000
+        ],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [],
+        "Resources": []
+      }
+    },
+    {
+      "Id": 14,
+      "GuardStrenght": 25,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "FullSummoningMagicChest"
+      }
+    },
+    {
+      "Id": 15,
+      "GuardStrenght": 25,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "FullLightMagicChest"
+      }
+    },
+    {
+      "Id": 16,
+      "GuardStrenght": 25,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "FullDestructiveMagicChest"
+      }
+    },
+    {
+      "Id": 17,
+      "GuardStrenght": 25,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "FullDarkMagicChest"
+      }
+    }
+  ],
+  "ZoneRandomizationConfig": {
+    "ZonesToSwap": [],
+    "ZonesToRandomize": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  }
+}

@@ -98,6 +98,13 @@
               "MinValue": 3,
               "MaxValue": 3
             }
+          },
+          {
+            "BuildingId": 3,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 1
+            }
           }
         ],
         "StaticObjectsByCastle": {},
@@ -128,6 +135,12 @@
               "T7": 2
             }
           ]
+        }
+      },
+      "MineGenerationConfig": {
+        "Gold": {
+          "MinValue": 3,
+          "MaxValue": 3
         }
       },
       "UpgBuildingsDensity": {
@@ -204,6 +217,12 @@
     {
       "ZoneId": 5,
       "TerrainType": "Terrain1",
+      "MineGenerationConfig": {
+        "Gold": {
+          "MinValue": 3,
+          "MaxValue": 3
+        }
+      },
       "UpgBuildingsDensity": {
         "MinValue": 90,
         "MaxValue": 100
@@ -399,7 +418,9 @@
         "T3",
         "Forge",
         "Market1",
-        "Tavern"
+        "Tavern",
+        "FortressRunicShrine1",
+        "InfernoHellGates"
       ],
       "BuildingMode": "StartCastle"
     },
@@ -414,12 +435,17 @@
         "StrongholdHallOfTrial",
         "StrongholdHallOfMastership",
         "StrongholdTravellerShelter",
-        "Tavern"
+        "Tavern",
+        "FortressRunicShrine1",
+        "InfernoHellGates"
       ],
       "BuildingMode": "NeutralCastle"
     }
   ],
   "SpecificCastlesStartBuildings": [],
+  "GeneralData": {
+    "MineGoldGuardLevel": 10
+  },
   "BaseArmyMultiplier": 0.0,
   "ArmyMultipliers": {},
   "ScriptFeaturesConfig": {
@@ -429,7 +455,12 @@
       ]
     },
     "ForcedFinalBattleProps": [],
-    "AdditionalStartCastles": []
+    "AdditionalStartCastles": [],
+    "FogOpeners": [],
+    "DisabledSiegeConfig": {
+      "Week": 2,
+      "Day": 1
+    }
   },
   "CustomBuildingConfigs": [
     {
@@ -439,7 +470,8 @@
       "RoadType": "MainRoad",
       "MapObjectXdb": {
         "MapObject": "HillFort"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 2,
@@ -447,8 +479,20 @@
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
       "DefaultBuilding": {
-        "DefaultBuilding": "GoldChest5K"
-      }
+        "DefaultBuilding": "GoldChest5K",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 3,
+      "GuardStrenght": 6,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "ArtifactXdb": {
+        "ArtifactType": "Shackles"
+      },
+      "InteractionMessageType": "NoMessage"
     }
   ]
 }

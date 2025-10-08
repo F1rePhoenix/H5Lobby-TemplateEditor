@@ -54,6 +54,10 @@
         "MinValue": 42,
         "MaxValue": 48
       },
+      "TreasureChestDensity": {
+        "MinValue": 60,
+        "MaxValue": 60
+      },
       "Prisons": {
         "MinValue": 0,
         "MaxValue": 0
@@ -73,6 +77,10 @@
       "TreasureBlocksTotalValue": {
         "MinValue": 25000,
         "MaxValue": 25000
+      },
+      "Taverns": {
+        "MinValue": 0,
+        "MaxValue": 0
       }
     },
     {
@@ -129,6 +137,10 @@
         "MaxValue": 1
       },
       "Town": true,
+      "Taverns": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
       "EnlightenmentStones": {
         "MinValue": 0,
         "MaxValue": 0
@@ -215,6 +227,10 @@
       "DistBetweenTreasureBlocks": {
         "MinValue": 4,
         "MaxValue": 4
+      },
+      "Taverns": {
+        "MinValue": 0,
+        "MaxValue": 0
       }
     }
   ],
@@ -247,25 +263,25 @@
       "SourceZoneIndex": 1,
       "DestZoneIndex": 3,
       "IsMain": true,
-      "GuardStrenght": 2
+      "GuardStrenght": 4
     },
     {
       "SourceZoneIndex": 1,
       "DestZoneIndex": 3,
       "IsMain": false,
-      "GuardStrenght": 2
+      "GuardStrenght": 4
     },
     {
       "SourceZoneIndex": 2,
       "DestZoneIndex": 4,
       "IsMain": true,
-      "GuardStrenght": 2
+      "GuardStrenght": 4
     },
     {
       "SourceZoneIndex": 2,
       "DestZoneIndex": 4,
       "IsMain": false,
-      "GuardStrenght": 2
+      "GuardStrenght": 4
     }
   ],
   "TerrainConfig": [
@@ -334,7 +350,9 @@
         "T2",
         "T3",
         "Forge",
-        "Market1"
+        "Market1",
+        "FortressRunicShrine1",
+        "InfernoHellGates"
       ],
       "BuildingMode": "StartCastle"
     },
@@ -347,7 +365,9 @@
         "Gm3",
         "StrongholdHallOfTrial",
         "StrongholdHallOfMastership",
-        "StrongholdTravellerShelter"
+        "StrongholdTravellerShelter",
+        "FortressRunicShrine1",
+        "InfernoHellGates"
       ],
       "BuildingMode": "NeutralCastle"
     },
@@ -360,7 +380,9 @@
         "Gm3",
         "StrongholdHallOfTrial",
         "StrongholdHallOfMastership",
-        "StrongholdTravellerShelter"
+        "StrongholdTravellerShelter",
+        "FortressRunicShrine1",
+        "InfernoHellGates"
       ],
       "BuildingMode": "NeutralCastle"
     },
@@ -376,7 +398,8 @@
   ],
   "SpecificCastlesStartBuildings": [],
   "GeneralData": {
-    "MineGoldGuardLevel": 10
+    "MineGoldGuardLevel": 10,
+    "HeroBaseMoves": 3000
   },
   "BaseArmyMultiplier": 0.0,
   "ArmyMultipliers": {},
@@ -389,7 +412,8 @@
       "TomeOfChaos",
       "TomeOfLight",
       "TomeOfDark",
-      "TomeOfSummon"
+      "TomeOfSummon",
+      "Shackles"
     ]
   },
   "CustomBuildingConfigs": [
@@ -399,7 +423,8 @@
       "GuardStrenght": 0,
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
-      "XdbRef": "/MapObjects/Dragon_Utopia.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)"
+      "XdbRef": "/MapObjects/Dragon_Utopia.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)",
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 2,
@@ -407,7 +432,8 @@
       "GuardStrenght": 0,
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
-      "XdbRef": "/MapObjects/Universe_mod/OrcDeposit.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)"
+      "XdbRef": "/MapObjects/Universe_mod/OrcDeposit.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)",
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 3,
@@ -415,7 +441,8 @@
       "GuardStrenght": 0,
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
-      "XdbRef": "/MapObjects/H5A2/SpellShop.xdb#xpointer(/AdvMapBuildingShared)"
+      "XdbRef": "/MapObjects/H5A2/SpellShop.xdb#xpointer(/AdvMapBuildingShared)",
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 4,
@@ -423,7 +450,8 @@
       "GuardStrenght": 0,
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
-      "XdbRef": "/MapObjects/TreantThicket.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)"
+      "XdbRef": "/MapObjects/TreantThicket.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)",
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 5,
@@ -431,7 +459,8 @@
       "GuardStrenght": 0,
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
-      "XdbRef": "/MapObjects/WitchBank.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)"
+      "XdbRef": "/MapObjects/WitchBank.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)",
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 6,
@@ -439,7 +468,8 @@
       "GuardStrenght": 0,
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
-      "XdbRef": "/MapObjects/Universe_mod/NecroEstate.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)"
+      "XdbRef": "/MapObjects/Universe_mod/NecroEstate.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)",
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 7,
@@ -447,7 +477,8 @@
       "GuardStrenght": 0,
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
-      "XdbRef": "/MapObjects/Elemantal_Stockpile.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)"
+      "XdbRef": "/MapObjects/Elemantal_Stockpile.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)",
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 8,
@@ -455,7 +486,8 @@
       "GuardStrenght": 0,
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
-      "XdbRef": "/MapObjects/DwarvenTreasury.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)"
+      "XdbRef": "/MapObjects/DwarvenTreasury.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)",
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 9,
@@ -463,36 +495,21 @@
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
       "DefaultBuilding": {
-        "DefaultBuilding": "HighTierRunicChest"
-      }
+        "DefaultBuilding": "HighTierRunicChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 10,
       "GuardStrenght": 10,
-      "BuildingTexture": "DwarvenCareer",
+      "BuildingTexture": "Null",
       "RoadType": "NoRoad",
-      "ResourceGiver": {
-        "ResourcesConfigs": [
-          {
-            "Mercury": {
-              "MinValue": 3,
-              "MaxValue": 5
-            },
-            "Crystals": {
-              "MinValue": 3,
-              "MaxValue": 5
-            },
-            "Sulfur": {
-              "MinValue": 3,
-              "MaxValue": 5
-            },
-            "Gems": {
-              "MinValue": 3,
-              "MaxValue": 5
-            }
-          }
-        ]
-      }
+      "DefaultBuilding": {
+        "DefaultBuilding": "RareResourcesGiver",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
     }
   ]
 }

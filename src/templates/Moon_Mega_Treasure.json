@@ -7,80 +7,89 @@
       "DwellingGenerationConfig": {
         "BuildingTexture": "Null",
         "DwellingByPointsConfig": {
-          "PointsCount": 130000,
-          "PointsCountByFaction": {},
+          "PointsCount": 2000,
+          "PointsCountByFaction": {
+            "Humans": 2120,
+            "Inferno": 2030,
+            "Necropolis": 1900,
+            "Elves": 2030,
+            "Liga": 2000,
+            "Mages": 2140,
+            "Dwarfs": 2160,
+            "Horde": 2100
+          },
           "DwellingPointsByFaction": {
             "Humans": {
-              "T1": 2706,
-              "T2": 5796,
-              "T3": 6030,
-              "T4": 7860,
-              "T5": 11241,
-              "T6": 13110,
-              "T7": 14598
+              "T1": 44,
+              "T2": 95,
+              "T3": 98,
+              "T4": 128,
+              "T5": 183,
+              "T6": 214,
+              "T7": 238
             },
             "Inferno": {
-              "T1": 4050,
-              "T2": 4545,
-              "T3": 6993,
-              "T4": 8820,
-              "T5": 9621,
-              "T6": 15258,
-              "T7": 14609
+              "T1": 63,
+              "T2": 71,
+              "T3": 109,
+              "T4": 139,
+              "T5": 150,
+              "T6": 239,
+              "T7": 229
             },
             "Necropolis": {
-              "T1": 3629,
-              "T2": 5292,
-              "T3": 7016,
-              "T4": 8702,
-              "T5": 13517,
-              "T6": 14811,
-              "T7": 10665
+              "T1": 57,
+              "T2": 83,
+              "T3": 110,
+              "T4": 137,
+              "T5": 214,
+              "T6": 232,
+              "T7": 167
             },
             "Elves": {
-              "T1": 3000,
-              "T2": 5157,
-              "T3": 7770,
-              "T4": 13335,
-              "T5": 9648,
-              "T6": 10302,
-              "T7": 14826
+              "T1": 47,
+              "T2": 81,
+              "T3": 121,
+              "T4": 208,
+              "T5": 151,
+              "T6": 161,
+              "T7": 231
             },
             "Liga": {
-              "T1": 5589,
-              "T2": 5994,
-              "T3": 9234,
-              "T4": 8970,
-              "T5": 8712,
-              "T6": 15132,
-              "T7": 15702
+              "T1": 81,
+              "T2": 86,
+              "T3": 133,
+              "T4": 129,
+              "T5": 126,
+              "T6": 218,
+              "T7": 227
             },
             "Mages": {
-              "T1": 4320,
-              "T2": 4746,
-              "T3": 6561,
-              "T4": 10455,
-              "T5": 7551,
-              "T6": 12648,
-              "T7": 14649
+              "T1": 71,
+              "T2": 78,
+              "T3": 108,
+              "T4": 171,
+              "T5": 124,
+              "T6": 208,
+              "T7": 240
             },
             "Dwarfs": {
-              "T1": 3780,
-              "T2": 5544,
-              "T3": 8208,
-              "T4": 5724,
-              "T5": 9648,
-              "T6": 12654,
-              "T7": 14649
+              "T1": 63,
+              "T2": 92,
+              "T3": 136,
+              "T4": 96,
+              "T5": 160,
+              "T6": 210,
+              "T7": 243
             },
             "Horde": {
-              "T1": 2772,
-              "T2": 5004,
-              "T3": 5700,
-              "T4": 7380,
-              "T5": 10425,
-              "T6": 12348,
-              "T7": 14370
+              "T1": 48,
+              "T2": 86,
+              "T3": 98,
+              "T4": 127,
+              "T5": 180,
+              "T6": 213,
+              "T7": 248
             }
           },
           "AllowedTiers": [],
@@ -97,7 +106,7 @@
             "Inferno": {
               "T1": 2,
               "T2": 1,
-              "T3": 2,
+              "T3": 1,
               "T4": 1,
               "T5": 1,
               "T6": 1,
@@ -114,7 +123,7 @@
             },
             "Elves": {
               "T1": 2,
-              "T2": 2,
+              "T2": 1,
               "T3": 1,
               "T4": 1,
               "T5": 1,
@@ -122,8 +131,8 @@
               "T7": 1
             },
             "Liga": {
-              "T1": 1,
-              "T2": 1,
+              "T1": 2,
+              "T2": 2,
               "T3": 1,
               "T4": 1,
               "T5": 1,
@@ -172,7 +181,7 @@
               "T1": 4,
               "T2": 4,
               "T3": 4,
-              "T4": 2,
+              "T4": 3,
               "T5": 4,
               "T6": 3,
               "T7": 3
@@ -200,16 +209,16 @@
               "T2": 4,
               "T3": 4,
               "T4": 4,
-              "T5": 1,
+              "T5": 2,
               "T6": 3,
               "T7": 3
             },
             "Mages": {
               "T1": 5,
-              "T2": 5,
+              "T2": 4,
               "T3": 4,
               "T4": 4,
-              "T5": 4,
+              "T5": 3,
               "T6": 3,
               "T7": 3
             },
@@ -217,7 +226,7 @@
               "T1": 5,
               "T2": 5,
               "T3": 4,
-              "T4": 5,
+              "T4": 4,
               "T5": 4,
               "T6": 3,
               "T7": 3
@@ -328,80 +337,89 @@
       "DwellingGenerationConfig": {
         "BuildingTexture": "Null",
         "DwellingByPointsConfig": {
-          "PointsCount": 130000,
-          "PointsCountByFaction": {},
+          "PointsCount": 2000,
+          "PointsCountByFaction": {
+            "Humans": 2120,
+            "Inferno": 2030,
+            "Necropolis": 1900,
+            "Elves": 2030,
+            "Liga": 2000,
+            "Mages": 2140,
+            "Dwarfs": 2160,
+            "Horde": 2100
+          },
           "DwellingPointsByFaction": {
             "Humans": {
-              "T1": 2706,
-              "T2": 5796,
-              "T3": 6030,
-              "T4": 7860,
-              "T5": 11241,
-              "T6": 13110,
-              "T7": 14598
+              "T1": 44,
+              "T2": 95,
+              "T3": 98,
+              "T4": 128,
+              "T5": 183,
+              "T6": 214,
+              "T7": 238
             },
             "Inferno": {
-              "T1": 4050,
-              "T2": 4545,
-              "T3": 6993,
-              "T4": 8820,
-              "T5": 9621,
-              "T6": 15258,
-              "T7": 14609
+              "T1": 63,
+              "T2": 71,
+              "T3": 109,
+              "T4": 139,
+              "T5": 150,
+              "T6": 239,
+              "T7": 229
             },
             "Necropolis": {
-              "T1": 3629,
-              "T2": 5292,
-              "T3": 7016,
-              "T4": 8702,
-              "T5": 13517,
-              "T6": 14811,
-              "T7": 10665
+              "T1": 57,
+              "T2": 83,
+              "T3": 110,
+              "T4": 137,
+              "T5": 214,
+              "T6": 232,
+              "T7": 167
             },
             "Elves": {
-              "T1": 3000,
-              "T2": 5157,
-              "T3": 7770,
-              "T4": 13335,
-              "T5": 9648,
-              "T6": 10302,
-              "T7": 14826
+              "T1": 47,
+              "T2": 81,
+              "T3": 121,
+              "T4": 208,
+              "T5": 151,
+              "T6": 161,
+              "T7": 231
             },
             "Liga": {
-              "T1": 5589,
-              "T2": 5994,
-              "T3": 9234,
-              "T4": 8970,
-              "T5": 8712,
-              "T6": 15132,
-              "T7": 15702
+              "T1": 81,
+              "T2": 86,
+              "T3": 133,
+              "T4": 129,
+              "T5": 126,
+              "T6": 218,
+              "T7": 227
             },
             "Mages": {
-              "T1": 4320,
-              "T2": 4746,
-              "T3": 6561,
-              "T4": 10455,
-              "T5": 7551,
-              "T6": 12648,
-              "T7": 14649
+              "T1": 71,
+              "T2": 78,
+              "T3": 108,
+              "T4": 171,
+              "T5": 124,
+              "T6": 208,
+              "T7": 240
             },
             "Dwarfs": {
-              "T1": 3780,
-              "T2": 5544,
-              "T3": 8208,
-              "T4": 5724,
-              "T5": 9648,
-              "T6": 12654,
-              "T7": 14649
+              "T1": 63,
+              "T2": 92,
+              "T3": 136,
+              "T4": 96,
+              "T5": 160,
+              "T6": 210,
+              "T7": 243
             },
             "Horde": {
-              "T1": 2772,
-              "T2": 5004,
-              "T3": 5700,
-              "T4": 7380,
-              "T5": 10425,
-              "T6": 12348,
-              "T7": 14370
+              "T1": 48,
+              "T2": 86,
+              "T3": 98,
+              "T4": 127,
+              "T5": 180,
+              "T6": 213,
+              "T7": 248
             }
           },
           "AllowedTiers": [],
@@ -418,7 +436,7 @@
             "Inferno": {
               "T1": 2,
               "T2": 1,
-              "T3": 2,
+              "T3": 1,
               "T4": 1,
               "T5": 1,
               "T6": 1,
@@ -435,7 +453,7 @@
             },
             "Elves": {
               "T1": 2,
-              "T2": 2,
+              "T2": 1,
               "T3": 1,
               "T4": 1,
               "T5": 1,
@@ -443,8 +461,8 @@
               "T7": 1
             },
             "Liga": {
-              "T1": 1,
-              "T2": 1,
+              "T1": 2,
+              "T2": 2,
               "T3": 1,
               "T4": 1,
               "T5": 1,
@@ -493,7 +511,7 @@
               "T1": 4,
               "T2": 4,
               "T3": 4,
-              "T4": 2,
+              "T4": 3,
               "T5": 4,
               "T6": 3,
               "T7": 3
@@ -521,16 +539,16 @@
               "T2": 4,
               "T3": 4,
               "T4": 4,
-              "T5": 1,
+              "T5": 2,
               "T6": 3,
               "T7": 3
             },
             "Mages": {
               "T1": 5,
-              "T2": 5,
+              "T2": 4,
               "T3": 4,
               "T4": 4,
-              "T5": 4,
+              "T5": 3,
               "T6": 3,
               "T7": 3
             },
@@ -538,7 +556,7 @@
               "T1": 5,
               "T2": 5,
               "T3": 4,
-              "T4": 5,
+              "T4": 4,
               "T5": 4,
               "T6": 3,
               "T7": 3
@@ -701,8 +719,8 @@
       },
       "Town": false,
       "Taverns": {
-        "MinValue": 2,
-        "MaxValue": 2
+        "MinValue": 6,
+        "MaxValue": 6
       },
       "AdditionalMapObjectConfig": {
         "StaticObjects": [
@@ -763,6 +781,10 @@
       "DistBetweenTreasureBlocks": {
         "MinValue": 4,
         "MaxValue": 4
+      },
+      "Taverns": {
+        "MinValue": 6,
+        "MaxValue": 6
       },
       "AdditionalMapObjectConfig": {
         "StaticObjects": [
@@ -866,8 +888,8 @@
       "ZoneId": 9,
       "TerrainType": "Terrain5",
       "TownGuardStrenght": {
-        "MinValue": 250,
-        "MaxValue": 250
+        "MinValue": 200,
+        "MaxValue": 200
       },
       "TreasureBuildingPoints": {
         "MinValue": 200,
@@ -1191,22 +1213,33 @@
     }
   ],
   "SpecificCastlesStartBuildings": [],
+  "GeneralData": {
+    "MineGoldGuardLevel": 10
+  },
   "BaseArmyMultiplier": 1.0,
   "ArmyMultipliers": {
     "Dwarfs": 1.5,
-    "Elves": 0.5
+    "Mages": 1.25,
+    "Elves": 0.75,
+    "Necropolis": 0.5
   },
   "ScriptFeaturesConfig": {
     "CastleCaptureProps": {
       "CoordinateX": 88,
       "CoordinateY": 82,
       "SearchRadius": 25,
-      "EventTimer": 4,
+      "EventTimer": 3,
       "DisableFortifications": true,
       "IsForcedFinalBattle": true
     },
+    "GloballyDisabledBuildingsProps": {
+      "Buildings": [
+        "NecromancyUnholyTemple"
+      ]
+    },
     "ForcedFinalBattleProps": [],
-    "AdditionalStartCastles": []
+    "AdditionalStartCastles": [],
+    "FogOpeners": []
   },
   "CustomBuildingConfigs": [
     {
@@ -1215,7 +1248,8 @@
       "GuardStrenght": 0,
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
-      "XdbRef": "/MapObjects/Dragon_Utopia.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)"
+      "XdbRef": "/MapObjects/Dragon_Utopia.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)",
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 2,
@@ -1223,35 +1257,19 @@
       "GuardStrenght": 0,
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
-      "XdbRef": "/MapObjects/Universe_mod/OrcDeposit.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)"
+      "XdbRef": "/MapObjects/Universe_mod/OrcDeposit.(AdvMapBuildingShared).xdb#xpointer(/AdvMapBuildingShared)",
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 3,
       "GuardStrenght": 7,
       "BuildingTexture": "DwarvenCareer",
       "RoadType": "MainRoad",
-      "ResourceGiver": {
-        "ResourcesConfigs": [
-          {
-            "Mercury": {
-              "MinValue": 3,
-              "MaxValue": 5
-            },
-            "Crystals": {
-              "MinValue": 3,
-              "MaxValue": 5
-            },
-            "Sulfur": {
-              "MinValue": 3,
-              "MaxValue": 5
-            },
-            "Gems": {
-              "MinValue": 3,
-              "MaxValue": 5
-            }
-          }
-        ]
-      }
+      "DefaultBuilding": {
+        "DefaultBuilding": "RareResourcesGiver",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 4,
@@ -1267,7 +1285,8 @@
             }
           }
         ]
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 5,
@@ -1285,8 +1304,10 @@
         "PlayerFactions": false,
         "PlayerType": "Any",
         "CreatureIds": [],
-        "GrowMultiplier": 4.0
-      }
+        "GrowMultiplier": 4.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 6,
@@ -1304,8 +1325,10 @@
         "PlayerFactions": false,
         "PlayerType": "Any",
         "CreatureIds": [],
-        "GrowMultiplier": 3.0
-      }
+        "GrowMultiplier": 3.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 7,
@@ -1323,8 +1346,10 @@
         "PlayerFactions": false,
         "PlayerType": "Any",
         "CreatureIds": [],
-        "GrowMultiplier": 4.0
-      }
+        "GrowMultiplier": 4.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 8,
@@ -1342,8 +1367,10 @@
         "PlayerFactions": false,
         "PlayerType": "Any",
         "CreatureIds": [],
-        "GrowMultiplier": 3.0
-      }
+        "GrowMultiplier": 3.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 9,
@@ -1370,7 +1397,8 @@
         "PandoraCreatureConfig": [],
         "Spells": [],
         "Resources": []
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 10,
@@ -1397,7 +1425,8 @@
         "PandoraCreatureConfig": [],
         "Spells": [],
         "Resources": []
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 12,
@@ -1425,7 +1454,8 @@
         "PandoraCreatureConfig": [],
         "Spells": [],
         "Resources": []
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 13,
@@ -1453,7 +1483,8 @@
         "PandoraCreatureConfig": [],
         "Spells": [],
         "Resources": []
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 14,
@@ -1481,7 +1512,8 @@
         "PandoraCreatureConfig": [],
         "Spells": [],
         "Resources": []
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 15,
@@ -1508,7 +1540,8 @@
         "PandoraCreatureConfig": [],
         "Spells": [],
         "Resources": []
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 16,
@@ -1535,7 +1568,8 @@
         "PandoraCreatureConfig": [],
         "Spells": [],
         "Resources": []
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 17,
@@ -1563,7 +1597,8 @@
         "PandoraCreatureConfig": [],
         "Spells": [],
         "Resources": []
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 18,
@@ -1590,7 +1625,8 @@
         "PandoraCreatureConfig": [],
         "Spells": [],
         "Resources": []
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 19,
@@ -1606,7 +1642,8 @@
             }
           }
         ]
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 20,
@@ -1615,7 +1652,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "Arena"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 21,
@@ -1624,7 +1662,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "SchoolOfMagic"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 22,
@@ -1633,7 +1672,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "LibraryOfEnlightenment"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 23,
@@ -1642,7 +1682,8 @@
       "RoadType": "MainRoad",
       "MapObjectXdb": {
         "MapObject": "Arena"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 24,
@@ -1651,7 +1692,8 @@
       "RoadType": "MainRoad",
       "MapObjectXdb": {
         "MapObject": "SchoolOfMagic"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     }
   ]
 }

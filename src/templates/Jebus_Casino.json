@@ -1,0 +1,1702 @@
+{
+  "TemplateName": "Jebus",
+  "Zones": [
+    {
+      "ZoneId": 1,
+      "TerrainType": "FirstPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "StaticDwellingConfigs": {
+          "DwellingValue": [
+            {
+              "T1": 3,
+              "T2": 2
+            }
+          ]
+        }
+      },
+      "Prisons": {
+        "MinValue": 6,
+        "MaxValue": 6
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 130000,
+        "MaxValue": 130000
+      },
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "Taverns": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "HillForts": {
+        "MinValue": 2,
+        "MaxValue": 2
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 1,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 2,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 3,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 4,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 5,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 6,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 7,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 29,
+            "Count": {
+              "MinValue": 3,
+              "MaxValue": 3
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    },
+    {
+      "ZoneId": 2,
+      "TerrainType": "SecondPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "StaticDwellingConfigs": {
+          "DwellingValue": [
+            {
+              "T1": 3,
+              "T2": 2
+            }
+          ]
+        }
+      },
+      "Prisons": {
+        "MinValue": 6,
+        "MaxValue": 6
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 130000,
+        "MaxValue": 130000
+      },
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "Taverns": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "HillForts": {
+        "MinValue": 2,
+        "MaxValue": 2
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 8,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 9,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 10,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 11,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 12,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 13,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 14,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 29,
+            "Count": {
+              "MinValue": 3,
+              "MaxValue": 3
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    },
+    {
+      "ZoneId": 3,
+      "TerrainType": "Terrain1",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "RandomDwellingConfig": {
+          "MinCount": 0,
+          "MaxCount": 0,
+          "AllowedTiers": []
+        }
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 200000,
+        "MaxValue": 200000
+      },
+      "TreasureBlocksScalingFromTownDist": false,
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "Taverns": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 1,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 2,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 3,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 4,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 5,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 6,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 7,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          }
+        ],
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    },
+    {
+      "ZoneId": 4,
+      "TerrainType": "Terrain2",
+      "MirrorZoneId": 3,
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 8,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 9,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 10,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 11,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 12,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 13,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 14,
+            "Count": {
+              "MinValue": 2,
+              "MaxValue": 2
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    },
+    {
+      "ZoneId": 5,
+      "TerrainType": "Terrain3",
+      "Prisons": {
+        "MinValue": 6,
+        "MaxValue": 6
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 400000,
+        "MaxValue": 400000
+      },
+      "TreasureBlocksScalingFromTownDist": false,
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 5,
+        "MaxValue": 5
+      },
+      "Taverns": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "WisdomStones": {
+        "MinValue": 10,
+        "MaxValue": 10
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 15,
+            "Count": {
+              "MinValue": 15,
+              "MaxValue": 15
+            }
+          },
+          {
+            "BuildingId": 23,
+            "Count": {
+              "MinValue": 4,
+              "MaxValue": 5
+            }
+          },
+          {
+            "BuildingId": 24,
+            "Count": {
+              "MinValue": 4,
+              "MaxValue": 5
+            }
+          },
+          {
+            "BuildingId": 25,
+            "Count": {
+              "MinValue": 4,
+              "MaxValue": 5
+            }
+          },
+          {
+            "BuildingId": 26,
+            "Count": {
+              "MinValue": 4,
+              "MaxValue": 5
+            }
+          },
+          {
+            "BuildingId": 27,
+            "Count": {
+              "MinValue": 4,
+              "MaxValue": 5
+            }
+          },
+          {
+            "BuildingId": 28,
+            "Count": {
+              "MinValue": 4,
+              "MaxValue": 5
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [],
+        "FewOfModels": [
+          {
+            "Models": [
+              {
+                "Objects": [
+                  {
+                    "BuildingId": 101,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 102,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 103,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 104,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  }
+                ],
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              },
+              {
+                "Objects": [
+                  {
+                    "BuildingId": 111,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 112,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 113,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 114,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  }
+                ],
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              },
+              {
+                "Objects": [
+                  {
+                    "BuildingId": 121,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 122,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 123,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 124,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  }
+                ],
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              },
+              {
+                "Objects": [
+                  {
+                    "BuildingId": 131,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 132,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 133,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 134,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  }
+                ],
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              },
+              {
+                "Objects": [
+                  {
+                    "BuildingId": 141,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 142,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 143,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 144,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  }
+                ],
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              },
+              {
+                "Objects": [
+                  {
+                    "BuildingId": 151,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 152,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 153,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  },
+                  {
+                    "BuildingId": 154,
+                    "Count": {
+                      "MinValue": 5,
+                      "MaxValue": 5
+                    }
+                  }
+                ],
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              }
+            ],
+            "Count": {
+              "MinValue": 4,
+              "MaxValue": 4
+            }
+          }
+        ],
+        "ArtifactsGenerationModels": []
+      }
+    }
+  ],
+  "Connections": [
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 5,
+      "IsMain": true,
+      "GuardStrenght": 20,
+      "StartPointY": 136
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 5,
+      "IsMain": false,
+      "GuardStrenght": 20
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 5,
+      "IsMain": true,
+      "GuardStrenght": 20
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 5,
+      "IsMain": false,
+      "GuardStrenght": 20
+    }
+  ],
+  "TerrainConfig": [],
+  "FactionTerrainConfigs": {},
+  "StartBuildingConfigs": [
+    {
+      "ApplyAllTerrains": true,
+      "TerrainType": "Null",
+      "CastleType": "Undefined",
+      "Buildings": [
+        "Tavern",
+        "Forge",
+        "Market1",
+        "T1",
+        "T2"
+      ],
+      "BuildingMode": "All"
+    }
+  ],
+  "SpecificCastlesStartBuildings": [],
+  "GeneralData": {
+    "MineGoldGuardLevel": 10
+  },
+  "ArmyMultipliers": {
+    "Liga": 0.5,
+    "Horde": 0.75,
+    "Elves": 0.75,
+    "Dwarfs": 1.5,
+    "Inferno": 1.5
+  },
+  "ScriptFeaturesConfig": {
+    "CastleCaptureProps": {
+      "CoordinateX": 90,
+      "CoordinateY": 97,
+      "SearchRadius": 25,
+      "EventTimer": 5,
+      "DisableFortifications": true,
+      "IsForcedFinalBattle": false
+    },
+    "GloballyDisabledBuildingsProps": {
+      "Buildings": [
+        "NecromancyUnholyTemple"
+      ]
+    },
+    "ForcedFinalBattleProps": [],
+    "AdditionalStartCastles": [],
+    "FogOpeners": []
+  },
+  "EntitiesBanConfig": {
+    "BannedHeroes": ["Hero1", "Jazaz"],
+    "BannedSpells": [],
+    "BannedArtifacts": []
+  },
+  "CustomBuildingConfigs": [
+    {
+      "Id": 1,
+      "GuardStrenght": 4,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          1
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1",
+          "Terrain2",
+          "Terrain3",
+          "Terrain4",
+          "Terrain5",
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "CostMultiplier": 0.5,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 2,
+      "GuardStrenght": 6,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          2
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1",
+          "Terrain2",
+          "Terrain3",
+          "Terrain4",
+          "Terrain5",
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "CostMultiplier": 0.5,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 3,
+      "GuardStrenght": 8,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          3
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1",
+          "Terrain2",
+          "Terrain3",
+          "Terrain4",
+          "Terrain5",
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "CostMultiplier": 0.5,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 4,
+      "GuardStrenght": 10,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          4
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1",
+          "Terrain2",
+          "Terrain3",
+          "Terrain4",
+          "Terrain5",
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "CostMultiplier": 0.5,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 5,
+      "GuardStrenght": 12,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          5
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1",
+          "Terrain2",
+          "Terrain3",
+          "Terrain4",
+          "Terrain5",
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "CostMultiplier": 0.5,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 6,
+      "GuardStrenght": 14,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          6
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1",
+          "Terrain2",
+          "Terrain3",
+          "Terrain4",
+          "Terrain5",
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "CostMultiplier": 0.5,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 7,
+      "GuardStrenght": 16,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          7
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1",
+          "Terrain2",
+          "Terrain3",
+          "Terrain4",
+          "Terrain5",
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "CostMultiplier": 0.5,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 8,
+      "GuardStrenght": 4,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          1
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1",
+          "Terrain2",
+          "Terrain3",
+          "Terrain4",
+          "Terrain5",
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "CostMultiplier": 0.5,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 9,
+      "GuardStrenght": 6,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          2
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1",
+          "Terrain2",
+          "Terrain3",
+          "Terrain4",
+          "Terrain5",
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "CostMultiplier": 0.5,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 10,
+      "GuardStrenght": 8,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          3
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1",
+          "Terrain2",
+          "Terrain3",
+          "Terrain4",
+          "Terrain5",
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "CostMultiplier": 0.5,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 11,
+      "GuardStrenght": 10,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          4
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1",
+          "Terrain2",
+          "Terrain3",
+          "Terrain4",
+          "Terrain5",
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "CostMultiplier": 0.5,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 12,
+      "GuardStrenght": 12,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          5
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1",
+          "Terrain2",
+          "Terrain3",
+          "Terrain4",
+          "Terrain5",
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "CostMultiplier": 0.5,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 13,
+      "GuardStrenght": 14,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          6
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1",
+          "Terrain2",
+          "Terrain3",
+          "Terrain4",
+          "Terrain5",
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "CostMultiplier": 0.5,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 14,
+      "GuardStrenght": 16,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          7
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1",
+          "Terrain2",
+          "Terrain3",
+          "Terrain4",
+          "Terrain5",
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "CostMultiplier": 0.5,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 15,
+      "GuardStrenght": 14,
+      "BuildingTexture": "Null",
+      "RoadType": "SecondaryRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "ExpChest20K",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 23,
+      "GuardStrenght": 10,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "HighTierRunicChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 24,
+      "GuardStrenght": 12,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "FullT1MagicChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 25,
+      "GuardStrenght": 16,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "FullT2MagicChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 26,
+      "GuardStrenght": 20,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "FullT3MagicChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 27,
+      "GuardStrenght": 16,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "RandomT4SpellFromEachSchoolChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 28,
+      "GuardStrenght": 20,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "RandomT5SpellFromEachSchoolChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 29,
+      "GuardStrenght": 6,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "ArtifactXdb": {
+        "ArtifactType": "CrownOfLeadership"
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 101,
+      "GuardStrenght": 22,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          7
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 102,
+      "GuardStrenght": 20,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          6
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 4.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 103,
+      "GuardStrenght": 18,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          5
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 5.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 104,
+      "GuardStrenght": 16,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          4
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain1"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 111,
+      "GuardStrenght": 22,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          7
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain2"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 112,
+      "GuardStrenght": 20,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          6
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain2"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 4.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 113,
+      "GuardStrenght": 18,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          5
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain2"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 5.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 114,
+      "GuardStrenght": 16,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          4
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain2"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 121,
+      "GuardStrenght": 22,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          7
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain3"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 122,
+      "GuardStrenght": 20,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          6
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain3"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 4.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 123,
+      "GuardStrenght": 18,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          5
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain3"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 5.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 124,
+      "GuardStrenght": 16,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          4
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain3"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 131,
+      "GuardStrenght": 22,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          7
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain4"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 132,
+      "GuardStrenght": 20,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          6
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain4"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 4.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 133,
+      "GuardStrenght": 18,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          5
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain4"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 5.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 134,
+      "GuardStrenght": 16,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          4
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain4"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 141,
+      "GuardStrenght": 22,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          7
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain5"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 142,
+      "GuardStrenght": 20,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          6
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain5"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 4.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 143,
+      "GuardStrenght": 18,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          5
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain5"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 5.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 144,
+      "GuardStrenght": 16,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          4
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain5"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 151,
+      "GuardStrenght": 22,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          7
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 152,
+      "GuardStrenght": 20,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          6
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 4.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 153,
+      "GuardStrenght": 18,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          5
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 5.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 154,
+      "GuardStrenght": 16,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          4
+        ],
+        "Grades": true,
+        "TerrainTypes": [
+          "Terrain6"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    }
+  ]
+}

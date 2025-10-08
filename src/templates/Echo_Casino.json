@@ -40,6 +40,13 @@
               "MinValue": 2,
               "MaxValue": 2
             }
+          },
+          {
+            "BuildingId": 2,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 1
+            }
           }
         ],
         "StaticObjectsByCastle": {},
@@ -305,7 +312,35 @@
       "GuardStrenght": 20
     }
   ],
-  "TerrainConfig": [],
+  "TerrainConfig": [
+    {
+      "TerrainType": "Terrain1",
+      "MirrorTerrainType": "Null",
+      "BuildingsToDelete": [
+        "Dragon_Utopia",
+        "OrcDeposit"
+      ],
+      "BuildingsToAdd": []
+    },
+    {
+      "TerrainType": "Terrain2",
+      "MirrorTerrainType": "Terrain1",
+      "BuildingsToDelete": [],
+      "BuildingsToAdd": []
+    },
+    {
+      "TerrainType": "Terrain3",
+      "MirrorTerrainType": "Terrain1",
+      "BuildingsToDelete": [],
+      "BuildingsToAdd": []
+    },
+    {
+      "TerrainType": "Terrain4",
+      "MirrorTerrainType": "Terrain1",
+      "BuildingsToDelete": [],
+      "BuildingsToAdd": []
+    }
+  ],
   "FactionTerrainConfigs": {},
   "StartBuildingConfigs": [
     {
@@ -333,8 +368,21 @@
       "BuildingMode": "NeutralCastle"
     }
   ],
+  "EntitiesBanConfig": {
+    "BannedHeroes": ["Hero1", "Jazaz"],
+    "BannedSpells": [],
+    "BannedArtifacts": []
+  },
   "SpecificCastlesStartBuildings": [],
+  "GeneralData": {
+    "MineGoldGuardLevel": 10
+  },
   "BaseArmyMultiplier": 0.0,
+  "ArmyMultipliers": {
+    "Dwarfs": 0.5,
+    "Inferno": 0.5,
+    "Mages": 0.5
+  },
   "ArmyMultipliers": {},
   "ScriptFeaturesConfig": {
     "GloballyDisabledBuildingsProps": {
@@ -343,7 +391,34 @@
       ]
     },
     "ForcedFinalBattleProps": [],
-    "AdditionalStartCastles": []
+    "AdditionalStartCastles": [],
+    "FogOpeners": [
+      {
+        "Player": "Any",
+        "Data": [
+          {
+            "CoordinateX": 102,
+            "CoordinateY": 114
+          },
+          {
+            "CoordinateX": 34,
+            "CoordinateY": 23
+          },
+          {
+            "CoordinateX": 34,
+            "CoordinateY": 69
+          },
+          {
+            "CoordinateX": 102,
+            "CoordinateY": 69
+          }
+        ]
+      }
+    ],
+    "DisabledSiegeConfig": {
+      "Week": 1,
+      "Day": 2
+    }
   },
   "CustomBuildingConfigs": [
     {
@@ -353,7 +428,18 @@
       "RoadType": "NoRoad",
       "ArtifactXdb": {
         "ArtifactType": "CrownOfLeadership"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 2,
+      "GuardStrenght": 4,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "ArtifactXdb": {
+        "ArtifactType": "Shackles"
+      },
+      "InteractionMessageType": "NoMessage"
     }
   ]
 }

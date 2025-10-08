@@ -36,6 +36,10 @@
         "MinValue": 0,
         "MaxValue": 0
       },
+      "Taverns": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
       "TradingPosts": {
         "MinValue": 2,
         "MaxValue": 2
@@ -54,7 +58,55 @@
       },
       "AdditionalMapObjectConfig": {
         "StaticObjects": [],
-        "StaticObjectsByCastle": {},
+        "StaticObjectsByCastle": {
+          "Humans": {
+            "Objects": [
+              {
+                "BuildingId": 101,
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              }
+            ]
+          },
+          "Inferno": {
+            "Objects": [
+              {
+                "BuildingId": 102,
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              },
+              {
+                "BuildingId": 103,
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              }
+            ]
+          },
+          "Dwarfs": {
+            "Objects": [
+              {
+                "BuildingId": 104,
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              },
+              {
+                "BuildingId": 105,
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              }
+            ]
+          }
+        },
         "ByPointModels": [],
         "FewOfModels": [],
         "ArtifactsGenerationModels": [
@@ -113,7 +165,63 @@
     {
       "ZoneId": 2,
       "TerrainType": "SecondPlayer",
-      "MirrorZoneId": 1
+      "MirrorZoneId": 1,
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [],
+        "StaticObjectsByCastle": {
+          "Humans": {
+            "Objects": [
+              {
+                "BuildingId": 101,
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              }
+            ]
+          },
+          "Inferno": {
+            "Objects": [
+              {
+                "BuildingId": 102,
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              },
+              {
+                "BuildingId": 103,
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              }
+            ]
+          },
+          "Dwarfs": {
+            "Objects": [
+              {
+                "BuildingId": 104,
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              },
+              {
+                "BuildingId": 105,
+                "Count": {
+                  "MinValue": 1,
+                  "MaxValue": 1
+                }
+              }
+            ]
+          }
+        },
+        "ByPointModels": [],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": [],
+        "AddMirrorLocationObjects": true
+      }
     },
     {
       "ZoneId": 3,
@@ -569,8 +677,20 @@
     }
   ],
   "SpecificCastlesStartBuildings": [],
+  "GeneralData": {
+    "MineGoldGuardLevel": 10
+  },
   "BaseArmyMultiplier": 0.0,
   "ArmyMultipliers": {},
+  "ScriptFeaturesConfig": {
+    "ForcedFinalBattleProps": [],
+    "AdditionalStartCastles": [],
+    "FogOpeners": [],
+    "DisabledSiegeConfig": {
+      "Week": 2,
+      "Day": 1
+    }
+  },
   "StartSpellsConfig": {
     "GlobalSpells": [
       "TownPortal"
@@ -594,6 +714,19 @@
         "PandoraCreatureConfig": [],
         "Spells": [],
         "Resources": []
+      },
+      "InteractionMessageType": "NoMessage",
+      "CustomTexts": {
+        "Texts": {
+          "Ru": {
+            "Name": "",
+            "Description": "Хранит в себе 40 000 очков опыта."
+          },
+          "En": {
+            "Name": "",
+            "Description": "Contains 40 000 experience points."
+          }
+        }
       }
     },
     {
@@ -610,7 +743,125 @@
         "PandoraCreatureConfig": [],
         "Spells": [],
         "Resources": []
+      },
+      "InteractionMessageType": "NoMessage",
+      "CustomTexts": {
+        "Texts": {
+          "Ru": {
+            "Name": "",
+            "Description": "Хранит в себе 30 000 очков опыта."
+          },
+          "En": {
+            "Name": "",
+            "Description": "Contains 30 000 experience points."
+          }
+        }
       }
+    },
+    {
+      "Id": 101,
+      "GuardStrenght": 4,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          1
+        ],
+        "NoGrades": true,
+        "TerrainTypes": [
+          "Humans"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 102,
+      "GuardStrenght": 4,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          1
+        ],
+        "NoGrades": true,
+        "TerrainTypes": [
+          "Inferno"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 103,
+      "GuardStrenght": 8,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          3
+        ],
+        "NoGrades": true,
+        "TerrainTypes": [
+          "Inferno"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 104,
+      "GuardStrenght": 4,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          1
+        ],
+        "NoGrades": true,
+        "TerrainTypes": [
+          "Dwarfs"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 105,
+      "GuardStrenght": 8,
+      "BuildingTexture": "DefaultDwellingByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [
+          3
+        ],
+        "NoGrades": true,
+        "TerrainTypes": [
+          "Dwarfs"
+        ],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [],
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     }
   ]
 }

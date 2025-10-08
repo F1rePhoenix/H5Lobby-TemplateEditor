@@ -1,0 +1,399 @@
+{
+  "TemplateName": "[S3]Universe_S",
+  "Zones": [
+    {
+      "ZoneId": 1,
+      "TerrainType": "FirstPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "RandomDwellingConfig": {
+          "MinCount": 9,
+          "MaxCount": 12,
+          "MinTiersCount": 3,
+          "MaxTiersCount": 4,
+          "AllowedTiers": [],
+          "MaxCountPerTier": 4
+        }
+      },
+      "MineGenerationConfig": {
+        "Wood": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Ore": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Mercury": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Crystals": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Sulfur": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Gems": {
+          "MinValue": 1,
+          "MaxValue": 1
+        },
+        "Gold": {
+          "MinValue": 1,
+          "MaxValue": 1
+        }
+      },
+      "UpgBuildingsDensity": {
+        "MinValue": 40,
+        "MaxValue": 40
+      },
+      "TreasureDensity": {
+        "MinValue": 10,
+        "MaxValue": 10
+      },
+      "TreasureChestDensity": {
+        "MinValue": 25,
+        "MaxValue": 25
+      },
+      "Prisons": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ShopPoints": {
+        "MinValue": 25,
+        "MaxValue": 25
+      },
+      "ShrinePoints": {
+        "MinValue": 20,
+        "MaxValue": 20
+      },
+      "LuckMoralBuildingsDensity": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "ResourceBuildingsDensity": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "TreasureBuildingPoints": {
+        "MinValue": 90,
+        "MaxValue": 90
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 95000,
+        "MaxValue": 100000
+      },
+      "DenOfThieves": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "RedwoodObservatoryDensity": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "Size": {
+        "MinValue": 10,
+        "MaxValue": 10
+      },
+      "ZoneStartPointX": {
+        "MinValue": 34,
+        "MaxValue": 34
+      },
+      "ZoneStartPointY": {
+        "MinValue": 102,
+        "MaxValue": 102
+      },
+      "MainTownStartPointX": {
+        "MinValue": 34,
+        "MaxValue": 34
+      },
+      "MainTownStartPointY": {
+        "MinValue": 102,
+        "MaxValue": 102
+      },
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 6,
+        "MaxValue": 6
+      },
+      "Taverns": {
+        "MinValue": 0,
+        "MaxValue": 0
+      }
+    },
+    {
+      "ZoneId": 2,
+      "TerrainType": "SecondPlayer",
+      "MirrorZoneId": 1,
+      "Size": {
+        "MinValue": 10,
+        "MaxValue": 10
+      },
+      "ZoneStartPointX": {
+        "MinValue": 34,
+        "MaxValue": 34
+      },
+      "ZoneStartPointY": {
+        "MinValue": 34,
+        "MaxValue": 34
+      },
+      "MainTownStartPointX": {
+        "MinValue": 34,
+        "MaxValue": 34
+      },
+      "MainTownStartPointY": {
+        "MinValue": 34,
+        "MaxValue": 34
+      }
+    },
+    {
+      "ZoneId": 3,
+      "TerrainType": "Terrain1",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "RandomDwellingConfig": {
+          "MinCount": 8,
+          "MaxCount": 14,
+          "MinTiersCount": 3,
+          "MaxTiersCount": 4,
+          "AllowedTiers": [],
+          "MaxCountPerTier": 4
+        }
+      },
+      "UpgBuildingsDensity": {
+        "MinValue": 50,
+        "MaxValue": 50
+      },
+      "TreasureDensity": {
+        "MinValue": 10,
+        "MaxValue": 10
+      },
+      "TreasureChestDensity": {
+        "MinValue": 25,
+        "MaxValue": 25
+      },
+      "Prisons": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ShopPoints": {
+        "MinValue": 40,
+        "MaxValue": 40
+      },
+      "ShrinePoints": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "LuckMoralBuildingsDensity": {
+        "MinValue": 30,
+        "MaxValue": 30
+      },
+      "ResourceBuildingsDensity": {
+        "MinValue": 20,
+        "MaxValue": 20
+      },
+      "TreasureBuildingPoints": {
+        "MinValue": 140,
+        "MaxValue": 140
+      },
+      "TreasureBlocksTotalValue": {
+        "MinValue": 165000,
+        "MaxValue": 165000
+      },
+      "DenOfThieves": {
+        "MinValue": 1,
+        "MaxValue": 1
+      },
+      "RedwoodObservatoryDensity": {
+        "MinValue": 1,
+        "MaxValue": 1
+      },
+      "Size": {
+        "MinValue": 10,
+        "MaxValue": 10
+      },
+      "Town": true,
+      "ZoneStartPointX": {
+        "MinValue": 102,
+        "MaxValue": 102
+      },
+      "ZoneStartPointY": {
+        "MinValue": 102,
+        "MaxValue": 102
+      },
+      "MainTownStartPointX": {
+        "MinValue": 102,
+        "MaxValue": 102
+      },
+      "MainTownStartPointY": {
+        "MinValue": 102,
+        "MaxValue": 102
+      },
+      "MainTownRotationDirection": {
+        "MinValue": 3,
+        "MaxValue": 3
+      },
+      "DistBetweenTreasureBlocks": {
+        "MinValue": 6,
+        "MaxValue": 6
+      },
+      "Taverns": {
+        "MinValue": 0,
+        "MaxValue": 0
+      }
+    },
+    {
+      "ZoneId": 4,
+      "TerrainType": "Terrain2",
+      "MirrorZoneId": 3,
+      "Size": {
+        "MinValue": 10,
+        "MaxValue": 10
+      },
+      "ZoneStartPointX": {
+        "MinValue": 102,
+        "MaxValue": 102
+      },
+      "ZoneStartPointY": {
+        "MinValue": 34,
+        "MaxValue": 34
+      },
+      "MainTownStartPointX": {
+        "MinValue": 102,
+        "MaxValue": 102
+      },
+      "MainTownStartPointY": {
+        "MinValue": 34,
+        "MaxValue": 34
+      },
+      "MainTownRotationDirection": {
+        "MinValue": 3,
+        "MaxValue": 3
+      }
+    },
+    {
+      "ZoneId": 5,
+      "TerrainType": "Null",
+      "RemoveZone": true
+    }
+  ],
+  "Connections": [
+    {
+      "SourceZoneIndex": 3,
+      "DestZoneIndex": 5,
+      "IsMain": false,
+      "RemoveConnection": true
+    },
+    {
+      "SourceZoneIndex": 4,
+      "DestZoneIndex": 5,
+      "IsMain": false,
+      "RemoveConnection": true
+    },
+    {
+      "SourceZoneIndex": 3,
+      "DestZoneIndex": 5,
+      "IsMain": true,
+      "RemoveConnection": true
+    },
+    {
+      "SourceZoneIndex": 4,
+      "DestZoneIndex": 5,
+      "IsMain": true,
+      "RemoveConnection": true
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 3,
+      "IsMain": true,
+      "GuardStrenght": 10,
+      "StaticPos": true,
+      "StartPointX": 68,
+      "StartPointY": 113,
+      "MinRadiusToSearch": 3,
+      "MaxRadiusToSearch": 5,
+      "RoadType": 2
+    },
+    {
+      "SourceZoneIndex": 1,
+      "DestZoneIndex": 3,
+      "IsMain": false,
+      "GuardStrenght": 10,
+      "StaticPos": true,
+      "StartPointX": 68,
+      "StartPointY": 91,
+      "MinRadiusToSearch": 3,
+      "MaxRadiusToSearch": 5,
+      "RoadType": 2
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 4,
+      "IsMain": true,
+      "GuardStrenght": 10,
+      "StaticPos": true,
+      "StartPointX": 68,
+      "StartPointY": 45,
+      "MinRadiusToSearch": 3,
+      "MaxRadiusToSearch": 5,
+      "RoadType": 2
+    },
+    {
+      "SourceZoneIndex": 2,
+      "DestZoneIndex": 4,
+      "IsMain": false,
+      "GuardStrenght": 10,
+      "StaticPos": true,
+      "StartPointX": 68,
+      "StartPointY": 23,
+      "MinRadiusToSearch": 3,
+      "MaxRadiusToSearch": 5,
+      "RoadType": 2
+    },
+    {
+      "SourceZoneIndex": 3,
+      "DestZoneIndex": 4,
+      "IsMain": false,
+      "GuardStrenght": 10,
+      "StaticPos": true,
+      "StartPointX": 113,
+      "StartPointY": 68,
+      "MinRadiusToSearch": 3,
+      "MaxRadiusToSearch": 5,
+      "RoadType": 2
+    },
+    {
+      "SourceZoneIndex": 3,
+      "DestZoneIndex": 4,
+      "IsMain": true,
+      "GuardStrenght": 10,
+      "StaticPos": true,
+      "StartPointX": 91,
+      "StartPointY": 68,
+      "MinRadiusToSearch": 3,
+      "MaxRadiusToSearch": 5,
+      "RoadType": 2
+    }
+  ],
+  "TerrainConfig": [],
+  "FactionTerrainConfigs": {},
+  "StartBuildingConfigs": [],
+  "SpecificCastlesStartBuildings": [],
+  "BaseArmyMultiplier": 0.0,
+  "ArmyMultipliers": {},
+  "ScriptFeaturesConfig": {
+    "GloballyDisabledBuildingsProps": {
+      "Buildings": [
+        "NecromancyUnholyTemple"
+      ]
+    },
+    "ForcedFinalBattleProps": [],
+    "AdditionalStartCastles": []
+  },
+  "CustomBuildingConfigs": [],
+  "ZoneRandomizationConfig": {
+    "ZonesToSwap": [],
+    "ZonesToRandomize": []
+  }
+}

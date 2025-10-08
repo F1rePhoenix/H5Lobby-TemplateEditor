@@ -198,72 +198,76 @@ const ByPointModelsEditor: React.FC<ByPointModelsEditorProps> = ({
           </Box>
 
           {/* Points Count By Faction */}
-          <Box sx={{ mb: 2 }}>
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
-              <Typography variant="subtitle1">
-                {language === 'ru' ? 'Очки по фракциям' : 'Points by Factions'}
-              </Typography>
-              <Button
-                variant="outlined"
-                startIcon={<AddIcon />}
-                onClick={() => setFactionDialogOpen(index)}
-                disabled={disabled || availableFactions.length === 0}
-                size="small"
-              >
-                {language === 'ru' ? 'Добавить фракцию' : 'Add Faction'}
-              </Button>
-            </Box>
-
-            {factions.length > 0 && (
-              <Paper sx={{ mb: 2 }}>
-                <Tabs
-                  value={activeFactionTab}
-                  onChange={(e, newValue) => setActiveFactionTab(newValue)}
-                  variant="scrollable"
-                  scrollButtons="auto"
+            <Box sx={{ mb: 2 }}>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 1 }}>
+                <Typography variant="subtitle1">
+                  {language === 'ru' ? 'Очки по фракциям' : 'Points by Factions'}
+                </Typography>
+                <Button
+                  variant="outlined"
+                  startIcon={<AddIcon />}
+                  onClick={() => setFactionDialogOpen(index)}
+                  disabled={disabled || availableFactions.length === 0}
+                  size="small"
                 >
-                  {factions.map(([faction], tabIndex) => (
-                    <Tab 
-                      key={faction}
-                      label={castleTypeDict[faction]?.[language] || faction}
-                      icon={
-                        <IconButton
-                          size="small"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            removeFaction(index, faction);
-                          }}
-                          color="error"
-                        >
-                          <DeleteIcon fontSize="small" />
-                        </IconButton>
-                      }
-                      iconPosition="end"
-                    />
-                  ))}
-                </Tabs>
+                  {language === 'ru' ? 'Добавить фракцию' : 'Add Faction'}
+                </Button>
+              </Box>
 
-                {factions.map(([faction, pointsValue], tabIndex) => (
-                  <Box
-                    key={faction}
-                    role="tabpanel"
-                    hidden={activeFactionTab !== tabIndex}
-                    sx={{ p: 2 }}
-                  >
-                    <TextField
-                      label={language === 'ru' ? 'Количество очков' : 'Points Value'}
-                      type="number"
-                      value={pointsValue ?? ''}
-                      onChange={(e) => updateFactionValue(index, faction, e.target.value ? Number(e.target.value) : undefined)}
-                      disabled={disabled}
-                      fullWidth
-                      inputProps={{ min: 0 }}
-                    />
+              {factions.length > 0 && (
+                <Paper sx={{ mb: 2 }}>
+                  {/* Прокручиваемый контейнер для вкладок фракций */}
+                  <Box sx={{ maxWidth: '100%', overflowX: 'auto' }}>
+                    <Tabs
+                      value={activeFactionTab}
+                      onChange={(e, newValue) => setActiveFactionTab(newValue)}
+                      variant="scrollable"
+                      scrollButtons="auto"
+                      sx={{ minWidth: 'fit-content' }}
+                    >
+                      {factions.map(([faction], tabIndex) => (
+                        <Tab 
+                          key={faction}
+                          label={castleTypeDict[faction]?.[language] || faction}
+                          icon={
+                            <IconButton
+                              size="small"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                removeFaction(index, faction);
+                              }}
+                              color="error"
+                            >
+                              <DeleteIcon fontSize="small" />
+                            </IconButton>
+                          }
+                          iconPosition="end"
+                        />
+                      ))}
+                    </Tabs>
                   </Box>
-                ))}
-              </Paper>
-            )}
-          </Box>
+
+                  {factions.map(([faction, pointsValue], tabIndex) => (
+                    <Box
+                      key={faction}
+                      role="tabpanel"
+                      hidden={activeFactionTab !== tabIndex}
+                      sx={{ p: 2 }}
+                    >
+                      <TextField
+                        label={language === 'ru' ? 'Количество очков' : 'Points Value'}
+                        type="number"
+                        value={pointsValue ?? ''}
+                        onChange={(e) => updateFactionValue(index, faction, e.target.value ? Number(e.target.value) : undefined)}
+                        disabled={disabled}
+                        fullWidth
+                        inputProps={{ min: 0 }}
+                      />
+                    </Box>
+                  ))}
+                </Paper>
+              )}
+            </Box>
 
           {/* Points By Building ID */}
           <Box sx={{ mb: 2 }}>
@@ -284,51 +288,71 @@ const ByPointModelsEditor: React.FC<ByPointModelsEditorProps> = ({
 
             {buildings.length > 0 && (
               <Paper sx={{ mb: 2 }}>
-                <Tabs
-                  value={activeBuildingTab}
-                  onChange={(e, newValue) => setActiveBuildingTab(newValue)}
-                  variant="scrollable"
-                  scrollButtons="auto"
-                >
+                {/* Контейнер с переносом кнопок */}
+                <Box sx={{ 
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  gap: 0.5,
+                  p: 1,
+                  maxHeight: 120,
+                  overflow: 'auto',
+                  borderBottom: 1,
+                  borderColor: 'divider'
+                }}>
                   {buildings.map(([buildingId], tabIndex) => (
-                    <Tab 
+                    <Button
                       key={buildingId}
-                      label={`ID: ${buildingId}`}
-                      icon={
+                      variant={activeBuildingTab === tabIndex ? "contained" : "outlined"}
+                      size="small"
+                      onClick={() => setActiveBuildingTab(tabIndex)}
+                      sx={{ 
+                        minWidth: 'auto',
+                        px: 1,
+                        py: 0.5,
+                        fontSize: '0.75rem',
+                        height: 32
+                      }}
+                      endIcon={
                         <IconButton
                           size="small"
                           onClick={(e) => {
                             e.stopPropagation();
                             removeBuildingId(index, buildingId);
+                            if (activeBuildingTab === tabIndex) {
+                              setActiveBuildingTab(Math.max(0, activeBuildingTab - 1));
+                            } else if (activeBuildingTab > tabIndex) {
+                              setActiveBuildingTab(activeBuildingTab - 1);
+                            }
                           }}
                           color="error"
+                          sx={{ p: 0.1, ml: 0.5 }}
                         >
                           <DeleteIcon fontSize="small" />
                         </IconButton>
                       }
-                      iconPosition="end"
-                    />
+                    >
+                      ID: {buildingId}
+                    </Button>
                   ))}
-                </Tabs>
+                </Box>
 
-                {buildings.map(([buildingId, pointsValue], tabIndex) => (
-                  <Box
-                    key={buildingId}
-                    role="tabpanel"
-                    hidden={activeBuildingTab !== tabIndex}
-                    sx={{ p: 2 }}
-                  >
-                    <TextField
-                      label={language === 'ru' ? 'Количество очков' : 'Points Value'}
-                      type="number"
-                      value={pointsValue ?? ''}
-                      onChange={(e) => updateBuildingIdValue(index, buildingId, e.target.value ? Number(e.target.value) : undefined)}
-                      disabled={disabled}
-                      fullWidth
-                      inputProps={{ min: 0 }}
-                    />
-                  </Box>
-                ))}
+                {/* Активная панель */}
+                <Box sx={{ p: 2 }}>
+                  {buildings.map(([buildingId, pointsValue], tabIndex) => 
+                    activeBuildingTab === tabIndex ? (
+                      <TextField
+                        key={buildingId}
+                        label={language === 'ru' ? 'Количество очков' : 'Points Value'}
+                        type="number"
+                        value={pointsValue ?? ''}
+                        onChange={(e) => updateBuildingIdValue(index, buildingId, e.target.value ? Number(e.target.value) : undefined)}
+                        disabled={disabled}
+                        fullWidth
+                        inputProps={{ min: 0 }}
+                      />
+                    ) : null
+                  )}
+                </Box>
               </Paper>
             )}
           </Box>

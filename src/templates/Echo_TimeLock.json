@@ -7,128 +7,108 @@
       "DwellingGenerationConfig": {
         "BuildingTexture": "Null",
         "DwellingByPointsConfig": {
-          "PointsCount": 1500,
+          "PointsCount": 1800,
           "PointsCountByFaction": {},
           "DwellingPointsByFaction": {
             "Humans": {
-              "T1": 59,
-              "T2": 81,
-              "T3": 74,
-              "T4": 162,
-              "T5": 152,
-              "T6": 202,
-              "T7": 270
+              "T1": 44,
+              "T2": 95,
+              "T3": 98,
+              "T4": 128,
+              "T5": 183,
+              "T6": 214,
+              "T7": 238
             },
             "Inferno": {
-              "T1": 91,
-              "T2": 95,
-              "T3": 76,
-              "T4": 152,
-              "T5": 163,
-              "T6": 169,
-              "T7": 254
+              "T1": 63,
+              "T2": 71,
+              "T3": 109,
+              "T4": 139,
+              "T5": 150,
+              "T6": 239,
+              "T7": 229
             },
             "Necropolis": {
-              "T1": 109,
-              "T2": 115,
-              "T3": 138,
-              "T4": 128,
-              "T5": 191,
-              "T6": 191,
-              "T7": 128
+              "T1": 57,
+              "T2": 83,
+              "T3": 110,
+              "T4": 137,
+              "T5": 214,
+              "T6": 232,
+              "T7": 167
             },
             "Elves": {
-              "T1": 57,
-              "T2": 74,
-              "T3": 201,
-              "T4": 191,
-              "T5": 143,
-              "T6": 143,
-              "T7": 191
+              "T1": 47,
+              "T2": 81,
+              "T3": 121,
+              "T4": 208,
+              "T5": 151,
+              "T6": 161,
+              "T7": 231
             },
             "Liga": {
-              "T1": 84,
-              "T2": 98,
-              "T3": 146,
-              "T4": 130,
-              "T5": 163,
-              "T6": 163,
-              "T7": 217
+              "T1": 81,
+              "T2": 86,
+              "T3": 133,
+              "T4": 129,
+              "T5": 126,
+              "T6": 218,
+              "T7": 227
             },
             "Mages": {
-              "T1": 81,
-              "T2": 68,
-              "T3": 109,
-              "T4": 146,
-              "T5": 109,
-              "T6": 243,
-              "T7": 243
+              "T1": 71,
+              "T2": 78,
+              "T3": 108,
+              "T4": 171,
+              "T5": 124,
+              "T6": 208,
+              "T7": 240
             },
             "Dwarfs": {
-              "T1": 131,
-              "T2": 114,
-              "T3": 110,
-              "T4": 73,
-              "T5": 146,
-              "T6": 183,
-              "T7": 244
+              "T1": 63,
+              "T2": 92,
+              "T3": 136,
+              "T4": 96,
+              "T5": 160,
+              "T6": 210,
+              "T7": 243
             },
             "Horde": {
-              "T1": 51,
-              "T2": 65,
-              "T3": 74,
-              "T4": 135,
-              "T5": 203,
-              "T6": 203,
-              "T7": 270
+              "T1": 48,
+              "T2": 86,
+              "T3": 98,
+              "T4": 127,
+              "T5": 180,
+              "T6": 213,
+              "T7": 248
             }
           },
           "AllowedTiers": [],
-          "MinCountPerTierByFaction": {
-            "Humans": {
-              "T2": 1
-            },
-            "Inferno": {
-              "T1": 1,
-              "T4": 1
-            },
-            "Necropolis": {
-              "T1": 1
-            },
-            "Elves": {
-              "T3": 1
-            },
-            "Liga": {
-              "T1": 1,
-              "T2": 1
-            },
-            "Mages": {
-              "T1": 1,
-              "T3": 1
-            },
-            "Dwarfs": {
-              "T2": 1,
-              "T3": 1
-            },
-            "Horde": {
-              "T2": 1
-            }
+          "MinCountPerTier": {
+            "T1": 1,
+            "T2": 1,
+            "T3": 1,
+            "T4": 1,
+            "T5": 1,
+            "T6": 1,
+            "T7": 1
           },
+          "MinCountPerTierByFaction": {},
           "MaxCountPerTierByFaction": {
             "Humans": {
-              "T1": 3,
+              "T1": 4,
               "T2": 2,
               "T3": 3,
               "T4": 3,
-              "T5": 2,
+              "T5": 3,
               "T6": 3,
               "T7": 3
             },
             "Inferno": {
-              "T1": 3,
+              "T1": 4,
               "T2": 3,
               "T3": 3,
-              "T4": 2,
+              "T4": 3,
               "T5": 3,
               "T6": 3,
               "T7": 3
@@ -146,7 +126,7 @@
               "T1": 3,
               "T2": 3,
               "T3": 2,
-              "T4": 2,
+              "T4": 3,
               "T5": 3,
               "T6": 3,
               "T7": 3
@@ -156,7 +136,7 @@
               "T2": 2,
               "T3": 3,
               "T4": 3,
-              "T5": 1,
+              "T5": 2,
               "T6": 3,
               "T7": 3
             },
@@ -165,7 +145,7 @@
               "T2": 3,
               "T3": 3,
               "T4": 3,
-              "T5": 3,
+              "T5": 2,
               "T6": 3,
               "T7": 3
             },
@@ -184,8 +164,8 @@
               "T3": 3,
               "T4": 3,
               "T5": 3,
-              "T6": 2,
-              "T7": 2
+              "T6": 3,
+              "T7": 3
             }
           }
         }
@@ -289,158 +269,138 @@
       "DwellingGenerationConfig": {
         "BuildingTexture": "Null",
         "DwellingByPointsConfig": {
-          "PointsCount": 1500,
+          "PointsCount": 1800,
           "PointsCountByFaction": {},
           "DwellingPointsByFaction": {
             "Humans": {
-              "T1": 59,
-              "T2": 81,
-              "T3": 74,
-              "T4": 162,
-              "T5": 152,
-              "T6": 202,
-              "T7": 270
+              "T1": 44,
+              "T2": 95,
+              "T3": 98,
+              "T4": 128,
+              "T5": 183,
+              "T6": 214,
+              "T7": 238
             },
             "Inferno": {
-              "T1": 91,
-              "T2": 95,
-              "T3": 76,
-              "T4": 152,
-              "T5": 163,
-              "T6": 169,
-              "T7": 254
+              "T1": 63,
+              "T2": 71,
+              "T3": 109,
+              "T4": 139,
+              "T5": 150,
+              "T6": 239,
+              "T7": 229
             },
             "Necropolis": {
-              "T1": 109,
-              "T2": 115,
-              "T3": 138,
-              "T4": 128,
-              "T5": 191,
-              "T6": 191,
-              "T7": 128
+              "T1": 57,
+              "T2": 83,
+              "T3": 110,
+              "T4": 137,
+              "T5": 214,
+              "T6": 232,
+              "T7": 167
             },
             "Elves": {
-              "T1": 57,
-              "T2": 74,
-              "T3": 201,
-              "T4": 191,
-              "T5": 143,
-              "T6": 143,
-              "T7": 191
+              "T1": 47,
+              "T2": 81,
+              "T3": 121,
+              "T4": 208,
+              "T5": 151,
+              "T6": 161,
+              "T7": 231
             },
             "Liga": {
-              "T1": 84,
-              "T2": 98,
-              "T3": 146,
-              "T4": 130,
-              "T5": 163,
-              "T6": 163,
-              "T7": 217
+              "T1": 81,
+              "T2": 86,
+              "T3": 133,
+              "T4": 129,
+              "T5": 126,
+              "T6": 218,
+              "T7": 227
             },
             "Mages": {
-              "T1": 81,
-              "T2": 68,
-              "T3": 109,
-              "T4": 146,
-              "T5": 109,
-              "T6": 243,
-              "T7": 243
+              "T1": 71,
+              "T2": 78,
+              "T3": 108,
+              "T4": 171,
+              "T5": 124,
+              "T6": 208,
+              "T7": 240
             },
             "Dwarfs": {
-              "T1": 131,
-              "T2": 114,
-              "T3": 110,
-              "T4": 73,
-              "T5": 146,
-              "T6": 183,
-              "T7": 244
+              "T1": 63,
+              "T2": 92,
+              "T3": 136,
+              "T4": 96,
+              "T5": 160,
+              "T6": 210,
+              "T7": 243
             },
             "Horde": {
-              "T1": 51,
-              "T2": 65,
-              "T3": 74,
-              "T4": 135,
-              "T5": 203,
-              "T6": 203,
-              "T7": 270
+              "T1": 48,
+              "T2": 86,
+              "T3": 98,
+              "T4": 127,
+              "T5": 180,
+              "T6": 213,
+              "T7": 248
             }
           },
           "AllowedTiers": [],
-          "MinCountPerTierByFaction": {
-            "Humans": {
-              "T2": 1
-            },
-            "Inferno": {
-              "T1": 1,
-              "T4": 1
-            },
-            "Necropolis": {
-              "T1": 1
-            },
-            "Elves": {
-              "T3": 1
-            },
-            "Liga": {
-              "T1": 1,
-              "T2": 1
-            },
-            "Mages": {
-              "T1": 1,
-              "T3": 1
-            },
-            "Dwarfs": {
-              "T2": 1,
-              "T3": 1
-            },
-            "Horde": {
-              "T2": 1
-            }
+          "MinCountPerTier": {
+            "T1": 1,
+            "T2": 1,
+            "T3": 1,
+            "T4": 1,
+            "T5": 1,
+            "T6": 1,
+            "T7": 1
           },
+          "MinCountPerTierByFaction": {},
           "MaxCountPerTierByFaction": {
             "Humans": {
               "T1": 4,
               "T2": 2,
               "T3": 3,
               "T4": 3,
-              "T5": 2,
-              "T6": 2,
-              "T7": 2
+              "T5": 3,
+              "T6": 3,
+              "T7": 3
             },
             "Inferno": {
-              "T1": 3,
+              "T1": 4,
               "T2": 3,
               "T3": 3,
-              "T4": 2,
-              "T5": 2,
-              "T6": 2,
-              "T7": 2
+              "T4": 3,
+              "T5": 3,
+              "T6": 3,
+              "T7": 3
             },
             "Necropolis": {
               "T1": 2,
               "T2": 3,
               "T3": 3,
               "T4": 2,
-              "T5": 2,
-              "T6": 2,
+              "T5": 3,
+              "T6": 3,
               "T7": 3
             },
             "Elves": {
               "T1": 3,
               "T2": 3,
               "T3": 2,
-              "T4": 2,
-              "T5": 2,
-              "T6": 2,
-              "T7": 2
+              "T4": 3,
+              "T5": 3,
+              "T6": 3,
+              "T7": 3
             },
             "Liga": {
               "T1": 3,
               "T2": 2,
               "T3": 3,
               "T4": 3,
-              "T5": 1,
-              "T6": 2,
-              "T7": 2
+              "T5": 2,
+              "T6": 3,
+              "T7": 3
             },
             "Mages": {
               "T1": 2,
@@ -448,17 +408,17 @@
               "T3": 3,
               "T4": 3,
               "T5": 2,
-              "T6": 2,
-              "T7": 2
+              "T6": 3,
+              "T7": 3
             },
             "Dwarfs": {
               "T1": 3,
               "T2": 3,
               "T3": 3,
               "T4": 3,
-              "T5": 2,
-              "T6": 2,
-              "T7": 2
+              "T5": 3,
+              "T6": 3,
+              "T7": 3
             },
             "Horde": {
               "T1": 4,
@@ -466,8 +426,8 @@
               "T3": 3,
               "T4": 3,
               "T5": 3,
-              "T6": 2,
-              "T7": 2
+              "T6": 3,
+              "T7": 3
             }
           }
         }
@@ -817,13 +777,15 @@
       "BuildingsToDelete": [
         "Magic_Spring",
         "Tree_of_Knowledge",
-        "LibraryOfEnlightenment"
+        "LibraryOfEnlightenment",
+        "Stables"
       ],
       "BuildingsToAdd": [],
       "NewTreasuryBuildings": {
         "BuildingsToDelete": [
           "DwarvenTreasury",
-          "Elemantal_Stockpile"
+          "Elemantal_Stockpile",
+          "Stables"
         ],
         "BuildingsToAdd": []
       }
@@ -835,7 +797,7 @@
       "BuildingsToAdd": []
     },
     {
-      "TerrainType": "Terrain2",
+      "TerrainType": "Terrain1",
       "MirrorTerrainType": "Null",
       "BuildingsToDelete": [
         "Magic_Spring",
@@ -843,7 +805,8 @@
         "LibraryOfEnlightenment",
         "OrcDeposit",
         "Monasterybank",
-        "Dragon_Utopia"
+        "Dragon_Utopia",
+        "Stables"
       ],
       "BuildingsToAdd": []
     },
@@ -856,7 +819,8 @@
         "LibraryOfEnlightenment",
         "OrcDeposit",
         "Monasterybank",
-        "Dragon_Utopia"
+        "Dragon_Utopia",
+        "Stables"
       ],
       "BuildingsToAdd": []
     }
@@ -876,13 +840,15 @@
     }
   ],
   "SpecificCastlesStartBuildings": [],
+  "GeneralData": {
+    "MineGoldGuardLevel": 10
+  },
   "BaseArmyMultiplier": 1.0,
   "ArmyMultipliers": {
-    "Elves": 0.4,
+    "Elves": 0.5,
     "Liga": 0.6,
     "Necropolis": 0.6,
-    "Horde": 0.5,
-    "Dwarfs": 1.2
+    "Horde": 0.5
   },
   "ScriptFeaturesConfig": {
     "GloballyDisabledBuildingsProps": {
@@ -891,6 +857,10 @@
       ]
     },
     "ForcedFinalBattleProps": [
+      {
+        "Week": 2,
+        "Day": 2
+      },
       {
         "Week": 2,
         "Day": 3
@@ -920,44 +890,58 @@
         "Day": 2
       }
     ],
-    "AdditionalStartCastles": []
+    "AdditionalStartCastles": [],
+    "FogOpeners": []
+  },
+  "EntitiesBanConfig": {
+    "BannedHeroes": [],
+    "BannedSpells": [],
+    "BannedArtifacts": [
+      "BootsOfOpenRoad",
+      "BootsOfSwiftJourney",
+      "Shackles"
+    ]
   },
   "CustomBuildingConfigs": [
     {
       "Id": 1,
       "GuardStrenght": 12,
       "BuildingTexture": "Null",
-      "RoadType": "NoRoad",
+      "RoadType": "MainRoad",
       "MapObjectXdb": {
         "MapObject": "Arena"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 2,
       "GuardStrenght": 12,
       "BuildingTexture": "Null",
-      "RoadType": "NoRoad",
+      "RoadType": "MainRoad",
       "MapObjectXdb": {
         "MapObject": "SchoolOfMagic"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 3,
       "GuardStrenght": 8,
       "BuildingTexture": "Null",
-      "RoadType": "NoRoad",
+      "RoadType": "SecondaryRoad",
       "MapObjectXdb": {
         "MapObject": "MercenaryCamp"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 4,
       "GuardStrenght": 8,
       "BuildingTexture": "Null",
-      "RoadType": "NoRoad",
+      "RoadType": "SecondaryRoad",
       "MapObjectXdb": {
         "MapObject": "MarlettoTower"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 5,
@@ -966,7 +950,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "GardenOfRevelation"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 6,
@@ -975,16 +960,18 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "StarAxis"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 7,
       "GuardStrenght": 16,
       "BuildingTexture": "Null",
-      "RoadType": "NoRoad",
+      "RoadType": "MainRoad",
       "MapObjectXdb": {
         "MapObject": "TreeOfKnowledge"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 8,
@@ -993,7 +980,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "OrcDeposit"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 9,
@@ -1002,7 +990,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "DragonUtopia"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     }
   ]
 }

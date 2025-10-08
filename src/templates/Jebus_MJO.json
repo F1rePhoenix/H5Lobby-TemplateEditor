@@ -1,0 +1,2742 @@
+{
+  "TemplateName": "Jebus",
+  "Zones": [
+    {
+      "ZoneId": 1,
+      "TerrainType": "FirstPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "RandomDwellingConfig": {
+          "MinCount": 3,
+          "MaxCount": 6,
+          "MinTiersCount": 1,
+          "MaxTiersCount": 2,
+          "UniformDistribution": false,
+          "AllowedTiers": []
+        }
+      },
+      "Prisons": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ShopPoints": {
+        "MinValue": 100,
+        "MaxValue": 150
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 207,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 3
+            }
+          },
+          {
+            "BuildingId": 208,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 3
+            }
+          },
+          {
+            "BuildingId": 209,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 3
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [
+          {
+            "PointsCount": 6,
+            "PointsCountByFaction": {},
+            "PointsByBuildingId": {
+              "1": 1,
+              "2": 1,
+              "3": 1,
+              "4": 2,
+              "5": 1,
+              "6": 1,
+              "7": 1,
+              "8": 2,
+              "9": 1,
+              "10": 1,
+              "11": 1,
+              "12": 2,
+              "13": 1,
+              "14": 1,
+              "15": 1,
+              "16": 2,
+              "17": 1,
+              "18": 1,
+              "19": 1,
+              "20": 2,
+              "21": 1,
+              "22": 1,
+              "23": 1,
+              "24": 2,
+              "25": 1,
+              "26": 1,
+              "27": 1,
+              "28": 2,
+              "29": 1,
+              "30": 1,
+              "31": 1,
+              "32": 2
+            },
+            "MaxBuildingsCount": 3
+          },
+          {
+            "PointsCount": 16,
+            "PointsCountByFaction": {},
+            "PointsByBuildingId": {
+              "200": 1,
+              "201": 1,
+              "202": 1,
+              "203": 1,
+              "204": 1,
+              "205": 2,
+              "206": 2
+            },
+            "MaxBuildingsCount": 4
+          }
+        ],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    },
+    {
+      "ZoneId": 2,
+      "TerrainType": "SecondPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "RandomDwellingConfig": {
+          "MinCount": 3,
+          "MaxCount": 6,
+          "MinTiersCount": 1,
+          "MaxTiersCount": 2,
+          "UniformDistribution": false,
+          "AllowedTiers": []
+        }
+      },
+      "Prisons": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ShopPoints": {
+        "MinValue": 100,
+        "MaxValue": 150
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 207,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 3
+            }
+          },
+          {
+            "BuildingId": 208,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 3
+            }
+          },
+          {
+            "BuildingId": 209,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 3
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [
+          {
+            "PointsCount": 6,
+            "PointsCountByFaction": {},
+            "PointsByBuildingId": {
+              "1": 1,
+              "2": 1,
+              "3": 1,
+              "4": 2,
+              "5": 1,
+              "6": 1,
+              "7": 1,
+              "8": 2,
+              "9": 1,
+              "10": 1,
+              "11": 1,
+              "12": 2,
+              "13": 1,
+              "14": 1,
+              "15": 1,
+              "16": 2,
+              "17": 1,
+              "18": 1,
+              "19": 1,
+              "20": 2,
+              "21": 1,
+              "22": 1,
+              "23": 1,
+              "24": 2,
+              "25": 1,
+              "26": 1,
+              "27": 1,
+              "28": 2,
+              "29": 1,
+              "30": 1,
+              "31": 1,
+              "32": 2
+            },
+            "MaxBuildingsCount": 3
+          },
+          {
+            "PointsCount": 16,
+            "PointsCountByFaction": {},
+            "PointsByBuildingId": {
+              "200": 1,
+              "201": 1,
+              "202": 1,
+              "203": 1,
+              "204": 1,
+              "205": 2,
+              "206": 2
+            },
+            "MaxBuildingsCount": 4
+          }
+        ],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    },
+    {
+      "ZoneId": 3,
+      "TerrainType": "Terrain1",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null",
+        "RandomDwellingConfig": {
+          "MinCount": 0,
+          "MaxCount": 0,
+          "AllowedTiers": []
+        }
+      },
+      "Prisons": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ShopPoints": {
+        "MinValue": 50,
+        "MaxValue": 100
+      },
+      "RedwoodObservatoryDensity": {
+        "MinValue": 2,
+        "MaxValue": 2
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [
+          {
+            "PointsCount": 12,
+            "PointsCountByFaction": {},
+            "PointsByBuildingId": {
+              "400": 1,
+              "401": 1,
+              "402": 1,
+              "403": 1,
+              "404": 1,
+              "405": 1,
+              "406": 2,
+              "407": 2,
+              "408": 2
+            },
+            "MaxBuildingsCount": 4
+          }
+        ],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    },
+    {
+      "ZoneId": 4,
+      "TerrainType": "Terrain2",
+      "MirrorZoneId": 3
+    },
+    {
+      "ZoneId": 5,
+      "TerrainType": "Terrain3",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "Null"
+      },
+      "Prisons": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
+      "ShopPoints": {
+        "MinValue": 150,
+        "MaxValue": 200
+      },
+      "RedwoodObservatoryDensity": {
+        "MinValue": 2,
+        "MaxValue": 2
+      },
+      "AdditionalMapObjectConfig": {
+        "StaticObjects": [
+          {
+            "BuildingId": 307,
+            "Count": {
+              "MinValue": 3,
+              "MaxValue": 5
+            }
+          },
+          {
+            "BuildingId": 308,
+            "Count": {
+              "MinValue": 6,
+              "MaxValue": 8
+            }
+          },
+          {
+            "BuildingId": 309,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 310,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          },
+          {
+            "BuildingId": 311,
+            "Count": {
+              "MinValue": 1,
+              "MaxValue": 2
+            }
+          }
+        ],
+        "StaticObjectsByCastle": {},
+        "ByPointModels": [
+          {
+            "PointsCount": 20,
+            "PointsCountByFaction": {},
+            "PointsByBuildingId": {
+              "1": 1,
+              "2": 1,
+              "3": 1,
+              "4": 2,
+              "5": 1,
+              "6": 1,
+              "7": 1,
+              "8": 2,
+              "9": 1,
+              "10": 1,
+              "11": 1,
+              "12": 2,
+              "13": 1,
+              "14": 1,
+              "15": 1,
+              "16": 2,
+              "17": 1,
+              "18": 1,
+              "19": 1,
+              "20": 2,
+              "21": 1,
+              "22": 1,
+              "23": 1,
+              "24": 2,
+              "25": 1,
+              "26": 1,
+              "27": 1,
+              "28": 2,
+              "29": 1,
+              "30": 1,
+              "31": 1,
+              "32": 2
+            },
+            "MaxBuildingsCount": 4
+          },
+          {
+            "PointsCount": 25,
+            "PointsCountByFaction": {},
+            "PointsByBuildingId": {
+              "300": 1,
+              "301": 1,
+              "302": 1,
+              "303": 1,
+              "304": 1,
+              "305": 2,
+              "306": 2
+            },
+            "MaxBuildingsCount": 7
+          }
+        ],
+        "FewOfModels": [],
+        "ArtifactsGenerationModels": []
+      }
+    }
+  ],
+  "Connections": [],
+  "TerrainConfig": [
+    {
+      "TerrainType": "FirstPlayer",
+      "MirrorTerrainType": "Null",
+      "BuildingsToDelete": [],
+      "BuildingsToAdd": [],
+      "NewShopBuildings": {
+        "BuildingsToDelete": [],
+        "BuildingsToAdd": [
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106
+        ]
+      },
+      "NewUpgradeBuildings": {
+        "BuildingsToDelete": [],
+        "BuildingsToAdd": []
+      }
+    },
+    {
+      "TerrainType": "SecondPlayer",
+      "MirrorTerrainType": "FirstPlayer",
+      "BuildingsToDelete": [],
+      "BuildingsToAdd": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ]
+    },
+    {
+      "TerrainType": "Terrain3",
+      "MirrorTerrainType": "Null",
+      "BuildingsToDelete": [],
+      "BuildingsToAdd": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105,
+        106
+      ],
+      "NewShopBuildings": {
+        "BuildingsToDelete": [],
+        "BuildingsToAdd": []
+      },
+      "NewUpgradeBuildings": {
+        "BuildingsToDelete": [],
+        "BuildingsToAdd": []
+      }
+    }
+  ],
+  "FactionTerrainConfigs": {},
+  "StartBuildingConfigs": [
+    {
+      "ApplyAllTerrains": true,
+      "TerrainType": "Null",
+      "CastleType": "Undefined",
+      "Buildings": [
+        "Market1",
+        "Forge"
+      ],
+      "BuildingMode": "StartCastle"
+    },
+    {
+      "TerrainType": "Terrain3",
+      "CastleType": "Undefined",
+      "Buildings": [
+        "Gm1",
+        "Gm2",
+        "Gm3"
+      ],
+      "BuildingMode": "All"
+    }
+  ],
+  "SpecificCastlesStartBuildings": [],
+  "GeneralData": {},
+  "BaseArmyMultiplier": 1.0,
+  "ArmyMultipliers": {
+    "Horde": 0.7,
+    "Humans": 0.9,
+    "Inferno": 1.0,
+    "Liga": 1.1,
+    "Necropolis": 0.8,
+    "Elves": 0.6,
+    "Mages": 0.7,
+    "Dwarfs": 1.0
+  },
+  "ScriptFeaturesConfig": {
+    "CastleCaptureProps": {
+      "CoordinateX": 90,
+      "CoordinateY": 97,
+      "SearchRadius": 25,
+      "EventTimer": 14,
+      "DisableFortifications": true,
+      "IsForcedFinalBattle": true
+    },
+    "GloballyDisabledBuildingsProps": {
+      "Buildings": [
+        "NecromancyUnholyTemple"
+      ]
+    },
+    "ForcedFinalBattleProps": [],
+    "AdditionalStartCastles": []
+  },
+  "EntitiesBanConfig": {
+    "BannedHeroes": [
+      "Hero1",
+      "Hero2",
+      "Brem",
+      "Grok",
+      "Jazaz"
+    ],
+    "BannedSpells": [],
+    "BannedArtifacts": []
+  },
+  "CustomBuildingConfigs": [
+    {
+      "Id": 1,
+      "Value": 5,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_ARCH_MAGI",
+          "CREATURE_COMBAT_MAGE"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_IRON_GOLEM",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_IRON_GOLEM",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 2,
+      "Value": 8,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_MASTER_GENIE",
+          "CREATURE_DJINN_VIZIER"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_IRON_GOLEM",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_IRON_GOLEM",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_IRON_GOLEM",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 3,
+      "Value": 12,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_RAKSHASA_RUKH",
+          "CREATURE_RAKSHASA_KSHATRI"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_IRON_GOLEM",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_IRON_GOLEM",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_IRON_GOLEM",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_IRON_GOLEM",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 4,
+      "Value": 15,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_TITAN",
+          "CREATURE_STORM_LORD"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_IRON_GOLEM",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_IRON_GOLEM",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_IRON_GOLEM",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_IRON_GOLEM",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_IRON_GOLEM",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 5,
+      "Value": 5,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_BERSERKER",
+          "CREATURE_BATTLE_RAGER"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_BEAR_RIDER",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_BEAR_RIDER",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 6,
+      "Value": 8,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_FLAME_KEEPER",
+          "CREATURE_FLAME_MAGE"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_BEAR_RIDER",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_BEAR_RIDER",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_BEAR_RIDER",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 7,
+      "Value": 12,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_THUNDER_THANE",
+          "CREATURE_WARLORD"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_BEAR_RIDER",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_BEAR_RIDER",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_BEAR_RIDER",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_BEAR_RIDER",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 8,
+      "Value": 15,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_LAVA_DRAGON",
+          "CREATURE_MAGMA_DRAGON"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_BEAR_RIDER",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_BEAR_RIDER",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_BEAR_RIDER",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_BEAR_RIDER",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_BEAR_RIDER",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 9,
+      "Value": 5,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_INFERNAL_SUCCUBUS",
+          "CREATURE_SUCCUBUS_SEDUCER"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_HELL_HOUND",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_HELL_HOUND",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 10,
+      "Value": 8,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_FRIGHTFUL_NIGHTMARE",
+          "CREATURE_HELLMARE"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_HELL_HOUND",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_HELL_HOUND",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_HELL_HOUND",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 11,
+      "Value": 12,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_PIT_SPAWN",
+          "CREATURE_BALOR"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_HELL_HOUND",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_HELL_HOUND",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_HELL_HOUND",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_HELL_HOUND",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 12,
+      "Value": 15,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_ARCH_DEMON",
+          "CREATURE_ARCHDEVIL"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_HELL_HOUND",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_HELL_HOUND",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_HELL_HOUND",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_HELL_HOUND",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_HELL_HOUND",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 13,
+      "Value": 5,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_RAVAGER",
+          "CREATURE_BLACK_RIDER"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_MINOTAUR",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_MINOTAUR",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 14,
+      "Value": 8,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_CHAOS_HYDRA",
+          "CREATURE_ACIDIC_HYDRA"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_MINOTAUR",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_MINOTAUR",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_MINOTAUR",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 15,
+      "Value": 12,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_MATRIARCH",
+          "CREATURE_SHADOW_MISTRESS"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_MINOTAUR",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_MINOTAUR",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_MINOTAUR",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_MINOTAUR",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 16,
+      "Value": 15,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_BLACK_DRAGON",
+          "CREATURE_RED_DRAGON"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_MINOTAUR",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_MINOTAUR",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_MINOTAUR",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_MINOTAUR",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_MINOTAUR",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 17,
+      "Value": 5,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_VAMPIRE_LORD",
+          "CREATURE_NOSFERATU"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 18,
+      "Value": 8,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_DEMILICH",
+          "CREATURE_LICH_MASTER"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 19,
+      "Value": 12,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_WRAITH",
+          "CREATURE_BANSHEE"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 20,
+      "Value": 15,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_HORROR_DRAGON",
+          "CREATURE_SHADOW_DRAGON"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ZOMBIE",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 21,
+      "Value": 5,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_ROYAL_GRIFFIN",
+          "CREATURE_BATTLE_GRIFFIN"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_FOOTMAN",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_FOOTMAN",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 22,
+      "Value": 8,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_CLERIC",
+          "CREATURE_ZEALOT"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_FOOTMAN",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_FOOTMAN",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_FOOTMAN",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 23,
+      "Value": 12,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_CHAMPION",
+          "CREATURE_PALADIN"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_FOOTMAN",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_FOOTMAN",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_FOOTMAN",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_FOOTMAN",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 24,
+      "Value": 15,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_SERAPH",
+          "CREATURE_ARCHANGEL"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_FOOTMAN",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_FOOTMAN",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_FOOTMAN",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_FOOTMAN",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_FOOTMAN",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 25,
+      "Value": 5,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_SHAMAN_WITCH",
+          "CREATURE_SHAMAN_HAG"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_ORC_WARRIOR",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_ORC_WARRIOR",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 26,
+      "Value": 8,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_ORCCHIEF_EXECUTIONER",
+          "CREATURE_ORCCHIEF_CHIEFTAIN"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_ORC_WARRIOR",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_ORC_WARRIOR",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_ORC_WARRIOR",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 27,
+      "Value": 12,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_WYVERN_POISONOUS",
+          "CREATURE_WYVERN_PAOKAI"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_ORC_WARRIOR",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ORC_WARRIOR",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ORC_WARRIOR",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ORC_WARRIOR",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 28,
+      "Value": 15,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_CYCLOP_BLOODEYED",
+          "CREATURE_CYCLOP_UNTAMED"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_ORC_WARRIOR",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ORC_WARRIOR",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ORC_WARRIOR",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ORC_WARRIOR",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_ORC_WARRIOR",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 29,
+      "Value": 5,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_DRUID_ELDER",
+          "CREATURE_HIGH_DRUID"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_BLADE_JUGGLER",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_BLADE_JUGGLER",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 30,
+      "Value": 8,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_WAR_UNICORN",
+          "CREATURE_WHITE_UNICORN"
+        ],
+        "GrowMultiplier": 6.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_BLADE_JUGGLER",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_BLADE_JUGGLER",
+                "GrowMultiplier": 4.0
+              },
+              {
+                "CreatureId": "CREATURE_BLADE_JUGGLER",
+                "GrowMultiplier": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 31,
+      "Value": 12,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_TREANT_GUARDIAN",
+          "CREATURE_ANGER_TREANT"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_BLADE_JUGGLER",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_BLADE_JUGGLER",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_BLADE_JUGGLER",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_BLADE_JUGGLER",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 32,
+      "Value": 15,
+      "GuardStrenght": 0,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "NoRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_GOLD_DRAGON",
+          "CREATURE_RAINBOW_DRAGON"
+        ],
+        "GrowMultiplier": 3.0,
+        "GuardsPool": [
+          {
+            "Guards": [
+              {
+                "CreatureId": "CREATURE_BLADE_JUGGLER",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_BLADE_JUGGLER",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_BLADE_JUGGLER",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_BLADE_JUGGLER",
+                "GrowMultiplier": 5.0
+              },
+              {
+                "CreatureId": "CREATURE_BLADE_JUGGLER",
+                "GrowMultiplier": 5.0
+              }
+            ]
+          }
+        ]
+      },
+      "InteractionMessageType": "Scouting"
+    },
+    {
+      "Id": 100,
+      "Value": 1,
+      "GuardStrenght": 6,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "TowerPortal"
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 101,
+      "Value": 1,
+      "GuardStrenght": 6,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "MinorArtChest"
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 102,
+      "Value": 1,
+      "GuardStrenght": 12,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "MajorArtChest"
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 103,
+      "Value": 1,
+      "GuardStrenght": 20,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "RelicArtChest"
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 104,
+      "Value": 1,
+      "GuardStrenght": 6,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "WoodGiver"
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 105,
+      "Value": 1,
+      "GuardStrenght": 6,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "OreGiver"
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 106,
+      "Value": 1,
+      "GuardStrenght": 8,
+      "BuildingTexture": "Null",
+      "RoadType": "NoRoad",
+      "DefaultBuilding": {
+        "DefaultBuilding": "RareResourceGiver"
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 200,
+      "GuardStrenght": 4,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [
+          {
+            "TiersPool": [
+              1
+            ],
+            "Grades": true,
+            "TerrainTypes": [
+              "Terrain1",
+              "Terrain2",
+              "Terrain3",
+              "Terrain4",
+              "Terrain5",
+              "Terrain6"
+            ],
+            "PlayerFactions": false,
+            "PlayerType": "Any",
+            "CreatureIds": [],
+            "GrowMultiplier": 7.5
+          }
+        ],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 201,
+      "GuardStrenght": 6,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [
+          {
+            "TiersPool": [
+              2
+            ],
+            "Grades": true,
+            "TerrainTypes": [
+              "Terrain1",
+              "Terrain2",
+              "Terrain3",
+              "Terrain4",
+              "Terrain5",
+              "Terrain6"
+            ],
+            "PlayerFactions": false,
+            "PlayerType": "Any",
+            "CreatureIds": [],
+            "GrowMultiplier": 7.5
+          }
+        ],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 202,
+      "GuardStrenght": 8,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [
+          {
+            "TiersPool": [
+              3
+            ],
+            "Grades": true,
+            "TerrainTypes": [
+              "Terrain1",
+              "Terrain2",
+              "Terrain3",
+              "Terrain4",
+              "Terrain5",
+              "Terrain6"
+            ],
+            "PlayerFactions": false,
+            "PlayerType": "Any",
+            "CreatureIds": [],
+            "GrowMultiplier": 6.0
+          }
+        ],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 203,
+      "GuardStrenght": 10,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [
+          {
+            "TiersPool": [
+              4
+            ],
+            "Grades": true,
+            "TerrainTypes": [
+              "Terrain1",
+              "Terrain2",
+              "Terrain3",
+              "Terrain4",
+              "Terrain5",
+              "Terrain6"
+            ],
+            "PlayerFactions": false,
+            "PlayerType": "Any",
+            "CreatureIds": [],
+            "GrowMultiplier": 4.5
+          }
+        ],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 204,
+      "GuardStrenght": 12,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [
+          {
+            "TiersPool": [
+              5
+            ],
+            "Grades": true,
+            "TerrainTypes": [
+              "Terrain1",
+              "Terrain2",
+              "Terrain3",
+              "Terrain4",
+              "Terrain5",
+              "Terrain6"
+            ],
+            "PlayerFactions": false,
+            "PlayerType": "Any",
+            "CreatureIds": [],
+            "GrowMultiplier": 3.75
+          }
+        ],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 205,
+      "GuardStrenght": 14,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [
+          {
+            "TiersPool": [
+              6
+            ],
+            "Grades": true,
+            "TerrainTypes": [
+              "Terrain1",
+              "Terrain2",
+              "Terrain3",
+              "Terrain4",
+              "Terrain5",
+              "Terrain6"
+            ],
+            "PlayerFactions": false,
+            "PlayerType": "Any",
+            "CreatureIds": [],
+            "GrowMultiplier": 3.0
+          }
+        ],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 206,
+      "GuardStrenght": 16,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [
+          {
+            "TiersPool": [
+              7
+            ],
+            "Grades": true,
+            "TerrainTypes": [
+              "Terrain1",
+              "Terrain2",
+              "Terrain3",
+              "Terrain4",
+              "Terrain5",
+              "Terrain6"
+            ],
+            "PlayerFactions": false,
+            "PlayerType": "Any",
+            "CreatureIds": [],
+            "GrowMultiplier": 3.0
+          }
+        ],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 207,
+      "GuardStrenght": 10,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [
+          5000
+        ],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 208,
+      "GuardStrenght": 10,
+      "BuildingTexture": "ExpChest",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [
+          5000
+        ],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 209,
+      "GuardStrenght": 18,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [
+          {
+            "Spells": [],
+            "MagicSchools": [],
+            "MagicTiers": [
+              1
+            ],
+            "RuneTiers": [],
+            "WarCryTiers": [
+              1
+            ],
+            "Count": 100
+          },
+          {
+            "Spells": [],
+            "MagicSchools": [],
+            "MagicTiers": [
+              2
+            ],
+            "RuneTiers": [],
+            "WarCryTiers": [
+              2
+            ],
+            "Count": 100
+          },
+          {
+            "Spells": [],
+            "MagicSchools": [],
+            "MagicTiers": [
+              3
+            ],
+            "RuneTiers": [],
+            "WarCryTiers": [
+              2
+            ],
+            "Count": 100
+          }
+        ],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 300,
+      "GuardStrenght": 4,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [
+          {
+            "TiersPool": [
+              1
+            ],
+            "Grades": true,
+            "TerrainTypes": [
+              "Terrain1",
+              "Terrain2",
+              "Terrain3",
+              "Terrain4",
+              "Terrain5",
+              "Terrain6"
+            ],
+            "PlayerFactions": false,
+            "PlayerType": "Any",
+            "CreatureIds": [],
+            "GrowMultiplier": 15.0
+          }
+        ],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 301,
+      "GuardStrenght": 6,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [
+          {
+            "TiersPool": [
+              2
+            ],
+            "Grades": true,
+            "TerrainTypes": [
+              "Terrain1",
+              "Terrain2",
+              "Terrain3",
+              "Terrain4",
+              "Terrain5",
+              "Terrain6"
+            ],
+            "PlayerFactions": false,
+            "PlayerType": "Any",
+            "CreatureIds": [],
+            "GrowMultiplier": 13.5
+          }
+        ],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 302,
+      "GuardStrenght": 8,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [
+          {
+            "TiersPool": [
+              3
+            ],
+            "Grades": true,
+            "TerrainTypes": [
+              "Terrain1",
+              "Terrain2",
+              "Terrain3",
+              "Terrain4",
+              "Terrain5",
+              "Terrain6"
+            ],
+            "PlayerFactions": false,
+            "PlayerType": "Any",
+            "CreatureIds": [],
+            "GrowMultiplier": 12.0
+          }
+        ],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 303,
+      "GuardStrenght": 10,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [
+          {
+            "TiersPool": [
+              4
+            ],
+            "Grades": true,
+            "TerrainTypes": [
+              "Terrain1",
+              "Terrain2",
+              "Terrain3",
+              "Terrain4",
+              "Terrain5",
+              "Terrain6"
+            ],
+            "PlayerFactions": false,
+            "PlayerType": "Any",
+            "CreatureIds": [],
+            "GrowMultiplier": 10.5
+          }
+        ],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 304,
+      "GuardStrenght": 12,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [
+          {
+            "TiersPool": [
+              5
+            ],
+            "Grades": true,
+            "TerrainTypes": [
+              "Terrain1",
+              "Terrain2",
+              "Terrain3",
+              "Terrain4",
+              "Terrain5",
+              "Terrain6"
+            ],
+            "PlayerFactions": false,
+            "PlayerType": "Any",
+            "CreatureIds": [],
+            "GrowMultiplier": 9.0
+          }
+        ],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 305,
+      "GuardStrenght": 14,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [
+          {
+            "TiersPool": [
+              6
+            ],
+            "Grades": true,
+            "TerrainTypes": [
+              "Terrain1",
+              "Terrain2",
+              "Terrain3",
+              "Terrain4",
+              "Terrain5",
+              "Terrain6"
+            ],
+            "PlayerFactions": false,
+            "PlayerType": "Any",
+            "CreatureIds": [],
+            "GrowMultiplier": 6.0
+          }
+        ],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 306,
+      "GuardStrenght": 16,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [
+          {
+            "TiersPool": [
+              7
+            ],
+            "Grades": true,
+            "TerrainTypes": [
+              "Terrain1",
+              "Terrain2",
+              "Terrain3",
+              "Terrain4",
+              "Terrain5",
+              "Terrain6"
+            ],
+            "PlayerFactions": false,
+            "PlayerType": "Any",
+            "CreatureIds": [],
+            "GrowMultiplier": 6.0
+          }
+        ],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 307,
+      "GuardStrenght": 10,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [
+          20000
+        ],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 308,
+      "GuardStrenght": 10,
+      "BuildingTexture": "ExpChest",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [
+          30000
+        ],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 309,
+      "GuardStrenght": 14,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [
+          {
+            "Spells": [],
+            "MagicSchools": [],
+            "MagicTiers": [
+              4
+            ],
+            "RuneTiers": [],
+            "WarCryTiers": [
+              3
+            ],
+            "Count": 100
+          }
+        ],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 310,
+      "GuardStrenght": 18,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [
+          {
+            "Spells": [],
+            "MagicSchools": [],
+            "MagicTiers": [
+              5
+            ],
+            "RuneTiers": [],
+            "WarCryTiers": [
+              3
+            ],
+            "Count": 100
+          }
+        ],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 311,
+      "GuardStrenght": 18,
+      "BuildingTexture": "PandoraBox",
+      "RoadType": "NoRoad",
+      "PandoraBox": {
+        "GoldAmount": [],
+        "ExpAmount": [],
+        "Artifacts": [],
+        "PandoraCreatureConfig": [],
+        "Spells": [
+          {
+            "Spells": [],
+            "MagicSchools": [
+              "Destructive"
+            ],
+            "MagicTiers": [],
+            "RuneTiers": [],
+            "WarCryTiers": [],
+            "Count": 100
+          },
+          {
+            "Spells": [],
+            "MagicSchools": [
+              "Dark"
+            ],
+            "MagicTiers": [],
+            "RuneTiers": [],
+            "WarCryTiers": [],
+            "Count": 100
+          },
+          {
+            "Spells": [],
+            "MagicSchools": [
+              "Light"
+            ],
+            "MagicTiers": [],
+            "RuneTiers": [],
+            "WarCryTiers": [],
+            "Count": 100
+          },
+          {
+            "Spells": [],
+            "MagicSchools": [
+              "Summoning"
+            ],
+            "MagicTiers": [],
+            "RuneTiers": [],
+            "WarCryTiers": [],
+            "Count": 100
+          }
+        ],
+        "Resources": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 400,
+      "GuardStrenght": 10,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_EARTH_ELEMENTAL"
+        ],
+        "CostMultiplier": 0.5,
+        "GrowMultiplier": 3.0,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 401,
+      "GuardStrenght": 10,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_WATER_ELEMENTAL"
+        ],
+        "CostMultiplier": 0.5,
+        "GrowMultiplier": 3.0,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 402,
+      "GuardStrenght": 12,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_FIRE_ELEMENTAL"
+        ],
+        "CostMultiplier": 0.5,
+        "GrowMultiplier": 3.0,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 403,
+      "GuardStrenght": 12,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_AIR_ELEMENTAL"
+        ],
+        "CostMultiplier": 0.5,
+        "GrowMultiplier": 3.0,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 404,
+      "GuardStrenght": 14,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_WOLF"
+        ],
+        "CostMultiplier": 0.5,
+        "GrowMultiplier": 3.0,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 405,
+      "GuardStrenght": 14,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_MANTICORE"
+        ],
+        "CostMultiplier": 0.5,
+        "GrowMultiplier": 2.0,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 406,
+      "GuardStrenght": 16,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_DEATH_KNIGHT"
+        ],
+        "CostMultiplier": 0.5,
+        "GrowMultiplier": 2.0,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 407,
+      "GuardStrenght": 16,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_MUMMY"
+        ],
+        "CostMultiplier": 0.5,
+        "GrowMultiplier": 2.0,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    },
+    {
+      "Id": 408,
+      "GuardStrenght": 20,
+      "BuildingTexture": "TowerByCreature",
+      "RoadType": "SecondaryRoad",
+      "CreatureBuilding": {
+        "TiersPool": [],
+        "TerrainTypes": [],
+        "PlayerFactions": false,
+        "PlayerType": "Any",
+        "CreatureIds": [
+          "CREATURE_PHOENIX"
+        ],
+        "CostMultiplier": 0.5,
+        "GrowMultiplier": 1.0,
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
+    }
+  ]
+}

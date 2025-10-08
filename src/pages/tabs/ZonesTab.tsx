@@ -112,7 +112,9 @@ const ZonesTab: React.FC = () => {
         'Prisons', 'TownGuardStrenght', 'ShopPoints', 'ShrinePoints', 'LuckMoralBuildingsDensity',
         'ResourceBuildingsDensity', 'TreasureBuildingPoints', 'TreasureBlocksTotalValue',
         'DenOfThieves', 'RedwoodObservatoryDensity', 'Size', 'DistBetweenTreasureBlocks',
-        'MineGenerationConfig'
+        'MineGenerationConfig','Taverns', 'TradingPosts', 'HillForts', 'SpellMentors', 'MagicWells',
+        'LearningStones', 'EnlightenmentStones', 'WisdomStones', 'RedwoodObservatories',
+        'Wagons', 'Skeletons', 'TombOfTheWarriors'
       ];
 
       fieldsToClear.forEach(field => {
@@ -335,6 +337,66 @@ const ZonesTab: React.FC = () => {
                     value={selectedZone.DenOfThieves || {}}
                     onChange={(config) => updateZoneField('DenOfThieves', config)}
                     label="Воровские логова"
+                  />
+                  <IntValueConfigInput
+                    value={selectedZone.Taverns || {}}
+                    onChange={(config) => updateZoneField('Taverns', config)}
+                    label="Таверны"
+                  />
+                  <IntValueConfigInput
+                    value={selectedZone.TradingPosts || {}}
+                    onChange={(config) => updateZoneField('TradingPosts', config)}
+                    label="Фактории"
+                  />
+                  <IntValueConfigInput
+                    value={selectedZone.HillForts || {}}
+                    onChange={(config) => updateZoneField('HillForts', config)}
+                    label="Форты"
+                  />
+                  <IntValueConfigInput
+                    value={selectedZone.SpellMentors || {}}
+                    onChange={(config) => updateZoneField('SpellMentors', config)}
+                    label="Менторы заклинаний"
+                  />
+                  <IntValueConfigInput
+                    value={selectedZone.MagicWells || {}}
+                    onChange={(config) => updateZoneField('MagicWells', config)}
+                    label="Колодцы маны"
+                  />
+                  <IntValueConfigInput
+                    value={selectedZone.LearningStones || {}}
+                    onChange={(config) => updateZoneField('LearningStones', config)}
+                    label="Камни обучения (1к опыта)"
+                  />
+                  <IntValueConfigInput
+                    value={selectedZone.EnlightenmentStones || {}}
+                    onChange={(config) => updateZoneField('EnlightenmentStones', config)}
+                    label="Камни просветления (5к опыта)"
+                  />
+                  <IntValueConfigInput
+                    value={selectedZone.WisdomStones || {}}
+                    onChange={(config) => updateZoneField('WisdomStones', config)}
+                    label="Камни мудрости (10к опыта)"
+                  />
+                  <IntValueConfigInput
+                    value={selectedZone.RedwoodObservatories || {}}
+                    onChange={(config) => updateZoneField('RedwoodObservatories', config)}
+                    label="Обсерватории"
+                  />
+                  <IntValueConfigInput
+                    value={selectedZone.Wagons || {}}
+                    onChange={(config) => updateZoneField('Wagons', config)}
+                    label="Тележки с ресурсами"
+                  />
+                  <IntValueConfigInput
+                    value={selectedZone.Skeletons || {}}
+                    onChange={(config) => updateZoneField('Skeletons', config)}
+                    label="Скелеты с артефактами"
+                  />
+                  <IntValueConfigInput
+                    value={selectedZone.TombOfTheWarriors || {}}
+                    onChange={(config) => updateZoneField('TombOfTheWarriors', config)}
+                    label="Могилы воинов с артефактами"
                   />
                   <IntValueConfigInput
                     value={selectedZone.RedwoodObservatoryDensity || {}}

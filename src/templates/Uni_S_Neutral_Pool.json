@@ -232,11 +232,35 @@
   ],
   "TerrainConfig": [
     {
+      "TerrainType": "FirstPlayer",
+      "MirrorTerrainType": "Null",
+      "BuildingsToDelete": [
+        "LibraryOfEnlightenment",
+        "Elemantal_Stockpile"
+      ],
+      "BuildingsToAdd": []
+    },
+    {
+      "TerrainType": "SecondPlayer",
+      "MirrorTerrainType": "FirstPlayer",
+      "BuildingsToDelete": [],
+      "BuildingsToAdd": []
+    },
+    {
       "TerrainType": "Terrain1",
       "MirrorTerrainType": "Null",
       "BuildingsToDelete": [
         "Dragon_Utopia",
-        "OrcDeposit"
+        "OrcDeposit",
+        "Elemantal_Stockpile"
+      ],
+      "BuildingsToAdd": []
+    },
+    {
+      "TerrainType": "Terrain2",
+      "MirrorTerrainType": "Null",
+      "BuildingsToDelete": [
+        "Elemantal_Stockpile"
       ],
       "BuildingsToAdd": []
     }
@@ -253,6 +277,25 @@
         "Tavern"
       ],
       "BuildingMode": "All"
+    },
+    {
+      "TerrainType": "Terrain1",
+      "CastleType": "Undefined",
+      "Buildings": [
+        "Gm1",
+        "Gm2",
+        "StrongholdHallOfTrial",
+        "StrongholdTravellerShelter"
+      ],
+      "BuildingMode": "NeutralCastle"
+    },
+    {
+      "TerrainType": "Mages",
+      "CastleType": "Undefined",
+      "Buildings": [
+        "Gm1"
+      ],
+      "BuildingMode": "StartCastle"
     }
   ],
   "SpecificCastlesStartBuildings": [],
@@ -261,10 +304,11 @@
   },
   "ArmyMultipliers": {
     "Dwarfs": 1.5,
+    "Inferno": 1.5,
     "Mages": 1.25,
     "Liga": 0.75,
     "Horde": 0.75,
-    "Elves": 0.5
+    "Elves": 0.75
   },
   "CustomBuildingConfigs": [
     {
@@ -282,8 +326,10 @@
         ],
         "CostMultiplier": 0.3,
         "GrowMultiplier": 3.34,
-        "IsDwelling": true
-      }
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 2,
@@ -300,8 +346,10 @@
         ],
         "CostMultiplier": 0.4,
         "GrowMultiplier": 2.5,
-        "IsDwelling": true
-      }
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 3,
@@ -318,8 +366,10 @@
         ],
         "CostMultiplier": 0.5,
         "GrowMultiplier": 2.0,
-        "IsDwelling": true
-      }
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 4,
@@ -336,8 +386,10 @@
         ],
         "CostMultiplier": 0.5,
         "GrowMultiplier": 2.0,
-        "IsDwelling": true
-      }
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 5,
@@ -354,8 +406,10 @@
         ],
         "CostMultiplier": 0.6,
         "GrowMultiplier": 1.5,
-        "IsDwelling": true
-      }
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 6,
@@ -372,8 +426,10 @@
         ],
         "CostMultiplier": 0.42,
         "GrowMultiplier": 1.0,
-        "IsDwelling": true
-      }
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 7,
@@ -390,8 +446,10 @@
         ],
         "CostMultiplier": 0.85,
         "GrowMultiplier": 1.5,
-        "IsDwelling": true
-      }
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 8,
@@ -408,8 +466,10 @@
         ],
         "CostMultiplier": 0.75,
         "GrowMultiplier": 1.5,
-        "IsDwelling": true
-      }
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 9,
@@ -426,8 +486,10 @@
         ],
         "CostMultiplier": 0.5,
         "GrowMultiplier": 1.0,
-        "IsDwelling": true
-      }
+        "IsDwelling": true,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     }
   ]
 }

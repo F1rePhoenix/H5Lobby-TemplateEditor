@@ -15,6 +15,7 @@ import { Add as AddIcon, Delete as DeleteIcon } from '@mui/icons-material';
 import { useTemplate } from '../../contexts/TemplateContext';
 import { useLanguage } from '../../contexts/LanguageContext';
 import SearchableMultiSelectDialog from '../../components/common/SearchableMultiSelectDialog';
+import SearchableSingleSelectImageDialog from '../../components/common/SearchableSingleSelectImageDialog';
 import {
   spellTypeDict,
   playerTypeDict,
@@ -48,10 +49,11 @@ const StartSpellsTab: React.FC<{
   const [activeTab, setActiveTab] = useState(0);
   const [configTab, setConfigTab] = useState(0);
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [dialogType, setDialogType] = useState<'global' | 'player' | 'race' | 'hero'>('global');
+  const [dialogType, setDialogType] = useState<'global' | 'player' | 'race' | 'hero' | 'heroSelect'>('global');
   const [dialogFieldPath, setDialogFieldPath] = useState('');
   const [dialogTitle, setDialogTitle] = useState('');
   const [currentConfigIndex, setCurrentConfigIndex] = useState(0);
+  const [heroSelectionIndex, setHeroSelectionIndex] = useState<number | null>(null);
 
   const startSpellsConfig = state.template.StartSpellsConfig || {};
   const globalSpells = startSpellsConfig.GlobalSpells || [];
@@ -105,6 +107,14 @@ const StartSpellsTab: React.FC<{
     setDialogOpen(true);
   };
 
+  // Функция для открытия диалога выбора героя с изображениями
+  const openHeroSelectionDialog = (index: number) => {
+    setHeroSelectionIndex(index);
+    setDialogType('heroSelect');
+    setDialogTitle(texts.selectHeroType);
+    setDialogOpen(true);
+  };
+
   const handleItemsSelect = (selectedItems: string[]) => {
     if (dialogType === 'player') {
       updateArrayField(`StartSpellsConfig.SpellsByPlayers.${currentConfigIndex}.Spells`, selectedItems);
@@ -116,6 +126,23 @@ const StartSpellsTab: React.FC<{
       updateArrayField(dialogFieldPath, selectedItems);
     }
     setDialogOpen(false);
+  };
+
+  // Обработчик выбора героя из диалога с изображениями
+  const handleHeroSelect = (heroType: string | null) => {
+    if (heroSelectionIndex !== null && heroType) {
+      updateConfigType('hero', heroSelectionIndex, heroType);
+    }
+    setHeroSelectionIndex(null);
+    setDialogOpen(false);
+  };
+
+  // Функция для получения выбранного героя
+  const getSelectedHero = (): string | null => {
+    if (heroSelectionIndex !== null && spellsByHeroes[heroSelectionIndex]) {
+      return spellsByHeroes[heroSelectionIndex].HeroType;
+    }
+    return null;
   };
 
   const getDictionary = () => {
@@ -433,32 +460,39 @@ const StartSpellsTab: React.FC<{
 
               {spellsByHeroes.map((config: StartSpellsByHero, index: number) => (
                 <Box key={index} sx={{ display: index === configTab ? 'block' : 'none', mt: 2 }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
-                    <TextField
-                      select
-                      label={texts.heroType}
-                      value={config.HeroType || ''}
-                      onChange={(e) => updateConfigType('hero', index, e.target.value)}
-                      sx={{ minWidth: 200 }}
-                    >
-                      <MenuItem value="" disabled>{texts.selectHeroType}</MenuItem>
-                      {Object.entries(heroTypeDict).map(([key, value]) => (
-                        <MenuItem 
-                          key={key} 
-                          value={key}
-                          disabled={spellsByHeroes.some((c, i) => i !== index && c.HeroType === key)}
-                        >
-                          {value[language]}
-                        </MenuItem>
-                      ))}
-                    </TextField>
+                  <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                    {/* Заменяем TextField на кнопку выбора героя с изображением */}
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                      {config.HeroType && heroTypeDict[config.HeroType] && (
+                        <img
+                          src={`${process.env.PUBLIC_URL}/${heroTypeDict[config.HeroType].img}`}
+                          alt={heroTypeDict[config.HeroType][language]}
+                          style={{
+                            width: '30%',
+                            height: '30%',
+                            objectFit: 'contain',
+                            borderRadius: 4,
+                          }}
+                        />
+                      )}
+                      <Button
+                        variant="outlined"
+                        onClick={() => openHeroSelectionDialog(index)}
+                        sx={{ minWidth: 80, justifyContent: 'flex-start' }}
+                      >
+                        {config.HeroType 
+                          ? heroTypeDict[config.HeroType]?.[language] || config.HeroType
+                          : texts.selectHeroType
+                        }
+                      </Button>
+                    </Box>
                     <IconButton onClick={() => removeConfig('hero', index)} color="error">
                       <DeleteIcon />
                     </IconButton>
                   </Box>
 
                   <Box sx={{ mb: 2 }}>
-                    <Typography variant="subtitle2" gutterBottom>
+                    <Typography variant="subtitle1" gutterBottom>
                       {texts.spellsFor} {heroTypeDict[config.HeroType as keyof typeof heroTypeDict]?.[language]}
                     </Typography>
                     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1, mb: 2 }}>
@@ -498,14 +532,26 @@ const StartSpellsTab: React.FC<{
         </Paper>
       )}
 
-      <SearchableMultiSelectDialog
-        open={dialogOpen}
-        title={dialogTitle}
-        items={getDictionary()}
-        selectedItems={getSelectedItems()}
-        onClose={() => setDialogOpen(false)}
-        onSelect={handleItemsSelect}
-      />
+      {/* Диалоги */}
+      {dialogType === 'heroSelect' ? (
+        <SearchableSingleSelectImageDialog
+          open={dialogOpen}
+          title={dialogTitle}
+          items={heroTypeDict}
+          selectedItem={getSelectedHero()}
+          onClose={() => setDialogOpen(false)}
+          onSelect={handleHeroSelect}
+        />
+      ) : (
+        <SearchableMultiSelectDialog
+          open={dialogOpen}
+          title={dialogTitle}
+          items={getDictionary()}
+          selectedItems={getSelectedItems()}
+          onClose={() => setDialogOpen(false)}
+          onSelect={handleItemsSelect}
+        />
+      )}
     </Box>
   );
 };

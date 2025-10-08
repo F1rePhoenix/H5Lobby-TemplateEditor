@@ -480,6 +480,18 @@ export interface Zone {
   TreasureBuildingPoints?: IntValueConfig;
   TreasureBlocksTotalValue?: IntValueConfig;
   DenOfThieves?: IntValueConfig;
+  Taverns?: IntValueConfig;
+  TradingPosts?: IntValueConfig;
+  HillForts?: IntValueConfig;
+  SpellMentors?: IntValueConfig; 
+  MagicWells?: IntValueConfig; 
+  LearningStones?: IntValueConfig;
+  EnlightenmentStones?: IntValueConfig; 
+  WisdomStones?: IntValueConfig; 
+  RedwoodObservatories?: IntValueConfig; 
+  Wagons?: IntValueConfig;
+  Skeletons?: IntValueConfig; 
+  TombOfTheWarriors?: IntValueConfig;
   RedwoodObservatoryDensity?: IntValueConfig;
   Size?: IntValueConfig;
   Town?: boolean;
@@ -490,7 +502,7 @@ export interface Zone {
   MainTownRotationDirection?: IntValueConfig;
   TreasureBlocksScalingFromTownDist?: boolean;
   DistBetweenTreasureBlocks?: IntValueConfig;
-  AdditionalMapObjectConfig?: AdditionalMapObjectConfig
+  AdditionalMapObjectConfig?: AdditionalMapObjectConfig;
 }
 
 export interface Template {
@@ -511,6 +523,7 @@ export interface Template {
 }
 
 export interface AdditionalMapObjectConfig {
+  AddMirrorLocationObjects?: Boolean;
   StaticObjects?: AdditionalObjectModel[];
   StaticObjectsByCastle?: StaticObjectsByCastleEntry[];
   ByPointModels?: AdditionalObjectByPointsModel[];

@@ -119,6 +119,10 @@
         "MinValue": 0,
         "MaxValue": 0
       },
+      "MagicWells": {
+        "MinValue": 10,
+        "MaxValue": 10
+      },
       "WisdomStones": {
         "MinValue": 3,
         "MaxValue": 3
@@ -208,8 +212,7 @@
       "MirrorTerrainType": "Null",
       "BuildingsToDelete": [
         "Stables",
-        "ElementalConflux",
-        "War_Machine_Factory"
+        "ElementalConflux"
       ],
       "BuildingsToAdd": []
     }
@@ -227,12 +230,17 @@
     }
   ],
   "SpecificCastlesStartBuildings": [],
+  "GeneralData": {
+    "MineGoldGuardLevel": 10
+  },
+  "BaseArmyMultiplier": 1.0,
   "ArmyMultipliers": {
-    "Dwarfs": 1.5,
+    "Dwarfs": 1.25,
+    "Inferno": 1.25,
     "Mages": 1.25,
     "Liga": 0.75,
-    "Horde": 0.5,
-    "Elves": 0.5
+    "Elves": 0.75,
+    "Horde": 0.5
   },
   "ScriptFeaturesConfig": {
     "CastleCaptureProps": {
@@ -244,7 +252,18 @@
       "IsForcedFinalBattle": false
     },
     "ForcedFinalBattleProps": [],
-    "AdditionalStartCastles": []
+    "AdditionalStartCastles": [],
+    "FogOpeners": [
+      {
+        "Player": "Any",
+        "Data": [
+          {
+            "CoordinateX": 117,
+            "CoordinateY": 67
+          }
+        ]
+      }
+    ]
   },
   "EntitiesBanConfig": {
     "BannedHeroes": [],
@@ -271,8 +290,10 @@
         "PlayerFactions": false,
         "PlayerType": "Any",
         "CreatureIds": [],
-        "GrowMultiplier": 3.0
-      }
+        "GrowMultiplier": 3.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 2,
@@ -290,17 +311,21 @@
         "PlayerFactions": false,
         "PlayerType": "Any",
         "CreatureIds": [],
-        "GrowMultiplier": 3.0
-      }
+        "GrowMultiplier": 3.0,
+        "GuardsPool": []
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 3,
-      "GuardStrenght": 10,
+      "GuardStrenght": 8,
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
       "DefaultBuilding": {
-        "DefaultBuilding": "HighTierRunicChest"
-      }
+        "DefaultBuilding": "HighTierRunicChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 4,
@@ -308,8 +333,10 @@
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
       "DefaultBuilding": {
-        "DefaultBuilding": "FullT1MagicChest"
-      }
+        "DefaultBuilding": "FullT1MagicChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 5,
@@ -317,8 +344,10 @@
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
       "DefaultBuilding": {
-        "DefaultBuilding": "FullT2MagicChest"
-      }
+        "DefaultBuilding": "FullT2MagicChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 6,
@@ -326,8 +355,10 @@
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
       "DefaultBuilding": {
-        "DefaultBuilding": "FullT3MagicChest"
-      }
+        "DefaultBuilding": "FullT3MagicChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 7,
@@ -335,8 +366,10 @@
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
       "DefaultBuilding": {
-        "DefaultBuilding": "GoldChest5K"
-      }
+        "DefaultBuilding": "GoldChest5K",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
     }
   ]
 }

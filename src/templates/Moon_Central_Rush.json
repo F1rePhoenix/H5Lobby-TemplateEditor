@@ -693,6 +693,10 @@
         "MinValue": 5,
         "MaxValue": 5
       },
+      "Taverns": {
+        "MinValue": 0,
+        "MaxValue": 0
+      },
       "MagicWells": {
         "MinValue": 10,
         "MaxValue": 10
@@ -966,11 +970,15 @@
   "FactionTerrainConfigs": {},
   "StartBuildingConfigs": [],
   "SpecificCastlesStartBuildings": [],
+  "GeneralData": {
+    "MineGoldGuardLevel": 10
+  },
   "BaseArmyMultiplier": 1.0,
   "ArmyMultipliers": {
-    "Elves": 0.5,
+    "Elves": 0.75,
     "Horde": 0.75,
     "Mages": 1.25,
+    "Inferno": 1.5,
     "Dwarfs": 1.5
   },
   "ScriptFeaturesConfig": {
@@ -997,7 +1005,18 @@
       ]
     },
     "ForcedFinalBattleProps": [],
-    "AdditionalStartCastles": []
+    "AdditionalStartCastles": [],
+    "FogOpeners": [
+      {
+        "Player": "Any",
+        "Data": [
+          {
+            "CoordinateX": 87,
+            "CoordinateY": 87
+          }
+        ]
+      }
+    ]
   },
   "EntitiesBanConfig": {
     "BannedHeroes": [
@@ -1036,7 +1055,8 @@
         "CreatureIds": [],
         "GrowMultiplier": 3.0,
         "GuardsPool": []
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 2,
@@ -1056,7 +1076,8 @@
         "CreatureIds": [],
         "GrowMultiplier": 3.0,
         "GuardsPool": []
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 3,
@@ -1064,8 +1085,10 @@
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
       "DefaultBuilding": {
-        "DefaultBuilding": "RandomT1MagicChest"
-      }
+        "DefaultBuilding": "RandomT1SpellFromEachSchoolChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 4,
@@ -1073,8 +1096,10 @@
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
       "DefaultBuilding": {
-        "DefaultBuilding": "RandomT2MagicChest"
-      }
+        "DefaultBuilding": "RandomT2SpellFromEachSchoolChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 5,
@@ -1082,8 +1107,10 @@
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
       "DefaultBuilding": {
-        "DefaultBuilding": "RandomT3MagicChest"
-      }
+        "DefaultBuilding": "RandomT3SpellFromEachSchoolChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 6,
@@ -1091,8 +1118,10 @@
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
       "DefaultBuilding": {
-        "DefaultBuilding": "RandomT4MagicChest"
-      }
+        "DefaultBuilding": "RandomT4SpellFromEachSchoolChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 7,
@@ -1100,8 +1129,10 @@
       "BuildingTexture": "Null",
       "RoadType": "NoRoad",
       "DefaultBuilding": {
-        "DefaultBuilding": "RandomT5MagicChest"
-      }
+        "DefaultBuilding": "RandomT5SpellFromEachSchoolChest",
+        "UseSpecificDescription": true
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 8,
@@ -1117,6 +1148,19 @@
         "PandoraCreatureConfig": [],
         "Spells": [],
         "Resources": []
+      },
+      "InteractionMessageType": "NoMessage",
+      "CustomTexts": {
+        "Texts": {
+          "Ru": {
+            "Name": "",
+            "Description": "Хранит в себе 20 000 очков опыта."
+          },
+          "En": {
+            "Name": "",
+            "Description": "Contains 20 000 experience points."
+          }
+        }
       }
     },
     {
@@ -1133,6 +1177,19 @@
         "PandoraCreatureConfig": [],
         "Spells": [],
         "Resources": []
+      },
+      "InteractionMessageType": "NoMessage",
+      "CustomTexts": {
+        "Texts": {
+          "Ru": {
+            "Name": "",
+            "Description": "Хранит в себе 50 000 очков опыта."
+          },
+          "En": {
+            "Name": "",
+            "Description": "Contains 50 000 experience points."
+          }
+        }
       }
     },
     {
@@ -1142,7 +1199,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "Astrologer"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 11,
@@ -1151,7 +1209,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "WarMachineFactory"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 12,
@@ -1160,7 +1219,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "BlackMarket"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 13,
@@ -1169,7 +1229,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "SpellShop"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 14,
@@ -1178,7 +1239,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "SchoolOfMagic"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 15,
@@ -1187,7 +1249,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "Arena"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 16,
@@ -1196,7 +1259,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "MercenaryCamp"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 17,
@@ -1205,7 +1269,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "MarlettoTower"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 18,
@@ -1214,7 +1279,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "GardenOfRevelation"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 19,
@@ -1223,7 +1289,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "StarAxis"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 20,
@@ -1232,7 +1299,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "ElementalConflux"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 21,
@@ -1241,7 +1309,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "TreeOfKnowledge"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 22,
@@ -1250,7 +1319,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "Crypt"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 23,
@@ -1259,7 +1329,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "GargoyleStoneVault"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 24,
@@ -1268,7 +1339,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "DwarvenTreasury"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 25,
@@ -1277,7 +1349,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "DemonBank"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 26,
@@ -1286,7 +1359,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "ElementalStockpile"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 27,
@@ -1295,7 +1369,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "MonasteryBank"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 28,
@@ -1304,7 +1379,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "MagiVault"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 29,
@@ -1313,7 +1389,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "TreantThicket"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 30,
@@ -1322,7 +1399,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "WitchBank"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 31,
@@ -1331,7 +1409,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "NecroEstate"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 32,
@@ -1340,7 +1419,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "OrcDeposit"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 33,
@@ -1349,7 +1429,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "DragonUtopia"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 34,
@@ -1358,7 +1439,8 @@
       "RoadType": "NoRoad",
       "MapObjectXdb": {
         "MapObject": "SpellMentor"
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 35,
@@ -1378,7 +1460,8 @@
         "CreatureIds": [],
         "GrowMultiplier": 6.0,
         "GuardsPool": []
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     },
     {
       "Id": 36,
@@ -1398,7 +1481,8 @@
         "CreatureIds": [],
         "GrowMultiplier": 6.0,
         "GuardsPool": []
-      }
+      },
+      "InteractionMessageType": "NoMessage"
     }
   ]
 }

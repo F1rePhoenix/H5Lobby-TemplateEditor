@@ -1,0 +1,314 @@
+{
+  "TemplateName": "[S4]Moon",
+  "Zones": [
+    {
+      "ZoneId": 1,
+      "TerrainType": "FirstPlayer",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "TowerByTerrain",
+        "CreaturesConfiguration": {
+          "ReplacementsCount": {
+            "MinValue": 7,
+            "MaxValue": 7
+          },
+          "TerrainFaction": false,
+          "NonPlayersFactions": true,
+          "Grades": true,
+          "Neutrals": false,
+          "BaseCostMultiplier": 0.5,
+          "BaseResourcesMultiplier": 0.5,
+          "CreatureModifiers": [],
+          "CreatureTierReplacements": []
+        },
+        "RandomDwellingConfig": {
+          "MinCount": 10,
+          "MaxCount": 10,
+          "MinTiersCount": 7,
+          "MaxTiersCount": 7,
+          "AllowedTiers": [],
+          "MinCountPerTier": 1,
+          "MaxCountPerTier": 4
+        }
+      }
+    },
+    {
+      "ZoneId": 2,
+      "TerrainType": "SecondPlayer",
+      "MirrorZoneId": 1,
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "TowerByTerrain",
+        "CreaturesConfiguration": {
+          "ReplacementsCount": {
+            "MinValue": 7,
+            "MaxValue": 7
+          },
+          "TerrainFaction": false,
+          "NonPlayersFactions": true,
+          "Grades": true,
+          "Neutrals": false,
+          "BaseCostMultiplier": 0.5,
+          "BaseResourcesMultiplier": 0.5,
+          "CreatureModifiers": [],
+          "CreatureTierReplacements": []
+        },
+        "RandomDwellingConfig": {
+          "MinCount": 10,
+          "MaxCount": 10,
+          "MinTiersCount": 7,
+          "MaxTiersCount": 7,
+          "AllowedTiers": [],
+          "MinCountPerTier": 1,
+          "MaxCountPerTier": 4
+        }
+      }
+    },
+    {
+      "ZoneId": 3,
+      "TerrainType": "Terrain1",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "TowerByTerrain",
+        "CreaturesConfiguration": {
+          "ReplacementsCount": {
+            "MinValue": 7,
+            "MaxValue": 7
+          },
+          "TerrainFaction": true,
+          "NonPlayersFactions": true,
+          "Grades": true,
+          "Neutrals": false,
+          "BaseCostMultiplier": 0.5,
+          "BaseResourcesMultiplier": 0.5,
+          "CreatureModifiers": [],
+          "CreatureTierReplacements": []
+        },
+        "RandomDwellingConfig": {
+          "MinCount": 10,
+          "MaxCount": 14,
+          "MinTiersCount": 7,
+          "MaxTiersCount": 7,
+          "AllowedTiers": [],
+          "MinCountPerTier": 1,
+          "MaxCountPerTier": 4
+        }
+      }
+    },
+    {
+      "ZoneId": 4,
+      "TerrainType": "Terrain1",
+      "MirrorZoneId": 3
+    },
+    {
+      "ZoneId": 5,
+      "TerrainType": "Terrain5",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "TowerByTerrain",
+        "CreaturesConfiguration": {
+          "ReplacementsCount": {
+            "MinValue": 7,
+            "MaxValue": 7
+          },
+          "TerrainFaction": true,
+          "NonPlayersFactions": true,
+          "Grades": true,
+          "Neutrals": false,
+          "BaseCostMultiplier": 0.5,
+          "BaseResourcesMultiplier": 0.5,
+          "CreatureModifiers": [],
+          "CreatureTierReplacements": []
+        },
+        "RandomDwellingConfig": {
+          "MinCount": 10,
+          "MaxCount": 14,
+          "MinTiersCount": 7,
+          "MaxTiersCount": 7,
+          "AllowedTiers": [],
+          "MinCountPerTier": 1,
+          "MaxCountPerTier": 4
+        }
+      }
+    },
+    {
+      "ZoneId": 6,
+      "TerrainType": "Terrain5",
+      "MirrorZoneId": 5
+    },
+    {
+      "ZoneId": 7,
+      "TerrainType": "Terrain2",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "TowerByTerrain",
+        "CreaturesConfiguration": {
+          "ReplacementsCount": {
+            "MinValue": 7,
+            "MaxValue": 7
+          },
+          "TerrainFaction": true,
+          "NonPlayersFactions": true,
+          "Grades": true,
+          "Neutrals": false,
+          "BaseCostMultiplier": 0.2,
+          "BaseResourcesMultiplier": 0.25,
+          "CreatureModifiers": [
+            {
+              "Tier": 5,
+              "GrowMultiplier": 2.7
+            },
+            {
+              "Tier": 6,
+              "GrowMultiplier": 2.0
+            },
+            {
+              "Tier": 7,
+              "GrowMultiplier": 2.0
+            }
+          ],
+          "CreatureTierReplacements": []
+        },
+        "RandomDwellingConfig": {
+          "MinCount": 8,
+          "MaxCount": 8,
+          "MinTiersCount": 7,
+          "MaxTiersCount": 7,
+          "AllowedTiers": [
+            5,
+            6,
+            7
+          ],
+          "MinCountPerTier": 2,
+          "MaxCountPerTier": 3
+        }
+      }
+    },
+    {
+      "ZoneId": 8,
+      "TerrainType": "Terrain3",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "TowerByTerrain",
+        "CreaturesConfiguration": {
+          "ReplacementsCount": {
+            "MinValue": 8,
+            "MaxValue": 8
+          },
+          "TerrainFaction": true,
+          "NonPlayersFactions": true,
+          "Grades": true,
+          "Neutrals": false,
+          "BaseCostMultiplier": 0.2,
+          "BaseResourcesMultiplier": 0.25,
+          "CreatureModifiers": [
+            {
+              "Tier": 5,
+              "GrowMultiplier": 2.7
+            },
+            {
+              "Tier": 6,
+              "GrowMultiplier": 2.0
+            },
+            {
+              "Tier": 7,
+              "GrowMultiplier": 2.0
+            }
+          ],
+          "CreatureTierReplacements": []
+        },
+        "RandomDwellingConfig": {
+          "MinCount": 8,
+          "MaxCount": 8,
+          "MinTiersCount": 7,
+          "MaxTiersCount": 7,
+          "AllowedTiers": [
+            5,
+            6,
+            7
+          ],
+          "MinCountPerTier": 2,
+          "MaxCountPerTier": 3
+        }
+      }
+    },
+    {
+      "ZoneId": 9,
+      "TerrainType": "Terrain4",
+      "DwellingGenerationConfig": {
+        "BuildingTexture": "TowerByTerrain",
+        "CreaturesConfiguration": {
+          "ReplacementsCount": {
+            "MinValue": 8,
+            "MaxValue": 8
+          },
+          "TerrainFaction": true,
+          "NonPlayersFactions": true,
+          "Grades": true,
+          "Neutrals": false,
+          "BaseCostMultiplier": 0.2,
+          "BaseResourcesMultiplier": 0.25,
+          "CreatureModifiers": [
+            {
+              "Tier": 5,
+              "GrowMultiplier": 2.7
+            },
+            {
+              "Tier": 6,
+              "GrowMultiplier": 2.0
+            },
+            {
+              "Tier": 7,
+              "GrowMultiplier": 2.0
+            }
+          ],
+          "CreatureTierReplacements": []
+        },
+        "RandomDwellingConfig": {
+          "MinCount": 8,
+          "MaxCount": 8,
+          "MinTiersCount": 7,
+          "MaxTiersCount": 7,
+          "AllowedTiers": [
+            5,
+            6,
+            7
+          ],
+          "MinCountPerTier": 2,
+          "MaxCountPerTier": 3
+        }
+      }
+    }
+  ],
+  "Connections": [],
+  "TerrainConfig": [],
+  "SpecificCastlesStartBuildings": {},
+  "StartBuildingConfigs": [
+    {
+      "ApplyAllTerrains": true,
+      "TerrainType": "Null",
+      "Buildings": [
+        "Tavern",
+        "Forge",
+        "Market1"
+      ],
+      "BuildingMode": "All"
+    }
+  ],
+  "BaseArmyMultiplier": 1.0,
+  "ArmyMultipliers": {
+    "Dwarfs": 1.5
+  },
+  "ScriptFeaturesConfig": {
+    "CastleCaptureProps": {
+      "CoordinateX": 88,
+      "CoordinateY": 82,
+      "SearchRadius": 25,
+      "EventTimer": 7,
+      "DisableFortifications": true,
+      "IsForcedFinalBattle": true
+    },
+    "GloballyDisabledBuildingsProps": {
+      "Buildings": [
+        "NecromancyUnholyTemple"
+      ]
+    },
+    "ForcedFinalBattleProps": [],
+    "AdditionalStartCastles": []
+  },
+  "CustomBuildingConfigs": []
+}

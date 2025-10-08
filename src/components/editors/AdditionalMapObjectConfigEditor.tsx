@@ -9,6 +9,8 @@ import {
   TextField,
   MenuItem,
   Divider,
+  FormControlLabel,
+  Switch,
 } from '@mui/material';
 import { ExpandMore as ExpandMoreIcon, ExpandLess as ExpandLessIcon, Add as AddIcon, Delete as DeleteIcon } from '@mui/icons-material';
 import { useLanguage } from '../../contexts/LanguageContext';
@@ -238,6 +240,20 @@ const AdditionalMapObjectConfigEditor: React.FC<AdditionalMapObjectConfigEditorP
 
       <Collapse in={expanded}>
         <Box sx={{ mt: 2 }}>
+          {/* Add Mirror Location Objects Switch */}
+          <FormControlLabel
+            control={
+              <Switch
+                checked={!!value.AddMirrorLocationObjects}
+                onChange={(e) => updateField('AddMirrorLocationObjects', e.target.checked)}
+                disabled={disabled}
+              />
+            }
+            label={language === 'ru' ? 'Добавить объекты из зеркальной локации' : 'Add Mirror Location Objects'}
+          />
+
+          <Divider sx={{ my: 3 }} />
+
           {/* Static Objects Section */}
           <Box sx={{ mb: 3 }}>
             <Typography variant="h6" gutterBottom>
@@ -324,8 +340,8 @@ const AdditionalMapObjectConfigEditor: React.FC<AdditionalMapObjectConfigEditorP
           {/* Остальные секции будут реализованы по аналогии */}
           <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center', py: 3 }}>
             {language === 'ru' 
-              ? 'Остальные секции (By Points, Resources) будут реализованы в ближайшем обновлении'
-              : 'Other sections (By Points, Resources) will be implemented in the next update'
+              ? 'Остальные секции (Resources) будут реализованы в ближайшем обновлении'
+              : 'Other sections (Resources) will be implemented in the next update'
             }
           </Typography>
 
