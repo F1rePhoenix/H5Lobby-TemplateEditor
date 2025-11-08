@@ -117,7 +117,7 @@ const JsonPreview: React.FC = () => {
       </Box>
 
       {/* Поле редактирования/просмотра */}
-      <Paper elevation={1} sx={{ p: 2, bgcolor: '#f8f9fa' }}>
+      <Paper elevation={1} sx={{ p: 2, bgcolor: '#2d2d2d' }}>
         {editMode ? (
           <Box
             component="textarea"

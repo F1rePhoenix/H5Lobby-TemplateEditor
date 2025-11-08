@@ -110,12 +110,11 @@ const Sidebar: React.FC<SidebarProps> = ({ selectedTab, onTabChange, language })
   return (
     <Box
       sx={{
+        minWidth:280,
         width: 280,
-        minWidth: 280,
-        bgcolor: '#f8f9fa',
-        borderRight: '1px solid #e0e0e0',
         height: '100vh',
-        overflowY: 'auto'
+        overflowY: 'auto',
+        bgcolor:'#1a1a2e'
       }}
     >
       {/* Заголовок */}
@@ -145,7 +144,7 @@ const Sidebar: React.FC<SidebarProps> = ({ selectedTab, onTabChange, language })
                   },
                 },
                 '&:hover': {
-                  bgcolor: '#eee',
+                  bgcolor: '#f1c011ad',
                 },
               }}
             >

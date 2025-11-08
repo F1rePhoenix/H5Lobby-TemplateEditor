@@ -6,7 +6,6 @@ import {
   Paper,
   IconButton,
   Snackbar,
-  TextField,
 } from '@mui/material';
 import {
   ContentCopy as ContentCopyIcon,
@@ -87,15 +86,6 @@ const MainEditor: React.FC = () => {
         path: field,
         value: items
       }
-    });
-  };
-
-  const openSelectionDialog = (type: 'buildings' | 'heroes' | 'spells' | 'artifacts', fieldPath: string, title: string) => {
-    setSelectionDialog({
-      open: true,
-      type,
-      fieldPath,
-      title
     });
   };
 
@@ -213,7 +203,6 @@ const MainEditor: React.FC = () => {
       <Box sx={{ 
         flex: 1, 
         p: 3, 
-        bgcolor: '#ffffff', 
         position: 'relative',
         marginLeft: '250px' // Отступ для бокового меню
       }}>
