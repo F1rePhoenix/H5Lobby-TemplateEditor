@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/H5Lobby-TemplateEditor/static/css/main.332820b5.css",
-    "main.js": "/H5Lobby-TemplateEditor/static/js/main.61572635.js",
+    "main.css": "/H5Lobby-TemplateEditor/static/css/main.24bd1de0.css",
+    "main.js": "/H5Lobby-TemplateEditor/static/js/main.a53df09e.js",
     "static/js/453.fceb0a01.chunk.js": "/H5Lobby-TemplateEditor/static/js/453.fceb0a01.chunk.js",
     "index.html": "/H5Lobby-TemplateEditor/index.html",
-    "main.332820b5.css.map": "/H5Lobby-TemplateEditor/static/css/main.332820b5.css.map",
-    "main.61572635.js.map": "/H5Lobby-TemplateEditor/static/js/main.61572635.js.map",
+    "main.24bd1de0.css.map": "/H5Lobby-TemplateEditor/static/css/main.24bd1de0.css.map",
+    "main.a53df09e.js.map": "/H5Lobby-TemplateEditor/static/js/main.a53df09e.js.map",
     "453.fceb0a01.chunk.js.map": "/H5Lobby-TemplateEditor/static/js/453.fceb0a01.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.332820b5.css",
-    "static/js/main.61572635.js"
+    "static/css/main.24bd1de0.css",
+    "static/js/main.a53df09e.js"
   ]
 }
